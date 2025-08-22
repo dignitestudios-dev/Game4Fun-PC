@@ -44,7 +44,7 @@ function Benchmark() {
         <h4 className="uppercase leading-8 text-gradient tracking-widest font-semibold text-sm">
           pc benchmark
         </h4>
-        <div className="text-5xl w-[40%] text-center font-semibold leading-16">
+        <div className="text-5xl md:w-[40%] text-center font-semibold leading-16">
           <span>
             <GradientUnderlineTitle title="Performance" classname="text-5xl"  />
           </span>{" "}

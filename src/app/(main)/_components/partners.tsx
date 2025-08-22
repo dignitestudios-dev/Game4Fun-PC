@@ -19,9 +19,9 @@ type Props = {}
 
 function Partners({}: Props) {
   return (
-    <div className='md:p-16 pt-30 relative bg-[#0f0f0f]'>
-      <div className='bg-[url(/images/gradient-bg.png)] w-[100%] hidden lg:block h-screen absolute top-0 bg-center  bg-no-repeat' />
-           <div className="flex flex-col items-center justify-center gap-4 w-full" >
+    <div className=' relative bg-[#0f0f0f] py-32'>
+      <div className='bg-[url(/images/gradient-bg.png)] w-[100%] hidden lg:block h-full absolute top-0 bg-center  bg-no-repeat' />
+           <div className="flex flex-col  items-center justify-center gap-4 w-full" >
            <div className="relative ">
           <StyledHeader title="our partners" backTitle='Partners' classname="-right-[300%] z-30" />
         </div>
@@ -52,7 +52,7 @@ function Partners({}: Props) {
               alt={logo.alt}
               width={logo.center ? 80 : 50}
               height={logo.center ? 80 : 50}
-              className={`${logo.center ? "scale-125" : ""}`}
+              className={`${logo.center ? "scale-105" : ""}`}
             />
           </div>
         ))}

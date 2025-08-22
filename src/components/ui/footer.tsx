@@ -10,7 +10,7 @@ function Footer() {
         <h1 className="text-center">© 2025 - Game4Fun - All Rights Reserved.</h1>
       </div>
       <Logo />
-      <div className="flex flex-wrap justify-center gap-4 z-50">
+      <div className="flex flex-wrap justify-center gap-4 z-40">
         <Link href={"/privacy-policy"}>Privacy Policy</Link>
         <Link href={"/terms-conditions"}>Terms & Conditions</Link>
       </div>

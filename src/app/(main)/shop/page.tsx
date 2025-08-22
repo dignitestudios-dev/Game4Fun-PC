@@ -1,10 +1,10 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import ShopBanner from "./_components/shop-banner";
 import SidebarFilter from "./_components/sidebar-filter";
 import ShopCard from "@/components/ui/shop-card";
+import { X } from "lucide-react";
 
-type Props = {};
 const sections = [
   {
     title: "Price",
@@ -76,26 +76,54 @@ const pc = {
   price: 1500,
   onDetailsClick: () => console.log("Clicked Gaming Beast X"),
 };
-function page({}: Props) {
+
+function Page() {
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
+
   return (
     <div className="">
       <ShopBanner />
-      <div className="p-12 flex gap-10">
-        <div>
+
+
+      <div className="lg:hidden flex justify-end p-4">
+        <button
+          onClick={() => setIsFilterOpen(true)}
+          className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-400 text-white rounded-lg"
+        >
+          Filter
+        </button>
+      </div>
+
+      <div className="lg:p-12 flex gap-10">
+        <div className="lg:block hidden">
           <h1 className="text-2xl font-semibold uppercase mb-2">Filter</h1>
           <SidebarFilter sections={sections} />
         </div>
-        <div>
+
+        <div className="flex-1">
           <h1 className="text-2xl font-semibold mb-2">ALL PC BUILDS</h1>
-          <div className="flex flex-wrap justify-start items-center gap-10">
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].fill(0).map((_, idx) => (
+          <div className="flex flex-wrap justify-center lg:justify-start items-center gap-10">
+            {Array.from({ length: 10 }).map((_, idx) => (
               <ShopCard {...pc} key={idx} />
             ))}
           </div>
         </div>
       </div>
+      {isFilterOpen && (
+        <div className="fixed inset-0 bg-black text-white bg-opacity-50 z-50">
+          <div className="fixed right-0 top-0 h-full w-72 p-5 shadow-lg">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-xl font-semibold">Filters</h2>
+              <button onClick={() => setIsFilterOpen(false)}>
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+            <SidebarFilter sections={sections} />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
 
-export default page;
+export default Page;

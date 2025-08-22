@@ -119,9 +119,10 @@ function ContactUs() {
           </div>
         </div>
       </div>
-      <div className="bg-[linear-gradient(to_right,#C100FF,#FFBE96)] w-full relative h-[300px] rounded-2xl my-32 p-12">
+      <div className="bg-[linear-gradient(to_right,#d642db,#FFBE96)] w-full relative h-[600px] lg:h-[300px] rounded-2xl md:my-32 p-12">
         <h1 className="text-5xl font-semibold py-4">CUSTOM BUILT YOUR PC</h1>
-        <Image className="absolute -top-44 right-28" src={"/images/footer-pc.png"} alt="pc" width={500} height={500} />
+        <button className="uppercase" >get free quote</button>
+        <Image className="absolute  lg:-top-44  right-6 lg:right-28" src={"/images/footer-pc.png"} alt="pc" width={500} height={500} />
       </div>
     </div>
   );
