@@ -2,8 +2,7 @@
 import { useRef, useState } from "react";
 import AuthInput from "../../_components/auth-input";
 import ArrowBtn from "@/components/ui/arrow-btn";
-import Link from "next/link";
-import { Eye, EyeClosed } from "lucide-react";
+import Image from "next/image";
 function CreateProfileForm() {
   const [preview, setPreview] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
@@ -26,9 +25,11 @@ function CreateProfileForm() {
         onClick={() => fileInputRef.current?.click()}
       >
         {preview ? (
-          <img
+          <Image
             src={preview}
             alt="Selected"
+            width={200}
+            height={200}
             className="w-full h-full object-cover rounded-full"
           />
         ) : (

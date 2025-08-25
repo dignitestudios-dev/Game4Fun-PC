@@ -3,9 +3,8 @@ import ArrowBtn from "@/components/ui/arrow-btn";
 
 import React, { useRef, useState } from "react";
 
-type Props = {};
 
-function VerificationForm({}: Props) {
+function VerificationForm() {
   const [values, setValues] = useState<string[]>(Array(5).fill(""));
   const inputsRef = useRef<(HTMLInputElement | null)[]>([]);
 

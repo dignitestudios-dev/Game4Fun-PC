@@ -2,7 +2,6 @@ import React from 'react'
 import CartCard from './cart-card'
 import Accordion from './accordion'
 
-type Props = {}
  const accordionData = [
     {
       title: "Return Policy",
@@ -19,7 +18,7 @@ type Props = {}
     },
   ];
 
-function Cart({}: Props) {
+function Cart() {
   return (
     <div className='w-[45%]' >
       <h1 className='text-5xl font-semibold'>Your cart</h1>

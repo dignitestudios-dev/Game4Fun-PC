@@ -1,9 +1,7 @@
 "use client";
 
 import React from "react";
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import ArrowIcon from "../icons/arrow-icon";
 import GraphicCardIcon from "../icons/graphic-card-icon";
 import CardBtn from "./card-btn";
 import Link from "next/link";
@@ -30,12 +28,12 @@ function ShopCard({
   gpu,
   productName,
   description,
-  processor,
+  // processor,
   graphicsCard,
-  ramDetail,
-  motherboard,
+  // ramDetail,
+  // motherboard,
   price,
-  onDetailsClick,
+  // onDetailsClick,
 }: PCBuildCardProps) {
   return (
     <Link href={"/shop/1"} className="bg-[#2A292959] rounded-2xl group w-[300px]  text-white max-w-sm p-5 flex flex-col gap-4 shadow-lg">

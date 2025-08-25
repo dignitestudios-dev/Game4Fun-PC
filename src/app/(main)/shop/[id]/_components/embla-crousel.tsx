@@ -40,7 +40,6 @@ const EmblaCarousel: React.FC<PropType> = ({ slides, options }) => {
 
   return (
     <div className="flex flex-col items-center">
-      {/* Main Carousel */}
       <div className="embla w-full max-w-[650px]">
         <div className="embla__viewport" ref={emblaMainRef}>
           <div className="embla__container">
@@ -61,7 +60,6 @@ const EmblaCarousel: React.FC<PropType> = ({ slides, options }) => {
         </div>
       </div>
 
-      {/* Thumbnails */}
       <div className="embla-thumbs mt-4 w-full max-w-[650px] mx-auto">
         <div className="embla-thumbs__viewport" ref={emblaThumbsRef}>
           <div className="embla-thumbs__container flex gap-3 justify-center">

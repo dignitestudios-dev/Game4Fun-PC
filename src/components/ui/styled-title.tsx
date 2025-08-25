@@ -10,7 +10,6 @@ interface StyledHeaderProps {
 const StyledHeader = ({ title,backTitle , classname }: StyledHeaderProps) => {
   return (
     <div className=" w-full  ">
-      {/* Big background outlined title */}
 <h1
        style={{
       WebkitTextStroke : "1px #7a5c74",

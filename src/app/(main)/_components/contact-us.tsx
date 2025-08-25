@@ -4,7 +4,7 @@ import {
   Linkedin,
   Mail,
   Phone,
-  Plus,
+  // Plus,
   Twitter,
 } from "lucide-react";
 import ContactInfo from "./ui/contact-info";
@@ -66,7 +66,7 @@ function ContactUs() {
               Get in Touch with Us
             </h1>
             <p className="text-[#A3A3A3]">
-              Have questions, feedback, or need assistance? We're here to help!
+              Have questions, feedback, or need assistance? We&apos;re here to help!
               Reach out and let’s connect
             </p>
           </div>

@@ -2,9 +2,7 @@ import StyledHeader from "@/components/ui/styled-title";
 import React from "react";
 import SignInForm from "./sign-in-form";
 
-type Props = {};
-
-function SignIn({}: Props) {
+function SignIn() {
   return (
     <div className="py-18 flex justify-center items-center">
       <div className="flex flex-col gap-20 items-center w-full">

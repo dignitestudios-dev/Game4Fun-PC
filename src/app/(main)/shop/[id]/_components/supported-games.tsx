@@ -2,7 +2,6 @@ import Image from 'next/image'
 import React from 'react'
 import Marquee from 'react-fast-marquee'
 
-type Props = {}
 const img = [
    {img: "/images/forza.png", title:"Forza Horizon 5"},
    {img: "/images/forza.png", title:"Forza Horizon 5"},
@@ -11,7 +10,7 @@ const img = [
    {img: "/images/forza.png", title:"Forza Horizon 5"},
 
 ]
-function SupportedGames({}: Props) {
+function SupportedGames() {
   return (
     <div className='py-8'>
         <h1 className='text-2xl font-semibold uppercase mb-4'>supported GAMES </h1>

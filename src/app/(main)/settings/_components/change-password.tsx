@@ -3,9 +3,8 @@ import React from 'react'
 import Input from './input'
 import ArrowBtn from '@/components/ui/arrow-btn'
 
-type Props = {}
 
-function ChangePassword({}: Props) {
+function ChangePassword() {
   return (
     <div className='py-2 pl-8 w-full h-screen'>
           <h1 className="uppercase text-gradient text-2xl font-semibold mb-8 tracking-wider">

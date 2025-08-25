@@ -2,9 +2,8 @@ import React from 'react'
 import ReviewBanner from './review-banner'
 import AllReviews from './all-reviews'
 
-type Props = {}
 
-function Review({}: Props) {
+function Review() {
   return (
     <div>
         <ReviewBanner/>

@@ -1,7 +1,7 @@
 import ShopCard from '@/components/ui/shop-card'
 import React from 'react'
 
-type Props = {}
+
 const pc=  {
     imageUrl: '/images/pc.png',
     caseName: 'Corsair iCUE',
@@ -17,7 +17,7 @@ const pc=  {
     price: 1500,
     onDetailsClick: () => console.log('Clicked Gaming Beast X'),
   }
-function SuggestedPcBuilds({}: Props) {
+function SuggestedPcBuilds() {
   return (
     <div className='py-10'>
         <h1 className='text-2xl uppercase font-semibold mb-4'>Suggested Pc Builds</h1>

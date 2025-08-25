@@ -1,8 +1,9 @@
-import { Mail } from 'lucide-react'
+// import { Mail } from 'lucide-react'
 import React from 'react'
 
 type Props = {
     info: {
+      // eslint-disable-next-line
         icon: any;
         text: string;
     }

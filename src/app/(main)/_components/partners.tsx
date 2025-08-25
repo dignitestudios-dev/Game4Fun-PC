@@ -3,7 +3,6 @@ import StyledHeader from '@/components/ui/styled-title'
 import Image from 'next/image'
 import React from 'react'
 
-type Props = {}
 
   const logos = [
     { src: "/images/logo.png", alt: "NVIDIA" },
@@ -17,7 +16,7 @@ type Props = {}
 
 
 
-function Partners({}: Props) {
+function Partners() {
   return (
     <div className=' relative bg-[#0f0f0f] py-32'>
       <div className='bg-[url(/images/gradient-bg.png)] w-[100%] hidden lg:block h-full absolute top-0 bg-center  bg-no-repeat' />

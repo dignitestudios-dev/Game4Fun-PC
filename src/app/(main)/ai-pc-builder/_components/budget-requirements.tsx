@@ -2,9 +2,8 @@ import ArrowBtn from "@/components/ui/arrow-btn";
 import Input from "@/components/ui/input";
 import React from "react";
 
-type Props = {};
 
-function BudgetRequirements({}: Props) {
+function BudgetRequirements() {
   return (
     <div className="flex p-12 justify-between">
       <div className="w-[45%]">

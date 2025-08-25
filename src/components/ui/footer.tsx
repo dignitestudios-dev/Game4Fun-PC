@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Logo from "./logo";
-import { cn } from "@/lib/utils";
+// import { cn } from "@/lib/utils";
 
 function Footer() {
   return (

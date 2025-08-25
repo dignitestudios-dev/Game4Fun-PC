@@ -2,9 +2,8 @@ import React from 'react'
 import PrivacyBanner from './privacy-banner'
 import PrivacyPolicyDescription from './privacy-policy-description'
 
-type Props = {}
 
-function PrivacyPolicy({}: Props) {
+function PrivacyPolicy() {
   return (
     <div><PrivacyBanner/>
     <PrivacyPolicyDescription/>

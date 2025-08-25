@@ -1,9 +1,8 @@
 import React from 'react'
 import PCBuilder from './_components/pc-builder'
 
-type Props = {}
 
-function page({}: Props) {
+function page() {
   return (
     <div><PCBuilder/></div>
   )

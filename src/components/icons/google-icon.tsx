@@ -1,8 +1,8 @@
 import React from "react";
 
-type Props = {};
 
-function GoogleIcon({}: Props) {
+
+function GoogleIcon() {
   return (
     <svg
       width="40"

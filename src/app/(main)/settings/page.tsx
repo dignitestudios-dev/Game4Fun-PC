@@ -1,9 +1,8 @@
 import React from 'react'
 import Settings from './_components/setting'
 
-type Props = {}
 
-function page({}: Props) {
+function page() {
   return (
     <div>
         <Settings/>

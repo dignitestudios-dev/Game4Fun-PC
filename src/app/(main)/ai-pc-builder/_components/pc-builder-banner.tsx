@@ -2,9 +2,8 @@ import GradientUnderlineTitle from "@/components/ui/gradient-underlined-title";
 import StyledHeader from "@/components/ui/styled-title";
 import React from "react";
 
-type Props = {};
 
-function PCBanner({}: Props) {
+function PCBanner() {
   return (
     <div className="relative z-20">
       <div className="absolute bg-[url(/images/shop-bg.png)] -top-28 left-0 bg-no-repeat bg-contain w-screen h-[500px]" />

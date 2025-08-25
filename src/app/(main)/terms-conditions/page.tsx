@@ -1,9 +1,8 @@
 import React from 'react'
 import TermsConditions from './_components/terms-conditions'
 
-type Props = {}
 
-function page({}: Props) {
+function page() {
   return (
     <div>
         <TermsConditions/>

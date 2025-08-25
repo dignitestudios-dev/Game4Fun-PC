@@ -2,9 +2,8 @@ import React from 'react'
 import TermsBanner from './terms-banner'
 import TermsDescription from './terms-description'
 
-type Props = {}
 
-function TermsConditions({}: Props) {
+function TermsConditions() {
   return (
     <div>
         <TermsBanner/>

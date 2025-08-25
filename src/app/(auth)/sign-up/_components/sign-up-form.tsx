@@ -31,7 +31,6 @@ function SignUpForm() {
         <ArrowBtn title="sign up" />
       </div>
       <div className="my-4 flex flex-col gap-4 items-center text-sm">
-        {/* <Link href={"forgot"}>forgot password?</Link> */}
 
         <h1>
           Already have an account?{" "}

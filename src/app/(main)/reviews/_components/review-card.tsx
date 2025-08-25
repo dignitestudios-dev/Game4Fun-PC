@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 interface ReviewCardProps {
@@ -8,16 +9,15 @@ interface ReviewCardProps {
   avatarUrl?: string;
 }
 
-export default function  ReviewCard({
+export default function ReviewCard({
   name,
   date,
   review,
   rating,
   avatarUrl,
-}:ReviewCardProps)  {
+}: ReviewCardProps) {
   return (
     <div className="bg-[#1A1A1A] w-full lg:w-[48%] text-white p-4 rounded-lg shadow-md  space-y-3">
-      {/* Rating */}
       <div className="flex text-yellow-400">
         {Array.from({ length: 5 }).map((_, i) => (
           <svg
@@ -38,13 +38,13 @@ export default function  ReviewCard({
         ))}
       </div>
 
-      {/* Review Text */}
       <p className="text-gray-300 text-sm">{review}</p>
 
-      {/* User Info */}
       <div className="flex items-center gap-3">
         {avatarUrl ? (
-          <img
+          <Image
+            width={300}
+            height={300}
             src={avatarUrl}
             alt={name}
             className="w-8 h-8 rounded-full object-cover"
@@ -61,4 +61,4 @@ export default function  ReviewCard({
       </div>
     </div>
   );
-};
+}

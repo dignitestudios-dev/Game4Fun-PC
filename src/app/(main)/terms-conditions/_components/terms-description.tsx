@@ -5,7 +5,6 @@ import LocationIcon from "@/components/icons/location-icon";
 import { PhoneIcon } from "lucide-react";
 import EmailIcon from "@/components/icons/email-icon";
 
-type Props = {};
 const columns = [
   { key: "condition", label: "Condition" },
   { key: "eligible", label: "Eligible" },
@@ -33,7 +32,7 @@ const data = [
     shippingFunds: "No",
   },
 ];
-function TermsDescription({}: Props) {
+function TermsDescription() {
   return (
     <div className="px-13">
       <div className="border-b border-[#2b2b2b] py-3">
@@ -113,7 +112,7 @@ function TermsDescription({}: Props) {
             </span>
             <br />
             All shipments include basic insurance. Address errors or rerouting
-            fees are the customer's responsibility ($5–$50).
+            fees are the customer&apos;s responsibility ($5–$50).
           </p>
 
           <p className="text-sm text-[#BDBDBD]">

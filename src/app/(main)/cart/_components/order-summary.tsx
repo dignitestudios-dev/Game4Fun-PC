@@ -1,9 +1,8 @@
 import CardBtn from '@/components/ui/card-btn'
 import React from 'react'
 
-type Props = {}
 
-function OrderSummary({}: Props) {
+function OrderSummary() {
   return (
        <div className='w-[45%] py-12' >
       <h1 className='text-3xl font-semibold'>Order Summary</h1>

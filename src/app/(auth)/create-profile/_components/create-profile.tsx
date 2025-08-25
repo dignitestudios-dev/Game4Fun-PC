@@ -1,11 +1,8 @@
 import StyledHeader from "@/components/ui/styled-title";
 import React from "react";
-import SignInForm from "./create-profile-form";
 import CreateProfileForm from "./create-profile-form";
 
-type Props = {};
-
-function CreateProfile({}: Props) {
+function CreateProfile() {
   return (
     <div className="py-18 flex justify-center items-center">
       <div className="flex flex-col gap-20 items-center w-full">

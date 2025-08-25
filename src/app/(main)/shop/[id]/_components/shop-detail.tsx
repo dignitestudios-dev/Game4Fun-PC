@@ -1,11 +1,11 @@
 import { EmblaOptionsType } from "embla-carousel";
 import EmblaCarousel from "./embla-crousel";
 import GraphicCardIcon from "@/components/icons/graphic-card-icon";
-import { title } from "process";
+// import { title } from "process";
 import CardBtn from "@/components/ui/card-btn";
 import ArrowBtn from "@/components/ui/arrow-btn";
 const OPTIONS: EmblaOptionsType = {};
-const SLIDE_COUNT = 10;
+// const SLIDE_COUNT = 10;
 const SLIDES = ["/images/pc.png","/images/pc.png","/images/pc.png","/images/pc.png"];
 const specs = [
   {

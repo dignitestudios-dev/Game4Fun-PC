@@ -4,13 +4,14 @@ import Image from "next/image";
 function About() {
   return (
     <section id="about-us" className="flex relative items-center">
+          <div className="bg-[url(/images/gradient-bg.png)] rotate-45 md:block hidden absolute z-20 w-[55%] h-full bg-contain bg-no-repeat left-[35%] top-[55%] -translate-x-1/2 -translate-y-1/2" />
       <div className=" w-full hidden md:block ">
         <Image
           src="/images/about-us.png"
           alt="aboutus"
           width={1500}
           height={1500}
-          className="rounded-xl z-50"
+          className="rounded-xl relative z-50"
         />
       </div>
 

@@ -2,9 +2,7 @@ import GoogleIcon from "@/components/icons/google-icon";
 import Image from "next/image";
 import React from "react";
 
-type Props = {};
-
-function TestimonialsCard({}: Props) {
+function TestimonialsCard() {
   return (
     <div className="relative w-[350px] text-[#A3A3A3] z-20  bg-[#1C1C1C] overflow-hidden rounded-2xl border-t border-t-[#34303f]">
 

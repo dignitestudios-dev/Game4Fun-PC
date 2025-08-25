@@ -1,9 +1,8 @@
 import React from 'react'
 import SignUp from './_components/sign-up'
 
-type Props = {}
 
-function page({}: Props) {
+function page() {
   return (
     <div><SignUp/></div>
   )

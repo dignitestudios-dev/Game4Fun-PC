@@ -2,9 +2,8 @@ import GradientUnderlineTitle from '@/components/ui/gradient-underlined-title'
 import StyledHeader from '@/components/ui/styled-title'
 import React from 'react'
 
-type Props = {}
 
-function ReviewBanner({}: Props) {
+function ReviewBanner() {
   return (
      <div className="relative z-20">
 

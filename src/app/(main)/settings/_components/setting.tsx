@@ -5,9 +5,7 @@ import { useState } from "react";
 import ChangePassword from "./change-password";
 import DeleteAccount from "./delete-account";
 
-type Props = {};
-
-function Settings({}: Props) {
+function Settings() {
   const [active, setActive] = useState(0);
   return (
     <div className="p-12 z-20 relative">

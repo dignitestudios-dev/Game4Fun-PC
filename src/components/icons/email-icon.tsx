@@ -1,8 +1,6 @@
 import React from "react";
 
-type Props = {};
-
-function EmailIcon({}: Props) {
+function EmailIcon() {
   return (
     <svg
       width="20"

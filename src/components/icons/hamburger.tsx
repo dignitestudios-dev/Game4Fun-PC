@@ -1,8 +1,8 @@
 import React from 'react'
 
-type Props = {}
 
-function Hamburger({}: Props) {
+
+function Hamburger() {
   return (
     <label className="hamburger">
   <input type="checkbox"/>

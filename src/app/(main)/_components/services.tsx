@@ -10,7 +10,7 @@ export default function Services() {
         <div className="flex flex-col justify-start space-y-6 my-8">
           <StyledHeader title="our services" classname="left-6" backTitle="our Services" />
           <h2 className="text-5xl  font-semibold mb-24">
-           Here's
+           Here&apos;s
             <span className="italic font-semibold">
             {" "}  <GradientUnderlineTitle title="what we" classname="text-5xl" />
             </span>{" "}

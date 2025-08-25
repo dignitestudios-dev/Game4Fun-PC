@@ -1,8 +1,8 @@
 import React from "react";
 
-type Props = {};
 
-function PhoneIcon({}: Props) {
+
+function PhoneIcon() {
   return (
     <svg
       width="18"

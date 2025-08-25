@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import ChatIcon from "./icons/chat-icon";
 import { X } from "lucide-react";
+import Image from "next/image";
 
 type ChatMessage = {
   id: string | number;
@@ -153,7 +154,9 @@ function MessageBubble({ msg }: { msg: ChatMessage }) {
       </div>
 
       {isUser && (
-        <img
+        <Image
+        width={100}
+        height={100}
           src={msg.avatarUrl ?? "https://i.pravatar.cc/80?img=47"}
           alt="avatar"
           className="h-8 w-8 rounded-full object-cover border border-white/10"

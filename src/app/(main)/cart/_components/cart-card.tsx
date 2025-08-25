@@ -1,9 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-type Props = {};
-
-function CartCard({}: Props) {
+function CartCard() {
   return (
     <div>
       <div className="flex items-center py-4 gap-4">

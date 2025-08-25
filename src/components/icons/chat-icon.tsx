@@ -1,8 +1,7 @@
 import React from "react";
 
-type Props = {};
 
-function ChatIcon({}: Props) {
+function ChatIcon() {
   return (
     <svg
       width="37"

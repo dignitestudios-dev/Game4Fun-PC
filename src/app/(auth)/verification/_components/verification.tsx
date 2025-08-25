@@ -2,9 +2,8 @@ import StyledHeader from '@/components/ui/styled-title'
 import React from 'react'
 import VerificationForm from './verfication-form'
 
-type Props = {}
 
-function Verification({}: Props) {
+function Verification() {
   return (
       <div className="py-18 flex justify-center items-center">
       <div className="flex flex-col gap-20 items-center w-full">

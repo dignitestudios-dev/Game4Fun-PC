@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react";
-import { ChevronDown, Plus } from "lucide-react";
+import {  Plus } from "lucide-react";
 
 function FAQCard() {
   const [isOpen, setIsOpen] = useState(false);
