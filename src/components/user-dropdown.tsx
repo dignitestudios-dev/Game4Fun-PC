@@ -53,6 +53,7 @@ export default function UserDropdown() {
             <li>
               <Link
                 href="/profile"
+                onClick={()=>setIsOpen(!isOpen)}
                 className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800"
               >
                My Profile 
@@ -61,6 +62,7 @@ export default function UserDropdown() {
             <li>
               <Link
                 href="/orders"
+                onClick={()=>setIsOpen(!isOpen)}
                 className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800"
               >
                 My Orders
@@ -69,20 +71,20 @@ export default function UserDropdown() {
             <li>
               <Link
                 href="/settings"
+                onClick={()=>setIsOpen(!isOpen)}
                 className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800"
               >
                 Settings
               </Link>
             </li>
             <li>
-              <button
-                onClick={() => {
-                  alert("Logging out...");
-                }}
+              <Link
+              href={"/sign-in"}
+              onClick={()=>setIsOpen(!isOpen)}
                 className="w-full text-red-600 text-left block px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800"
               >
                 Logout
-              </button>
+              </Link>
             </li>
           </ul>
         </div>

@@ -4,7 +4,7 @@ import Home from "./_components/home";
 
 function Page() {
   return (
-    <Suspense fallback={"loading"}>
+    <Suspense>
    <Home/>
     </Suspense>
   );

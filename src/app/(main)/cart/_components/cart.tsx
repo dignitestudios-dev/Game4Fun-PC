@@ -1,6 +1,6 @@
 import React from 'react'
-import CartCard from './cart-card'
-import Accordion from './accordion'
+import CartCard from './ui/cart-card'
+import Accordion from './ui/accordion'
 
  const accordionData = [
     {
