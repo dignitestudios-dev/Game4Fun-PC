@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import React from 'react'
 
-type Props = {}
+// type Props = {}
 
-function CartDetail({}: Props) {
+function CartDetail() {
   return (
     <div>
          <div>

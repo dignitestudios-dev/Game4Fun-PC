@@ -1,4 +1,4 @@
-import GradientUnderlineTitle from "@/components/ui/gradient-underlined-title";
+// import GradientUnderlineTitle from "@/components/ui/gradient-underlined-title";
 import StyledHeader from "@/components/ui/styled-title";
 
 function CheckoutBanner() {

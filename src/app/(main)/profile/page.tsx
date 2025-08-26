@@ -1,5 +1,5 @@
 import React from 'react'
-import ProfileBanner from './_components/profile-banner'
+// import ProfileBanner from './_components/profile-banner'
 import Profile from './_components/profile'
 
 

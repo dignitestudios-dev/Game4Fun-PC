@@ -4,9 +4,8 @@ import OrderSummary from "./order-summary";
 import Input from "@/components/ui/input";
 import Image from "next/image";
 
-type Props = {};
 
-function ReviewOrder({}: Props) {
+function ReviewOrder() {
   return (
     <div>
       <ReviewBanner />

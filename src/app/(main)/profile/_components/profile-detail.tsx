@@ -2,9 +2,7 @@ import { SquarePen } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
-type Props = {};
-
-function ProfileDetail({}: Props) {
+function ProfileDetail() {
   return (
     <div className="bg-[#2A2929CC] p-5 rounded-3xl w-[90%] mx-auto ">
       <div className="flex items-center justify-between">

@@ -3,9 +3,8 @@ import Input from "@/components/ui/input";
 import Link from "next/link";
 import React from "react";
 
-type Props = {};
 
-function CheckoutPayments({}: Props) {
+function CheckoutPayments() {
   return (
     <div className=" mx-auto flex flex-col items-start gap-4">
       <h1 className="text-xl font-semibold ">My Cart</h1>
