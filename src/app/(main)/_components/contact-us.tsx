@@ -12,6 +12,7 @@ import Input from "@/components/ui/input";
 import ArrowBtn from "@/components/ui/arrow-btn";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import ArrowIcon from "@/components/icons/arrow-icon";
 
 const info = [
   {
@@ -49,16 +50,7 @@ const links = [
 function ContactUs() {
   return (
     <div className="p-12 md:px-24 relative" id="contact">
-      <div
-        className={cn(
-          "bg-[url(/images/bottom-left-gradient-bg.png)] md:block hidden z-10 w-[832.05px] bg-no-repeat   absolute -bottom-20 left-0 h-[100px] "
-        )}
-      />
-      <div
-        className={cn(
-          "bg-[url(/images/bottom-right-gradient-bg.png)] z-10 w-[632.05px] md:block hidden bg-no-repeat absolute -bottom-20 right-0 h-[100px]"
-        )}
-      />
+    
       <div className="flex lg:flex-row flex-col gap-8  md:justify-between items-start">
         <div className="lg:w-[45%] w-full">
           <div>
@@ -113,15 +105,27 @@ function ContactUs() {
               rows={5}
               className="w-full px-4 py-3 rounded-2xl bg-[#1d1d1d] border border-[#FFFFFF36] text-[#FFFFFF36] placeholder-[#FFFFFF36] focus:outline-none focus:border-purple-500 transition"
             />
-            <div className="relative flex justify-center items-center">
+            <div className="relative flex justify-start items-center">
             <ArrowBtn title="submit" />
             </div>
           </div>
         </div>
       </div>
-      <div className="bg-[linear-gradient(to_right,#d642db,#FFBE96)] w-full relative h-[600px] lg:h-[300px] rounded-2xl md:my-32 p-12">
-        <h1 className="text-5xl font-semibold py-4">CUSTOM BUILT YOUR PC</h1>
-        <button className="uppercase" >get free quote</button>
+      <div className="bg-[linear-gradient(to_right,#d642db,#FFBE96)] w-full relative h-[700px] lg:h-[300px] rounded-2xl md:mt-32 p-12">
+        <h1 className="text-5xl font-semibold py-8">CUSTOM BUILT YOUR PC</h1>
+           <button
+          //   onClick={onDetailsClick}
+          className="flex items-center gap-2 mr-3 text-white font-medium "
+        >
+          <span className={cn("bg-[#d94ad7] text-sm uppercase -mr-4 z-50 p-2 px-1" )}>
+            Get a free quote
+          </span>{" "}
+          <div className=" border p-[1.2px] rounded-full z-30 flex">
+            <div className={cn( " rounded-full  w-10 h-10 flex  items-center justify-center")}>
+              <ArrowIcon />
+            </div>
+          </div>
+        </button>
         <Image className="absolute  lg:-top-44  right-6 lg:right-28" src={"/images/footer-pc.png"} alt="pc" width={500} height={500} />
       </div>
     </div>

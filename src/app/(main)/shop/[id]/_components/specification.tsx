@@ -46,7 +46,7 @@ const specs = [
 
 function Specification() {
   return (
-    <div className="py-8">
+    <div className="py-8 ">
       <h1 className="text-2xl tracking-widest font-bold mb-4 uppercase">full Specification</h1>
       <div className="">
         {specs.map((sp, idx) => (

@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
-import {  Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import { Provider } from "react-redux";
+import { Providers } from "./provider";
+// import { store } from "./store";
 
 const inter = Inter({
   variable: "--font-geist-sans",
@@ -25,11 +28,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-      suppressHydrationWarning
+        suppressHydrationWarning
         className={`${inter.className} antialiased max-w-screen-2xl mx-auto scroll-smooth overflow-x-hidden`}
       >
-        {children}
- 
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

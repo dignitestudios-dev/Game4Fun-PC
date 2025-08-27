@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay"; // <- Import Autoplay Plugin
 import Image from "next/image";
 
 type PropType = {
@@ -10,7 +11,10 @@ type PropType = {
 
 const EmblaCarousel: React.FC<PropType> = ({ slides, options }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [emblaMainRef, emblaMainApi] = useEmblaCarousel(options);
+
+  const autoplay = Autoplay({ delay: 3000, stopOnInteraction: false });
+
+  const [emblaMainRef, emblaMainApi] = useEmblaCarousel(options, [autoplay]);
   const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
     containScroll: "keepSnaps",
     dragFree: true,
@@ -45,13 +49,16 @@ const EmblaCarousel: React.FC<PropType> = ({ slides, options }) => {
           <div className="embla__container">
             {slides.map((img, index) => (
               <div className="embla__slide flex justify-center" key={index}>
-                <div className=" flex items-center justify-center rounded-xl">
+                <div
+                  className="flex items-center justify-center rounded-xl p-6 
+                  bg-black/50 backdrop-blur-md  shadow-lg"
+                >
                   <Image
                     src={img}
                     alt="carousel-img"
                     width={500}
                     height={500}
-                    className="rounded-xl w-[500px]  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 h-[500px] object-contain p-10"
+                    className="rounded-xl w-[500px] h-[400px] object-contain"
                   />
                 </div>
               </div>

@@ -1,4 +1,5 @@
 import CardBtn from '@/components/ui/card-btn'
+import Link from 'next/link'
 import React from 'react'
 
 
@@ -21,8 +22,9 @@ function OrderSummary() {
         </div>
       </div>
       <div className='flex justify-center items-center py-6'>
-      <CardBtn title='contunue to checkout' bgColor='bg-[#141414]'/>
-      {/* <CartCard/>
+        <Link href={"/checkout"} className='cursor-pointer' >
+      <CardBtn title='contunue to checkout' bgColor='bg-[#141414]' />
+      </Link>{/* <CartCard/>
       <Accordion items={accordionData}/> */}
     </div>
     </div>

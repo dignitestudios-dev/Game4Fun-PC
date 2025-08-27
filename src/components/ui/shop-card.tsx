@@ -63,7 +63,7 @@ function ShopCard({
       </div>
 
       <div>
-        <h2 className="text-xl font-bold uppercase tracking-widest pt-8">
+        <h2 className="text-xl font-bold uppercase tracking-widest pt-12">
           {productName}
         </h2>
         <p className="text-xs text-white/70 leading-relaxed">{description}</p>

@@ -54,9 +54,9 @@ function ShopDetail() {
               <h1 className="text-3xl font-bold tracking-widest pr-8 uppercase">
                 Odin 1.0 – Ryzen 9 9950X & RTX 5070 Ti 16GB
               </h1>
-              <span>
-                <span><sup>$</sup></span>
-                <span className="text-gradient text-4xl"> 1500</span>
+              <span className="flex items-center gap-1 font-semibold">
+                <span><sup className="text-lg mt-1">$</sup></span>
+                <span className="text-gradient text-4xl tracking-wider"> 1500</span>
               </span>
             </div>
             <p className="text-gradient">
