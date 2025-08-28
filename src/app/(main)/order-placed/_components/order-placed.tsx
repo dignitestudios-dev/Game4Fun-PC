@@ -8,8 +8,8 @@ function OrderPlaced() {
   return (
        <div>
       <Banner />
-      <div className="w-[90%] mx-auto flex justify-between">
-        <div className="w-[45%] flex flex-col gap-3">
+      <div className="w-[90%] mx-auto flex md:flex-row flex-col justify-between">
+        <div className="md:w-[45%] flex flex-col gap-3">
             <div>
                  <h1 className="text-2xl font-semibold mb-2">Thank you for placing an order!</h1>
                  <div>

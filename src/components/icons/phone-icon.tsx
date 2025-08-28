@@ -24,8 +24,8 @@ function PhoneIcon() {
           y2="2.84"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C100FF" />
-          <stop offset="1" stop-color="#FFBE96" />
+          <stop stopColor="#C100FF" />
+          <stop offset="1" stopColor="#FFBE96" />
         </linearGradient>
       </defs>
     </svg>

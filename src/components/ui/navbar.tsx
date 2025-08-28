@@ -6,7 +6,7 @@ import Image from "next/image";
 import UserDropdown from "../user-dropdown";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { ArrowLeft, Menu, X } from "lucide-react";
 
 const routes = [
   { href: "/", pathname: "HOME" },
@@ -33,20 +33,26 @@ function Navbar() {
       const el = document.querySelector(section);
       if (el) el.scrollIntoView({ behavior: "smooth" });
     }
-    setSidebarOpen(false); 
+    setSidebarOpen(false);
   };
 
   return (
     <>
       <div className="flex p-5 md:p-8 md:px-16 items-center relative w-full z-30 justify-between">
-
         <div className="bg-[url(/images/top-left-shadow.png)] md:block hidden z-10 w-full h-[565px] bg-no-repeat bg-contain absolute top-0 left-0" />
         <div className="bg-[url(/images/top-mid-shadow.png)] md:block hidden z-10 w-full bg-no-repeat  absolute top-0 left-1/5" />
 
-     
         <div className="flex items-center gap-8 z-50">
-          <Logo />
-          <div className="hidden md:flex gap-4 font-bold text-sm z-50">
+          <div className="flex items-center gap-4 z-50 relative">
+            {pathname !== "/" && (
+              <ArrowLeft
+                onClick={() => router.back()}
+                className="cursor-pointer"
+              />
+            )}
+            <Logo />
+          </div>
+          <div className="hidden xl:flex gap-4 font-bold text-sm z-50">
             {routes.map((r, idx) => {
               const isSection = r.href.startsWith("#");
               return isSection ? (
@@ -76,8 +82,7 @@ function Navbar() {
           </div>
         </div>
 
-
-        <div className="hidden md:flex items-center z-50 gap-2">
+        <div className="hidden lg:flex items-center z-50 gap-2">
           <Link
             href="/cart"
             className="bg-[linear-gradient(to_right,#C100FF,#FFBE96)] p-[1.2px] rounded-full flex"
@@ -101,14 +106,11 @@ function Navbar() {
             ) : (
               <Menu size={28} className="text-white" />
             )}
-            
           </button>
         </div>
 
-    
         <div className="bg-[url(/images/top-right-shadow.png)] z-10 w-[600px] bg-no-repeat absolute top-0 right-0 h-screen pointer-events-none select-none" />
       </div>
-
 
       <div
         className={cn(

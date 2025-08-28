@@ -13,7 +13,7 @@ function TermsBanner() {
           <StyledHeader
             title="GAME4FUNPCS Terms and Conditions"
             backTitle="Terms & Conditions"
-            classname="right-[-210%]"
+            classname="right-[-160%] text-9xl"
           />
         </div>
         {/* <GradientUnderlineTitle title="Build Your Dream PC" classname="text-5xl" /> */}

@@ -17,8 +17,8 @@ function About() {
 
       <div className="w-full md:w-1/2 relative md:absolute right-0 flex flex-col  gap-4 md:pl-2">
         <StyledHeader title="About us" backTitle="About us" classname="-left-44 top-0" />
-        <h1 className="uppercase text-5xl font-bold">WHO WE ARE</h1>
-        <p className="w-[80%]  leading-8">
+        <h1 className="uppercase text-5xl font-bold md:text-start text-center">WHO WE ARE</h1>
+        <p className="w-[80%] md:mx-0 mx-auto md:text-start text-center  leading-8">
           At Game4FunPCs, we take pride in hand-building every PC from the
           ground up—no assembly lines, no mass production. Each system is
           carefully stress-tested and fully optimized to ensure a seamless

@@ -1,10 +1,11 @@
 import CardBtn from '@/components/ui/card-btn'
+import Link from 'next/link'
 import React from 'react'
 
 
 function OrderSummary() {
   return (
-       <div className='w-[45%]' >
+       <div className='md:w-[45%]' >
       <h1 className='text-2xl font-semibold'>Order Summary</h1>
          <div className="mt-4">
         <div className="flex justify-between py-2 text-sm">
@@ -21,8 +22,10 @@ function OrderSummary() {
         </div>
       </div>
       <div className='flex justify-center items-center py-6'>
+        <Link href={"/orders"}>
       <CardBtn title='continue shipping' bgColor='bg-[#141414]'/>
-      {/* <CartCard/>
+      
+      </Link>{/* <CartCard/>
       <Accordion items={accordionData}/> */}
     </div>
     </div>

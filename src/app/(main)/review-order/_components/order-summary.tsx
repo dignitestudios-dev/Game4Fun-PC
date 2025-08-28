@@ -1,10 +1,19 @@
+"use client"
+import Popup from '@/components/popup';
 import CardBtn from '@/components/ui/card-btn'
-import React from 'react'
+import { useRouter } from 'next/navigation';
+import React, { useState } from 'react'
 
 
 function OrderSummary() {
+  const router = useRouter()
+    const [showPopup, setShowPopup] = useState(false);
+
+  const handlePlaceOrder = () => {
+    setShowPopup(true);
+  };
   return (
-       <div className='w-[45%]' >
+       <div className='md:w-[45%]' >
       <h1 className='text-2xl font-semibold'>Order Summary</h1>
          <div className="mt-4">
         <div className="flex justify-between py-2 text-sm">
@@ -21,10 +30,13 @@ function OrderSummary() {
         </div>
       </div>
       <div className='flex justify-center items-center py-6'>
+        <button onClick={handlePlaceOrder}>
       <CardBtn title='place order' bgColor='bg-[#141414]'/>
+      </button>
       {/* <CartCard/>
       <Accordion items={accordionData}/> */}
     </div>
+    {showPopup && <Popup title='Order Placed Successfully' description='Figma ipsum component variant main layer. Pixel vector boolean vector device vector.' onClose={()=>router.push("/order-placed")} />}
     </div>
   )
 }

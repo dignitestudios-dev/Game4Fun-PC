@@ -5,7 +5,7 @@ import OrderSummary from './order-summary'
 
 function CartDetails() {
   return (
-    <div className='flex gap-4 justify-between  px-16 pb-28' >
+    <div className='flex md:flex-row flex-col gap-4 justify-between flex-wrap px-4 md:px-16 pb-28' >
         <Cart/>
         <OrderSummary/>
     </div>

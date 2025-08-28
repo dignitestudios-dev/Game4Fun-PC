@@ -5,7 +5,7 @@ import React from 'react'
 
 function OrderSummary() {
   return (
-       <div className='w-[45%] py-12' >
+       <div className='w-full md:w-[45%] py-12' >
       <h1 className='text-3xl font-semibold'>Order Summary</h1>
          <div className="mt-4">
         <div className="flex justify-between py-2 text-sm">

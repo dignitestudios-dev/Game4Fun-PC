@@ -9,8 +9,8 @@ function ReviewOrder() {
   return (
     <div>
       <ReviewBanner />
-      <div className="w-[90%] mx-auto flex justify-between">
-        <div className="w-[45%] flex flex-col gap-3">
+      <div className="w-[90%] mx-auto flex md:flex-row flex-col justify-between">
+        <div className="md:w-[45%] flex flex-col gap-3">
           <h1 className="text-2xl font-semibold">Delivery Address</h1>
           <Input label="Address" />
           <h1 className="text-2xl font-semibold">Payment Method</h1>

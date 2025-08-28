@@ -20,7 +20,7 @@ import Accordion from './ui/accordion'
 
 function Cart() {
   return (
-    <div className='w-[45%]' >
+    <div className='w-full md:w-[45%]' >
       <h1 className='text-5xl font-semibold'>Your cart</h1>
       <p>Not ready to checkout? Continue Shopping</p>
       <CartCard/>
