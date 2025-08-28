@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import AuthInput from "../../_components/auth-input";
 import ArrowBtn from "@/components/ui/arrow-btn";
 import Link from "next/link";
-import toast from "react-hot-toast";
 import { useForgetPasswordMutation } from "@/services/auth-api";
 
 type Props = {
@@ -11,7 +10,7 @@ type Props = {
 
 function EmailForm({handleNextActive}: Props) {
   const [email, setEmail] = useState<string>("");
-  const [forgotPass, { isLoading }] = useForgetPasswordMutation();
+  // const [forgotPass, { isLoading }] = useForgetPasswordMutation();
   const handleSubmit = async (e:React.SyntheticEvent) => {
     e.preventDefault()
 //     if (!email) return toast.error("Email is required");

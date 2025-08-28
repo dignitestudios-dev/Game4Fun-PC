@@ -17,7 +17,7 @@ function SignUpForm() {
   } = useForm<SignUpFormData>({
     resolver: zodResolver(signUpSchema),
   });
-  const [signUp, { isLoading }] = useSignUpMutation();
+  const [signUp] = useSignUpMutation();
   const [visible, setVisible] = useState(false);
   const [visible1, setVisible1] = useState(false);
 
@@ -25,7 +25,7 @@ function SignUpForm() {
     const res = await signUp(data);
     if (res.error) {
       if ("data" in res.error) {
-        toast.error((res.error.data as any)?.message);
+        toast.error((res.error.data as any)?.message);// eslint-disable-line
       } else {
         toast.error("Something went wrong.");
       }

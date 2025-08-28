@@ -3,7 +3,6 @@ import ArrowBtn from '@/components/ui/arrow-btn'
 import React, { useState } from 'react'
 import AuthInput from '../../_components/auth-input'
 import { Eye, EyeClosed } from 'lucide-react'
-import Link from 'next/link'
 
 type Props = {
     handleNextActive: () =>void
@@ -12,9 +11,9 @@ type Props = {
 function ChangePasswordForm({handleNextActive}: Props) {
   const [visible, setVisible] = useState(false);
   const [visible1, setVisible1] = useState(false);
-    const handleSubmit = async() =>{
-              handleNextActive()
-    }
+    // const handleSubmit = async() =>{
+    //           handleNextActive()
+    // }
   return (
    <div className="bg-[#2A2929CC] rounded-2xl p-8 w-[90%] lg:w-[30%] relative  z-50">
       <form

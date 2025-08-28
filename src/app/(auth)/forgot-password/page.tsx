@@ -1,9 +1,7 @@
 import React from 'react'
 import ForgotPassword from './_components/forgot-password'
 
-type Props = {}
-
-function page({}: Props) {
+function page() {
   return (
     <div><ForgotPassword/></div>
   )

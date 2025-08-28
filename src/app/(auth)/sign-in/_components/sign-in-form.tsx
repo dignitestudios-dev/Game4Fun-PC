@@ -11,7 +11,7 @@ import { SignInInput, signInSchema } from "@/schemas/sign-in-schema";
 import toast from "react-hot-toast";
 function SignInForm() {
   const [visible, setVisible] = useState(false);
-  const [signIn, { isLoading }] = useSignInMutation();
+  const [signIn] = useSignInMutation();
   const {
     handleSubmit,
     formState: { errors },
@@ -22,7 +22,7 @@ function SignInForm() {
     const res = await signIn(data);
     if (res.error) {
       if ("data" in res.error) {
-        toast.error((res.error.data as any)?.message);
+        toast.error((res.error.data as any)?.message);// eslint-disable-line
       } else {
         toast.error("Something went wrong.");
       }
