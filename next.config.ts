@@ -8,6 +8,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'i.pravatar.cc',
       },
+      {
+        protocol: 'https',
+        hostname: '1b75nbwh-8080.inc1.devtunnels.ms',
+      },
     ],
   }
 };

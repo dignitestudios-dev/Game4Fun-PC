@@ -7,7 +7,9 @@ import UserDropdown from "../user-dropdown";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import { ArrowLeft, Menu, X } from "lucide-react";
-
+import { useGetProfileQuery } from "@/services/auth-api";
+import Cookies from "js-cookie";
+import ArrowBtn from "./arrow-btn";
 const routes = [
   { href: "/", pathname: "HOME" },
   { href: "#about-us", pathname: "ABOUT US" },
@@ -22,6 +24,9 @@ const routes = [
 ];
 
 function Navbar() {
+  const { data } = useGetProfileQuery({});
+
+  Cookies.set("userData", JSON.stringify(data?.user));
   const pathname = usePathname();
   const router = useRouter();
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -96,7 +101,14 @@ function Navbar() {
               />
             </div>
           </Link>
-          <UserDropdown />
+          {Cookies.get("token") && data ? (
+            <UserDropdown  />
+          ) : (
+            <Link href={"/sign-in"}>
+              {" "}
+              <ArrowBtn title="login" />
+            </Link>
+          )}
         </div>
 
         <div className="md:hidden z-50">

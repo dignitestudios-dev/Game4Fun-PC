@@ -9,6 +9,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useSignInMutation } from "@/services/auth-api";
 import { SignInInput, signInSchema } from "@/schemas/sign-in-schema";
 import toast from "react-hot-toast";
+import Cookies from "js-cookie";
+import { useRouter } from "next/navigation";
 function SignInForm() {
   const [visible, setVisible] = useState(false);
   const [signIn] = useSignInMutation();
@@ -17,16 +19,33 @@ function SignInForm() {
     formState: { errors },
     register,
   } = useForm({ resolver: zodResolver(signInSchema) });
-
+  const router = useRouter();
   const submit = async (data: SignInInput) => {
     const res = await signIn(data);
     if (res.error) {
-      if ("data" in res.error) {
-        toast.error((res.error.data as any)?.message);// eslint-disable-line
+      if ("data" in res.error && res.error.data) {
+        const errorData = res.error.data as Record<string, any>; // eslint-disable-line
+
+        if (errorData.message == "Please complete your profile") {
+          toast.error(errorData.message);
+          Cookies.set("token", errorData.token);
+          router.push("create-profile");
+        }
+
+        if (errorData.message == "Please verify your email") {
+          Cookies.set("token", errorData.token);
+          router.push("verification");
+        }
       } else {
         toast.error("Something went wrong.");
       }
       return;
+    }
+
+    if (res.data) {
+      toast.success(res.data.message);
+      Cookies.set("token", res.data.token);
+      router.push("/");
     }
   };
   return (

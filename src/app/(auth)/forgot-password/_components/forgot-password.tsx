@@ -24,7 +24,7 @@ function ForgotPassword() {
         </div>
         {active == 0 && <EmailForm handleNextActive={handleNextActive} />}
         {active == 1 && <OtpForm handleNextActive={handleNextActive} />}
-        {active == 2 && <ChangePasswordForm handleNextActive={handleNextActive} />}
+        {active == 2 && <ChangePasswordForm  />}
       </div>
     </div>
   )

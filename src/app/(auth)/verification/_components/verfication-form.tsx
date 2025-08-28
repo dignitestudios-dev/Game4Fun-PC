@@ -1,24 +1,43 @@
 "use client";
-import ArrowBtn from "@/components/ui/arrow-btn";
-
 import React, { useRef, useState } from "react";
-
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import ArrowBtn from "@/components/ui/arrow-btn";
+import {
+  VerificationFormData,
+  verificationSchema,
+} from "@/schemas/verification-schema";
+import {
+  useResendOtpMutation,
+  useVerifyOtpMutation,
+} from "@/services/auth-api";
+import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 function VerificationForm() {
-  const [values, setValues] = useState<string[]>(Array(5).fill(""));
+  const [verify] = useVerifyOtpMutation();
+  const [resend] = useResendOtpMutation();
+  const [values, setValues] = useState<string[]>(Array(6).fill(""));
   const inputsRef = useRef<(HTMLInputElement | null)[]>([]);
-
-  const handleOTPChange = (otp: string) => {
-    console.log("OTP:", otp);
-  };
+  const router = useRouter();
+  const {
+    handleSubmit,
+    setValue,
+    formState: { errors },
+  } = useForm<VerificationFormData>({
+    resolver: zodResolver(verificationSchema),
+    defaultValues: { otp: "" },
+  });
 
   const handleChange = (value: string, index: number) => {
     const newValues = [...values];
-    newValues[index] = value.slice(-1); // only take last digit
+    newValues[index] = value.slice(-1);
     setValues(newValues);
-    handleOTPChange(newValues.join(""));
 
-    if (value && index < length - 1) {
+    // Update RHF form value
+    setValue("otp", newValues.join(""));
+
+    if (value && index < newValues.length - 1) {
       inputsRef.current[index + 1]?.focus();
     }
   };
@@ -31,12 +50,33 @@ function VerificationForm() {
       inputsRef.current[index - 1]?.focus();
     }
   };
+
+  const onSubmit = async (data: VerificationFormData) => {
+    const res = await verify({ type: "signup", ...data });
+    if (res.error) {
+      if ("data" in res.error) {
+        toast.error((res.error.data as any)?.message); // eslint-disable-line
+      } else {
+        toast.error("Something went wrong.");
+      }
+      return;
+    }
+    if (res.data) {
+      toast.success(res.data.message);
+      router.push("create-profile");
+    }
+  };
+
   return (
-    <div className="bg-[#2A2929CC] rounded-2xl p-8 mb-2 w-[30%] relative  z-50">
-      <div className="flex w-full flex-col gap-4 items-center ">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="bg-[#2A2929CC] rounded-2xl p-8 mb-2 w-[30%] relative z-50"
+    >
+      <div className="flex w-full flex-col gap-4 items-center">
         <p className="text-sm text-center w-full">
           Please enter OTP code sent to designer@dignitestudios.com
         </p>
+
         <div className="flex gap-2">
           {values.map((val, index) => (
             <input
@@ -53,18 +93,39 @@ function VerificationForm() {
             />
           ))}
         </div>
+
+        {errors.otp && (
+          <p className="text-red-500 text-sm">{errors.otp.message}</p>
+        )}
+
         <h1 className="text-xs">
           Didn’t receive code?
-          <button className="text-gradient cursor-pointer font-semibold">
-            {" "}
+          <button
+            type="button"
+            onClick={async () => {
+              const res = await resend({ type: "signup" });
+              if (res.error) {
+                if ("data" in res.error) {
+                  toast.error((res.error.data as any)?.message); // eslint-disable-line
+                } else {
+                  toast.error("Something went wrong.");
+                }
+                return;
+              }
+              if (res.data) {
+                toast.success(res.data.message);
+              }
+            }}
+            className="text-gradient cursor-pointer font-semibold"
+          >
             Resend now
-          </button>{" "}
+          </button>
         </h1>
-
-        <ArrowBtn title="verify" />
+        <button type="submit">
+          <ArrowBtn title="verify" />
+        </button>
       </div>
-      <div className="my-4 flex flex-col gap-4 items-center text-sm"></div>
-    </div>
+    </form>
   );
 }
 

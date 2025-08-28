@@ -9,6 +9,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { useSignUpMutation } from "@/services/auth-api";
 import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
+import Cookies from "js-cookie"; 
 function SignUpForm() {
   const {
     register,
@@ -20,16 +22,21 @@ function SignUpForm() {
   const [signUp] = useSignUpMutation();
   const [visible, setVisible] = useState(false);
   const [visible1, setVisible1] = useState(false);
-
+  const router = useRouter();
   const submit = async (data: SignUpFormData) => {
     const res = await signUp(data);
     if (res.error) {
       if ("data" in res.error) {
-        toast.error((res.error.data as any)?.message);// eslint-disable-line
+        toast.error((res.error.data as any)?.message); // eslint-disable-line
       } else {
         toast.error("Something went wrong.");
       }
       return;
+    }
+    if (res.data) {
+      Cookies.set('token', res.data.data.token)
+      toast.success(res.data.message);
+      router.push("verification");
     }
   };
   return (
@@ -111,7 +118,7 @@ function SignUpForm() {
       <div className="my-4 flex flex-col gap-4 items-center text-sm">
         <h1>
           Already have an account?{" "}
-          <Link href={"/sign-ip"} className="text-gradient font-semibold">
+          <Link href={"/sign-in"} className="text-gradient font-semibold">
             Sign In
           </Link>{" "}
         </h1>

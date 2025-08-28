@@ -1,14 +1,15 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import Image from 'next/image';
 import { ChevronDown } from 'lucide-react';
 import Link from 'next/link';
-
+import Cookies from 'js-cookie';
+import Image from 'next/image';
 export default function UserDropdown() {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
-
+const data =  JSON.parse(Cookies.get("userData")!)
+console.log(data)
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -25,7 +26,6 @@ export default function UserDropdown() {
 
   return (
     <div className="relative z-[999999999999999999]" ref={dropdownRef}>
-      {/* Trigger */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-2 focus:outline-none"
@@ -33,10 +33,12 @@ export default function UserDropdown() {
         <div className="bg-[linear-gradient(to_right,#C100FF,#FFBE96)] p-[1.2px] rounded-full flex">
           <div className="bg-white dark:bg-black rounded-full w-12 h-12 flex items-center justify-center">
             <Image
-              src="/images/cart-icon.png"
+             src={data?.profilePicture ?? ""}
+
               alt="cart"
-              width={23}
-              height={23}
+              width={50}
+              height={50}
+              className='rounded-full'
             />
           </div>
         </div>

@@ -6,9 +6,13 @@ export const signUpSchema = z.object({
     .nonempty("Email is required")
     .email("Invalid email address"),
   password: z
-    .string()
-    .nonempty("Password is required")
-    .min(6, "Password must be at least 6 characters"),
+    .string({ message: "Password is required" })
+    .min(8, "Password must be at least 8 characters")
+    .max(64, "Password must be at most 64 characters")
+    .regex(/[A-Za-z]/, "Include at least one letter")
+    .regex(/\d/, "Include at least one number")
+    .nonempty("Password is required"),
+    // .min(6, "Password must be at least 6 characters"),
   confirmPassword: z
     .string()
     .nonempty("Confirm password is required"),
