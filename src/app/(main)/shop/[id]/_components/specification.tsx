@@ -61,7 +61,7 @@ function Specification() {
               " flex gap-12 p-2 px-12 tracking-widest"
             )}
           >
-            <h1 className="font-semibold ">{sp.name}</h1>{" "}
+            <h1 className="font-semibold w-[15%]">{sp.name}</h1>{" "}
             <div className=" top-0 right-0 w-[1px] bg-gradient-to-b from-[#1C1C1C] via-gray-500 to-[#1C1C1C] z-10" />{" "}
             <h4>{sp.value}</h4>
           </div>

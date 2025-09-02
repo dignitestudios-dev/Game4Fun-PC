@@ -79,6 +79,19 @@ const pc = {
 
 function Page() {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const [selected, setSelected] = useState<{ [key: string]: string[] }>({});
+
+  const toggleOption = (sectionTitle: string, value: string) => {
+    setSelected((prev) => {
+      const current = prev[sectionTitle] || [];
+      return {
+        ...prev,
+        [sectionTitle]: current.includes(value)
+          ? current.filter((v) => v !== value)
+          : [...current, value],
+      };
+    });
+  };
 
   return (
     <div className="">
@@ -113,13 +126,50 @@ function Page() {
         <div className="fixed inset-0 bg-black text-white bg-opacity-50 z-50">
           <div className="fixed right-0 top-0 h-full w-72 p-5 shadow-lg">
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-xl font-semibold">Filters</h2>
-              <button onClick={() => setIsFilterOpen(false)}>
+              {/* <h2 className="text-xl font-semibold">Filters</h2> */}
+              <button className="absolute right-2 top-4" onClick={() => setIsFilterOpen(false)}>
                 <X className="w-6 h-6" />
               </button>
             </div>
-            <SidebarFilter sections={sections} />
+            {/* <SidebarFilter sections={sections} /> */}
           </div>
+          <div
+  className="text-white block overflow-x-hidden rounded-2xl p-4 py-8 w-full 
+  space-y-6 top-4 max-h-[calc(100vh-2rem)] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-transparent "
+>
+
+      {/* Top Gradient Strip */}
+      <div className="absolute bg-custom-gradient w-full -left-0 h-2 top-1 rounded-t-2xl z-[10]" />
+
+      {sections.map((section, idx) => (
+        <div key={idx} className=" relative">
+          <h3 className="uppercase text-md tracking-widest pb-1 mb-3">
+            {section.title}
+          </h3>
+          <div className="space-y-2">
+            {section.options.map((opt) => (
+              <label
+                key={opt.value}
+                className="flex items-center gap-2 text-sm cursor-pointer"
+              >
+                <input
+                  type="checkbox"
+                  className="accent-pink-500"
+                  checked={selected[section.title]?.includes(opt.value) || false}
+                  onChange={() => toggleOption(section.title, opt.value)}
+                />
+                {opt.label}
+              </label>
+            ))}
+          </div>
+
+          {/* Gradient Border Divider */}
+          {idx !== sections.length - 1 && (
+            <div className="mt-4 h-px w-full bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500" />
+          )}
+        </div>
+      ))}
+    </div>
         </div>
       )}
     </div>
