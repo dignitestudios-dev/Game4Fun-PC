@@ -25,8 +25,9 @@ const routes = [
 
 function Navbar() {
   const { data } = useGetProfileQuery({});
-
-  Cookies.set("userData", JSON.stringify(data?.user));
+  if (data) {
+    Cookies.set("userData", JSON.stringify(data?.user));
+  }
   const pathname = usePathname();
   const router = useRouter();
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -102,7 +103,7 @@ function Navbar() {
             </div>
           </Link>
           {Cookies.get("token") && data ? (
-            <UserDropdown  />
+            <UserDropdown />
           ) : (
             <Link href={"/sign-in"}>
               {" "}

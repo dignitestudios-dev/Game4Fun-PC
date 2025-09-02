@@ -30,12 +30,14 @@ function SignInForm() {
           toast.error(errorData.message);
           Cookies.set("token", errorData.token);
           router.push("create-profile");
-        }
-
-        if (errorData.message == "Please verify your email") {
+        }else if (errorData.message == "Please verify your email") {
           Cookies.set("token", errorData.token);
           router.push("verification");
+        }else{
+          toast.error(errorData.message)
         }
+
+       
       } else {
         toast.error("Something went wrong.");
       }

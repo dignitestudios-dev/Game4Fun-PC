@@ -33,11 +33,11 @@ export default function SidebarFilter({ sections }: SidebarFilterProps) {
 
   return (
     <div
-      className="bg-[#2A292959]  lg:block hidden overflow-x-hidden rounded-2xl p-4 py-8 w-72 
+      className="bg-[#2A292959]  lg:block hidden overflow-x-hidden rounded-2xl p-4 py-8 w-80 
       space-y-6 sticky top-4 max-h-[calc(100vh-2rem)] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-transparent "
     >
       {/* Top Gradient Strip */}
-      <div className="absolute bg-custom-gradient w-72 -left-0 h-2 top-1 rounded-t-2xl z-[10]" />
+      <div className="absolute bg-custom-gradient w-80 -left-0 h-2 top-1 rounded-t-2xl z-[10]" />
 
       {sections.map((section, idx) => (
         <div key={idx} className=" relative">

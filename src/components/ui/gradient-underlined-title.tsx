@@ -15,7 +15,7 @@ interface GradientUnderlineTitleProps {
 function GradientUnderlineTitle ({ title  , classname}: GradientUnderlineTitleProps){
   return (
     <div className="inline-block relative w-fit">
-      <h2 className={cn(lora.className,"text-white  font-semibold italic" , classname ? classname :"text-4xl")}>{title}</h2>
+      <h2 className={cn(lora.className,"text-white text-center  font-semibold italic" , classname ? classname :"text-4xl")}>{title}</h2>
       <div
         className="absolute left-0 bottom-1 z-[-10] h-2 w-full rounded-full"
         style={{

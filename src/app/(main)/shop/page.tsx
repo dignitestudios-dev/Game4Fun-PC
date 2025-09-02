@@ -4,6 +4,7 @@ import ShopBanner from "./_components/shop-banner";
 import SidebarFilter from "./_components/sidebar-filter";
 import ShopCard from "@/components/ui/shop-card";
 import { X } from "lucide-react";
+import SortDropdown from "./_components/ui/sort-dropdown";
 
 const sections = [
   {
@@ -109,12 +110,16 @@ function Page() {
 
       <div className="lg:p-12 flex gap-10">
         <div className="lg:block hidden">
-          <h1 className="text-2xl font-semibold uppercase mb-2">Filter</h1>
+          <h1 className="text-2xl font-semibold uppercase py-4 mb-2">Filter</h1>
           <SidebarFilter sections={sections} />
         </div>
 
         <div className="flex-1">
-          <h1 className="text-2xl font-semibold mb-2">ALL PC BUILDS</h1>
+          <div className="flex justify-between pr-20 items-center py-4" >
+          <h1 className="text-2xl font-semibold ">ALL PC BUILDS</h1>
+         <SortDropdown/>
+
+          </div>
           <div className="flex flex-wrap justify-center lg:justify-start items-center gap-10">
             {Array.from({ length: 10 }).map((_, idx) => (
               <ShopCard {...pc} key={idx} />

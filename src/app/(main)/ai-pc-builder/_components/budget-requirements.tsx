@@ -5,8 +5,8 @@ import React from "react";
 
 function BudgetRequirements() {
   return (
-    <div className="flex p-12 justify-between">
-      <div className="w-[45%]">
+    <div className="flex flex-wrap p-4 md:p-12 justify-between">
+      <div className="md:w-[45%]">
         <h1 className="uppercase mb-4 font-bold tracking-wider text-3xl">budget & REQUIREMENT </h1>
         <div className="flex flex-col gap-4">
           <Input label="Budget" />
@@ -21,7 +21,7 @@ function BudgetRequirements() {
           </div>
         </div>
       </div>
-      <div className="w-[45%]">
+      <div className="md:w-[45%]">
         <h1 className="uppercase mb-4">Extra</h1>
         <div className="flex flex-col items-start gap-2">
           <div className="flex gap-2 items-center" ><input type="checkbox" /> <h1>Monitor</h1></div>
