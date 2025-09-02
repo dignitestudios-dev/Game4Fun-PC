@@ -34,7 +34,7 @@ const data = [
 ];
 function TermsDescription() {
   return (
-    <div className="px-13">
+    <div className="px-4 md:px-13">
       <div className="border-b border-[#2b2b2b] py-3">
         <h1>
           Effective Date:{" "}

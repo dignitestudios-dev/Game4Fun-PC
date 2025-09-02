@@ -7,7 +7,7 @@ import LocationIcon from "../../../../components/icons/location-icon";
 
 function PrivacyPolicyDescription() {
   return (
-    <div className="px-13">
+    <div className="px-4 md:px-13">
       <div className="border-b border-[#2b2b2b] py-3">
         <h1>
           Effective Date: <span className="text-[#BDBDBD] text-sm"> July 26, 2025</span>
