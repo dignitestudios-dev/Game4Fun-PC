@@ -4,7 +4,7 @@ import SpecAccordion from "./ui/spec-accrodian"
 function BenchmarkScore() {
   return (
     <div  >
-        <div className="flex justify-between" >
+        <div className="flex md:flex-row flex-col gap-4 justify-between" >
         <div className="uppercase w-[70%] flex flex-col gap-5 justify-center">
             <h3 className="text-sm tracking-widest text-gradient">Benchmark</h3>
             <h1 className=" text-5xl font-semibold">Benchmark score</h1>

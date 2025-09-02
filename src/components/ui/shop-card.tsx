@@ -36,7 +36,7 @@ function ShopCard({
   // onDetailsClick,
 }: PCBuildCardProps) {
   return (
-    <Link href={"/shop/1"} className="bg-[#2A292959] rounded-2xl group w-[300px]  text-white max-w-sm p-5 flex flex-col gap-4 shadow-lg">
+    <Link href={"/shop/1"} className="bg-[#2A292959]  rounded-2xl group w-[300px]  text-white max-w-sm p-5 flex flex-col gap-4 shadow-lg">
       <div className="flex gap-5 relative py-2">
         <div className="absolute bg-custom-gradient w-[300px] -left-5 h-2 -top-5 rounded-t-2xl z-[10] group-hover:h-72  transition-all duration-500" />
         <div className="flex flex-col gap-8 justify-center text-xs font-semibold z-20 tracking-widest text-white/70">

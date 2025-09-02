@@ -43,7 +43,7 @@ export default function SpecAccordion() {
   }
 
   return (
-    <div className="space-y-4 w-[60%]">
+    <div className="space-y-4 md:w-[60%]">
       {specs.map((spec) => {
         const isOpen = openId === spec.id
         return (

@@ -21,7 +21,7 @@ function SuggestedPcBuilds() {
   return (
     <div className='py-10'>
         <h1 className='text-2xl uppercase font-semibold mb-4'>Suggested Pc Builds</h1>
-        <div className='flex justify-between px-12'>
+        <div className='flex flex-wrap gap-4 justify-center md:justify-between md:px-12'>
     {([1,2,3,4]).fill(0).map((_,idx)=>(
             <ShopCard {...pc} key={idx} />
         ))}
