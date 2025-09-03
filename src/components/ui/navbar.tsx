@@ -10,7 +10,6 @@ import { ArrowLeft, Menu, X } from "lucide-react";
 import { useGetProfileQuery } from "@/services/auth-api";
 import Cookies from "js-cookie";
 import ArrowBtn from "./arrow-btn";
-
 const routes = [
   { href: "/", pathname: "HOME" },
   { href: "#about-us", pathname: "ABOUT US" },
@@ -25,7 +24,7 @@ const routes = [
 ];
 
 function Navbar() {
-  const { data } = useGetProfileQuery({});
+  const { data  } = useGetProfileQuery({});
   if (data) {
     Cookies.set("userData", JSON.stringify(data?.user));
   }
@@ -45,8 +44,10 @@ function Navbar() {
 
   return (
     <>
-      {/* Navbar */}
       <div className="flex p-5 md:p-8 md:px-16 items-center relative w-full z-30 justify-between">
+        <div className="bg-[url(/images/top-left-shadow.png)] md:block hidden z-10 w-full h-[565px] bg-no-repeat bg-contain absolute top-0 left-0" />
+        <div className="bg-[url(/images/top-mid-shadow.png)] md:block hidden z-10 w-full bg-no-repeat  absolute top-0 left-1/5" />
+
         <div className="flex items-center gap-8 z-50">
           <div className="flex items-center gap-4 z-50 relative">
             {pathname !== "/" && (
@@ -57,8 +58,6 @@ function Navbar() {
             )}
             <Logo />
           </div>
-
-          {/* Desktop Links */}
           <div className="hidden xl:flex gap-4 font-bold text-sm z-50">
             {routes.map((r, idx) => {
               const isSection = r.href.startsWith("#");
@@ -89,7 +88,6 @@ function Navbar() {
           </div>
         </div>
 
-        {/* Right side buttons */}
         <div className="hidden lg:flex items-center z-50 gap-2">
           <Link
             href="/cart"
@@ -108,12 +106,12 @@ function Navbar() {
             <UserDropdown />
           ) : (
             <Link href={"/sign-in"}>
+              {" "}
               <ArrowBtn title="login" />
             </Link>
           )}
         </div>
 
-        {/* Mobile Menu Button */}
         <div className="md:hidden z-50">
           <button onClick={() => setSidebarOpen(!sidebarOpen)}>
             {sidebarOpen ? (
@@ -123,20 +121,13 @@ function Navbar() {
             )}
           </button>
         </div>
+
+        <div className="bg-[url(/images/top-right-shadow.png)] z-10 w-[600px] bg-no-repeat absolute top-0 right-0 h-screen pointer-events-none select-none" />
       </div>
 
-      {/* Overlay */}
-      {sidebarOpen && (
-        <div
-          className="fixed inset-0 bg-black/50 z-[55] transition-opacity duration-300"
-          onClick={() => setSidebarOpen(false)}
-        />
-      )}
-
-      {/* Sidebar */}
       <div
         className={cn(
-          "fixed top-0 left-0 w-64 h-full  bg-clip-padding backdrop-filter bg-opacity-10 bg-black/60 backdrop-blur-lg z-[60] p-6 transform transition-transform duration-300 ease-in-out",
+          "fixed top-0 left-0  overflow-hidden w-64 bg-clip-padding h-full backdrop-filter bg-opacity-10 bg-black/60 backdrop-blur-lg z-[60] p-6 transform transition-transform duration-300",
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         )}
       >
