@@ -88,6 +88,14 @@ export const authApi = createApi({
       }),
       invalidatesTags: ["getProfile"],
     }),
+    changePassword: builder.mutation({
+      query: (data) => ({
+        url: "/auth/changePassword",
+        method: "PATCH",
+        body: data,
+      }),
+      invalidatesTags: ["getProfile"],
+    }),
   }),
 });
 
@@ -101,4 +109,5 @@ export const {
   useSignInMutation,
   useGetProfileQuery,
   useUpdateProfileMutation,
+  useChangePasswordMutation
 } = authApi;

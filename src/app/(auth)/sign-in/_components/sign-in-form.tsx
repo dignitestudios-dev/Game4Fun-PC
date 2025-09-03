@@ -11,6 +11,7 @@ import { SignInInput, signInSchema } from "@/schemas/sign-in-schema";
 import toast from "react-hot-toast";
 import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
+import { FormErrorMessage } from "@/components/error-message";
 function SignInForm() {
   const [visible, setVisible] = useState(false);
   const [signIn] = useSignInMutation();
@@ -58,11 +59,12 @@ function SignInForm() {
       >
         <div className="w-full relative">
           <AuthInput label="Email" type="email" {...register("email")} />
-          {errors?.email && (
+          {/* {errors?.email && (
             <span className="text-xs text-red-500 text-start">
               {errors?.email.message}
             </span>
-          )}
+          )} */}
+          <FormErrorMessage message={errors?.email?.message} />
         </div>
         <div className="relative w-full">
           <AuthInput
@@ -70,11 +72,7 @@ function SignInForm() {
             type={visible ? " text " : "password"}
             {...register("password")}
           />
-          {errors?.password && (
-            <span className="text-xs text-red-500 text-start">
-              {errors?.password.message}
-            </span>
-          )}
+        <FormErrorMessage message={errors?.password?.message} />
           <div
             onClick={() => setVisible(!visible)}
             className="absolute z-50 top-[20%] right-4"
