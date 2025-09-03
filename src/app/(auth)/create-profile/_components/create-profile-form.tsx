@@ -8,7 +8,7 @@ import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 
 function CreateProfileForm() {
-  const [complete] = useCompleteProfileMutation();
+  const [complete ] = useCompleteProfileMutation();
   const [preview, setPreview] = useState<string | null>(null);
   const [file, setFile] = useState<File | null>(null);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
@@ -67,7 +67,6 @@ function CreateProfileForm() {
   return (
     <div className="bg-[#2A2929CC] rounded-2xl p-8 w-[30%] relative z-50">
       <div className="flex flex-col gap-4 items-center">
-        {/* Image Upload */}
         <div
           className="w-32 h-32 rounded-full border-2 border-dashed flex items-center justify-center cursor-pointer border-purple-500 transition"
           onClick={() => fileInputRef.current?.click()}
@@ -92,7 +91,6 @@ function CreateProfileForm() {
           className="hidden"
         />
 
-        {/* Inputs */}
         <AuthInput
           label="Full Name"
           name="fullName"
@@ -114,7 +112,6 @@ function CreateProfileForm() {
           type="text"
         />
 
-        {/* Submit Button */}
         <button onClick={handleSubmit}>
           <ArrowBtn title="confirm" />
         </button>

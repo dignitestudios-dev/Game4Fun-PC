@@ -88,6 +88,13 @@ export const authApi = createApi({
       }),
       invalidatesTags: ["getProfile"],
     }),
+    deleteProfile: builder.mutation({
+      query: (password: string) => ({
+        url: `/auth/deleteProfile?password=${password}`,
+        method: "DELETE",
+      }),
+      invalidatesTags: ["getProfile"],
+    }),
     changePassword: builder.mutation({
       query: (data) => ({
         url: "/auth/changePassword",
@@ -95,6 +102,12 @@ export const authApi = createApi({
         body: data,
       }),
       invalidatesTags: ["getProfile"],
+    }),
+    logout: builder.mutation({
+      query: () => ({
+        url: "/auth/logout",
+        method: "POST",
+      }),
     }),
   }),
 });
@@ -109,5 +122,7 @@ export const {
   useSignInMutation,
   useGetProfileQuery,
   useUpdateProfileMutation,
-  useChangePasswordMutation
+  useChangePasswordMutation,
+  useDeleteProfileMutation,
+  useLogoutMutation
 } = authApi;

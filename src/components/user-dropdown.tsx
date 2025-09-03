@@ -1,15 +1,19 @@
-'use client';
+"use client";
 
-import { useState, useRef, useEffect } from 'react';
-import { ChevronDown } from 'lucide-react';
-import Link from 'next/link';
-import Cookies from 'js-cookie';
-import Image from 'next/image';
+import { useState, useRef, useEffect } from "react";
+import { ChevronDown } from "lucide-react";
+import Link from "next/link";
+import Cookies from "js-cookie";
+import Image from "next/image";
+import { useLogoutMutation } from "@/services/auth-api";
+import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 export default function UserDropdown() {
   const [isOpen, setIsOpen] = useState(false);
+  const [logout] = useLogoutMutation();
   const dropdownRef = useRef(null);
-const data =  JSON.parse(Cookies.get("userData")!)
-console.log(data)
+  const data = JSON.parse(Cookies.get("userData")!);
+  const router = useRouter();
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -20,8 +24,8 @@ console.log(data)
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
@@ -33,19 +37,18 @@ console.log(data)
         <div className="bg-[linear-gradient(to_right,#C100FF,#FFBE96)] p-[1.2px] rounded-full flex">
           <div className="bg-white dark:bg-black rounded-full w-12 h-12 flex items-center justify-center">
             <Image
-             src={data?.profilePicture ?? ""}
-
+              src={data?.profilePicture ?? ""}
               alt="cart"
               width={50}
               height={50}
-              className='rounded-full'
+              className="rounded-full"
             />
           </div>
         </div>
-        <div className='flex items-center gap-1' >
-            
-        <h3 className="text-sm font-medium text-foreground">Hi John Alex</h3>
-            <ChevronDown /></div>
+        <div className="flex items-center gap-1">
+          <h3 className="text-sm font-medium text-foreground">Hi John Alex</h3>
+          <ChevronDown />
+        </div>
       </button>
 
       {/* Dropdown */}
@@ -55,16 +58,16 @@ console.log(data)
             <li>
               <Link
                 href="/profile"
-                onClick={()=>setIsOpen(!isOpen)}
+                onClick={() => setIsOpen(!isOpen)}
                 className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800"
               >
-               My Profile 
+                My Profile
               </Link>
             </li>
             <li>
               <Link
                 href="/orders"
-                onClick={()=>setIsOpen(!isOpen)}
+                onClick={() => setIsOpen(!isOpen)}
                 className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800"
               >
                 My Orders
@@ -73,20 +76,24 @@ console.log(data)
             <li>
               <Link
                 href="/settings"
-                onClick={()=>setIsOpen(!isOpen)}
+                onClick={() => setIsOpen(!isOpen)}
                 className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800"
               >
                 Settings
               </Link>
             </li>
             <li>
-              <Link
-              href={"/sign-in"}
-              onClick={()=>setIsOpen(!isOpen)}
+              <button
+                onClick={async () => {
+                  const res = await logout({});
+                  toast.success(res.data.message);
+                  setIsOpen(!isOpen);
+                  router.push("/sign-in")
+                }}
                 className="w-full text-red-600 text-left block px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800"
               >
                 Logout
-              </Link>
+              </button>
             </li>
           </ul>
         </div>

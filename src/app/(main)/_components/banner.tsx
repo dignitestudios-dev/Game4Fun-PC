@@ -1,6 +1,7 @@
 import ArrowBtn from "@/components/ui/arrow-btn";
 import Image from "next/image";
-
+import { motion } from "framer-motion";
+import CyclingImageAnimation from "@/components/cycling-image-animation";
 function Banner() {
   return (
     <section className="flex items-center px-4 pb-12 md:px-12 relative overflow-hidden">
@@ -20,12 +21,10 @@ function Banner() {
           your style—and built to last.
         </p>
         <button className="flex gap-2 items-center">
-     
-          <ArrowBtn title="GET FREE QUOTE"/>
+          <ArrowBtn title="GET FREE QUOTE" />
         </button>
       </div>
-      <div className="w-1/2 z-10 hidden md:block">
-      <Image src={"/images/banner.png"} alt="banner-img" width={1000} height={1000} /></div>
+      <CyclingImageAnimation/>
     </section>
   );
 }

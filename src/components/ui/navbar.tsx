@@ -24,7 +24,7 @@ const routes = [
 ];
 
 function Navbar() {
-  const { data } = useGetProfileQuery({});
+  const { data  } = useGetProfileQuery({});
   if (data) {
     Cookies.set("userData", JSON.stringify(data?.user));
   }
