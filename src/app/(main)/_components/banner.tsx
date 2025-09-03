@@ -1,6 +1,5 @@
 import ArrowBtn from "@/components/ui/arrow-btn";
-import Image from "next/image";
-import { motion } from "framer-motion";
+
 import CyclingImageAnimation from "@/components/cycling-image-animation";
 function Banner() {
   return (
