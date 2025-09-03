@@ -32,7 +32,7 @@ function ChangePassword() {
 
       toast.success(res.message);
       reset();
-    } catch (err: any) {
+    } catch (err: any) { // eslint-disable-line
       toast.error(err?.data?.message);
     }
   };
