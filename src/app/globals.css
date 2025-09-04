@@ -55,7 +55,7 @@ body {
 
 .embla {
   max-width: 48rem;
-  z-index: 100;
+  /* z-index: 30; */
   position: relative;
   margin: auto;
   --slide-height: 19rem;

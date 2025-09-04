@@ -1,15 +1,19 @@
 "use client";
-// import { EmblaOptionsType } from "embla-carousel"
-// import EmblaCarousel from "./_components/embla-crousel"
+
+import React from "react";
 import ShopDetail from "./_components/shop-detail";
 import Specification from "./_components/specification";
 import SupportedGames from "./_components/supported-games";
 import BenchmarkScore from "./_components/benchmark-score";
 import SuggestedPcBuilds from "./_components/suggested-pc-builds";
-// const OPTIONS: EmblaOptionsType = {}
-// const SLIDE_COUNT = 10
-// const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
-function page() {
+import { useGetSingleProductQuery } from "@/services/product-api";
+
+function Page({ params }: { params: Promise<{ id: string }> }) {
+  const { id  } = React.use(params);
+
+  const { data , isLoading } = useGetSingleProductQuery(id);
+  console.log(data);
+if(isLoading) return null;
   return (
     <>
       <ShopDetail />
@@ -23,4 +27,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

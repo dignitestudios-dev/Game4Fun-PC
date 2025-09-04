@@ -5,12 +5,15 @@ import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 import Cookies from "js-cookie";
 import Image from "next/image";
-import { useLogoutMutation } from "@/services/auth-api";
+// import { useLogoutMutation } from "@/services/auth-api";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
+import PopupDropdown from "./popup-dropdown";
+
 export default function UserDropdown() {
   const [isOpen, setIsOpen] = useState(false);
-  const [logout] = useLogoutMutation();
+  // const [logout] = useLogoutMutation();
+  const [popup, setPopup] = useState(false);
   const dropdownRef = useRef(null);
   const data = JSON.parse(Cookies.get("userData")!);
   const router = useRouter();
@@ -28,8 +31,22 @@ export default function UserDropdown() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+    useEffect(() => {
+    if (popup) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+    return () => document.body.classList.remove("overflow-hidden");
+  }, [popup]);
+
+
+  const handleClose = () => {
+    setPopup(!popup);
+  };
   return (
     <div className="relative z-[999999999999999999]" ref={dropdownRef}>
+      <PopupDropdown handleClose={handleClose} popup={popup} html={"<div> hello </div>"} />
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-2 focus:outline-none"
@@ -74,6 +91,31 @@ export default function UserDropdown() {
               </Link>
             </li>
             <li>
+              <button
+                onClick={() => {setIsOpen(!isOpen);
+                   setPopup(!popup)}}
+                className="block w-full cursor-pointer text-start px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800"
+              >
+                Terms and Conditions
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="block w-full text-start cursor-pointer px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800"
+              >
+                Warranty
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="block w-full text-start cursor-pointer px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800"
+              >
+                PC Guide
+              </button>
+            </li>
+            <li>
               <Link
                 href="/settings"
                 onClick={() => setIsOpen(!isOpen)}
@@ -85,12 +127,14 @@ export default function UserDropdown() {
             <li>
               <button
                 onClick={async () => {
-                  const res = await logout({});
-                  toast.success(res.data.message);
+                  // const res = await logout({});
+                  // console.log(res)
+                  Cookies.remove("token");
+                  toast.success("Logout Successfully");
                   setIsOpen(!isOpen);
-                  router.push("/sign-in")
+                  router.push("/sign-in");
                 }}
-                className="w-full text-red-600 text-left block px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800"
+                className="w-full cursor-pointer text-red-600 text-left block px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800"
               >
                 Logout
               </button>

@@ -5,6 +5,7 @@ import SidebarFilter from "./_components/sidebar-filter";
 import ShopCard from "@/components/ui/shop-card";
 import { X } from "lucide-react";
 import SortDropdown from "./_components/ui/sort-dropdown";
+import { useGetAllProductsQuery } from "@/services/product-api";
 
 const sections = [
   {
@@ -62,26 +63,26 @@ const sections = [
   },
 ];
 
-const pc = {
-  imageUrl: "/images/pc.png",
-  caseName: "Corsair iCUE",
-  ram: "16 GB",
-  gpu: "8 GB",
-  productName: "Gaming Beast X",
-  description:
-    "Lorem ipsum dolor sit amet consectetur. Malesuada arcu nibh magna mi. Quis rhoncus fringilla ac elit.",
-  processor: "i7 12 Gen",
-  graphicsCard: "RTX 5090",
-  ramDetail: "2x 8 GB",
-  motherboard: "MSI 321",
-  price: 1500,
-  onDetailsClick: () => console.log("Clicked Gaming Beast X"),
-};
+// const pc = {
+//   imageUrl: "/images/pc.png",
+//   caseName: "Corsair iCUE",
+//   ram: "16 GB",
+//   gpu: "8 GB",
+//   productName: "Gaming Beast X",
+//   description:
+//     "Lorem ipsum dolor sit amet consectetur. Malesuada arcu nibh magna mi. Quis rhoncus fringilla ac elit.",
+//   processor: "i7 12 Gen",
+//   graphicsCard: "RTX 5090",
+//   ramDetail: "2x 8 GB",
+//   motherboard: "MSI 321",
+//   price: 1500,
+//   onDetailsClick: () => console.log("Clicked Gaming Beast X"),
+// };
 
 function Page() {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [selected, setSelected] = useState<{ [key: string]: string[] }>({});
-
+ const {data } = useGetAllProductsQuery({limit:"10"})
   const toggleOption = (sectionTitle: string, value: string) => {
     setSelected((prev) => {
       const current = prev[sectionTitle] || [];
@@ -121,8 +122,8 @@ function Page() {
 
           </div>
           <div className="flex flex-wrap justify-center lg:justify-start items-center gap-10">
-            {Array.from({ length: 10 }).map((_, idx) => (
-              <ShopCard {...pc} key={idx} />
+            {data?.products.map((build, idx) => (
+              <ShopCard {...build} key={idx} />
             ))}
           </div>
         </div>

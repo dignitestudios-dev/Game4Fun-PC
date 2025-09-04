@@ -44,9 +44,9 @@ function Navbar() {
 
   return (
     <>
-      <div className="flex p-5 md:p-8 md:px-16 items-center relative w-full z-30 justify-between">
-        <div className="bg-[url(/images/top-left-shadow.png)] md:block hidden z-10 w-full h-[565px] bg-no-repeat bg-contain absolute top-0 left-0" />
-        <div className="bg-[url(/images/top-mid-shadow.png)] md:block hidden z-10 w-full bg-no-repeat  absolute top-0 left-1/5" />
+      <div className="flex p-5 md:p-8 md:px-16 items-center relative w-full justify-between">
+        <div className="bg-[url(/images/top-left-shadow.png)] md:block hidden  w-full h-[565px] bg-no-repeat bg-contain absolute top-0 left-0" />
+        <div className="bg-[url(/images/top-mid-shadow.png)] md:block hidden w-full bg-no-repeat  absolute top-0 left-1/5" />
 
         <div className="flex items-center gap-8 z-50">
           <div className="flex items-center gap-4 z-50 relative">

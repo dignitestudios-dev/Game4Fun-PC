@@ -53,7 +53,7 @@ function ShopDetail() {
         <div className=" md:w-[50%] px-4">
           <EmblaCarousel slides={SLIDES} options={OPTIONS} />
         </div>
-        <div className="md:w-[45%] px-4 z-50">
+        <div className="md:w-[45%] px-4">
           <div className="flex flex-col gap-2">
             <div className="flex ">
               <h1 className="text-xl md:text-3xl font-bold tracking-widest pr-8 uppercase">
