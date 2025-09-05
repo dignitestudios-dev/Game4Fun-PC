@@ -2,7 +2,7 @@
 import { useState } from "react";
 import {  Plus } from "lucide-react";
 
-function FAQCard() {
+function FAQCard({faq}:{faq:Faq}) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -21,7 +21,8 @@ function FAQCard() {
             </div>
           </div>
         <span className="tfont-medium">
-          How long does it take to build my custom gaming PC?
+          {/* How long does it take to build my custom gaming PC? */}
+          {faq.question}
         </span>
     
       </button>
@@ -33,8 +34,7 @@ function FAQCard() {
         }`}
       >
         <p className="text-gray-300 text-sm pl-20">
-          Typically, building a custom gaming PC takes about 2–4 hours,
-          depending on your experience and complexity of the build.
+     {faq.answer}
         </p>
       </div>
     </div>

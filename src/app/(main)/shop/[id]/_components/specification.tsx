@@ -1,50 +1,50 @@
 import { cn } from "@/lib/utils";
 
-const specs = [
-  {
-    name: "CPU",
-    value: "Ryzen 9 9950X Processor",
-  },
-  {
-    name: "CPU Cooler",
-    value: "MSI MAG CORELIQUID E360 AIO Liquid Cooler",
-  },
-  {
-    name: "Motherboard",
-    value: "MSI X870 GAMING PLUS WIFI DDR5 AM5 Motherboard",
-  },
-  {
-    name: "Power Supply",
-    value:
-      "CORSAIR RM850e 850 Watt 80 Plus Gold Certified Full Modular Power Supply",
-  },
-  {
-    name: "Graphics Card",
-    value: "ZOTAC GAMING GeForce RTX 5070 Ti SOLID OC Graphics Card",
-  },
-  {
-    name: "RAM",
-    value: "G.SKILL Trident Z5 32GB (2 × 16GB) DDR5 6000MHz RAM",
-  },
-  {
-    name: "Storage",
-    value: "Samsung 990 PRO PCIe 1TB NVME GEN4",
-  },
-  {
-    name: "Case",
-    value: "Lian Li o11 Vision Case",
-  },
-  {
-    name: "RGB Fans",
-    value: "with 8X Aegis Case Fans infinity",
-  },
-  {
-    name: "Operating System",
-    value: "Windows 11 Pro",
-  },
-];
 
-function Specification() {
+function Specification({product}:{product:Product}) {
+  const specs = [
+    {
+      name: "CPU",
+      value: product.details.cpu,
+    },
+    {
+      name: "CPU Cooler",
+      value: product.details.cpuCooler,
+    },
+    {
+      name: "Motherboard",
+      value: product.details.motherboard,
+    },
+    {
+      name: "Power Supply",
+      value:
+        product.details.powerSupply,
+    },
+    {
+      name: "Graphics Card",
+      value: product.details.graphicCards,
+    },
+    {
+      name: "RAM",
+      value: product.details.ram,
+    },
+    {
+      name: "Storage",
+      value: product.details.storage,
+    },
+    {
+      name: "Case",
+      value: product.details.cpuCase,
+    },
+    {
+      name: "RGB Fans",
+      value: product.details.rgbFans,
+    },
+    {
+      name: "Operating System",
+      value: product.details.operatingSystems,
+    },
+  ];
   return (
     <div className="py-8 ">
       <h1 className="text-2xl tracking-widest font-bold mb-4 uppercase">full Specification</h1>

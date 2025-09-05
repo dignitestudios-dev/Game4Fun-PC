@@ -24,7 +24,7 @@ function SuggestedPcBuilds() {
       <h1 className="text-2xl uppercase font-semibold mb-4">
         Suggested Pc Builds
       </h1>
-      <div className="flex flex-wrap gap-4 justify-center md:justify-between md:px-12">
+      <div className="flex flex-wrap gap-4 justify-center  md:px-12">
         {data?.products.map((build, idx) => (
           <ShopCard {...build} key={idx} />
         ))}

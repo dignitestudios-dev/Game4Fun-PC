@@ -5,7 +5,7 @@ import Autoplay from "embla-carousel-autoplay"; // <- Import Autoplay Plugin
 import Image from "next/image";
 
 type PropType = {
-  slides: string[];
+  slides: Image[];
   options?: EmblaOptionsType;
 };
 
@@ -54,7 +54,7 @@ const EmblaCarousel: React.FC<PropType> = ({ slides, options }) => {
                   bg-black/50 backdrop-blur-md  shadow-lg"
                 >
                   <Image
-                    src={img}
+                    src={img.file}
                     alt="carousel-img"
                     width={500}
                     height={500}
@@ -82,7 +82,7 @@ const EmblaCarousel: React.FC<PropType> = ({ slides, options }) => {
                   }`}
               >
                 <Image
-                  src={img}
+                  src={slides[index].file}
                   alt={`thumb-${index}`}
                   width={100}
                   height={80}

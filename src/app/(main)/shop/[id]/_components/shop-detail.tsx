@@ -4,45 +4,51 @@ import GraphicCardIcon from "@/components/icons/graphic-card-icon";
 // import { title } from "process";
 import CardBtn from "@/components/ui/card-btn";
 import ArrowBtn from "@/components/ui/arrow-btn";
+import ProcessorIcon from "@/components/icons/processor-icon";
+import CpuCase from "@/components/icons/cpu-case";
+import RamIcon from "@/components/icons/ram-icon";
+import MotherboardIcon from "@/components/icons/mother-board-icon";
+import PsuIcon from "@/components/icons/psu-icon";
+import StorageIcon from "@/components/icons/storage-icon";
 const OPTIONS: EmblaOptionsType = {};
 // const SLIDE_COUNT = 10;
-const SLIDES = [
-  "/images/pc.png",
-  "/images/pc.png",
-  "/images/pc.png",
-  "/images/pc.png",
-];
-const specs = [
-  {
-    icon: <GraphicCardIcon />,
-    title: "Zotac RTX 5070 Ti 16GB Graphics Card",
-  },
-  {
-    icon: <GraphicCardIcon />,
-    title: "Zotac RTX 5070 Ti 16GB Graphics Card",
-  },
-  {
-    icon: <GraphicCardIcon />,
-    title: "Zotac RTX 5070 Ti 16GB Graphics Card",
-  },
-  {
-    icon: <GraphicCardIcon />,
-    title: "Zotac RTX 5070 Ti 16GB Graphics Card",
-  },
-  {
-    icon: <GraphicCardIcon />,
-    title: "Zotac RTX 5070 Ti 16GB Graphics Card",
-  },
-  {
-    icon: <GraphicCardIcon />,
-    title: "Zotac RTX 5070 Ti 16GB Graphics Card",
-  },
-  {
-    icon: <GraphicCardIcon />,
-    title: "Zotac RTX 5070 Ti 16GB Graphics Card",
-  },
-];
-function ShopDetail() {
+// const SLIDES = [
+//   "/images/pc.png",
+//   "/images/pc.png",
+//   "/images/pc.png",
+//   "/images/pc.png",
+// ];
+// const specs = [
+//   {
+//     icon: <GraphicCardIcon />,
+//     title: "Zotac RTX 5070 Ti 16GB Graphics Card",
+//   },
+//   {
+//     icon: <GraphicCardIcon />,
+//     title: "Zotac RTX 5070 Ti 16GB Graphics Card",
+//   },
+//   {
+//     icon: <GraphicCardIcon />,
+//     title: "Zotac RTX 5070 Ti 16GB Graphics Card",
+//   },
+//   {
+//     icon: <GraphicCardIcon />,
+//     title: "Zotac RTX 5070 Ti 16GB Graphics Card",
+//   },
+//   {
+//     icon: <GraphicCardIcon />,
+//     title: "Zotac RTX 5070 Ti 16GB Graphics Card",
+//   },
+//   {
+//     icon: <GraphicCardIcon />,
+//     title: "Zotac RTX 5070 Ti 16GB Graphics Card",
+//   },
+//   {
+//     icon: <GraphicCardIcon />,
+//     title: "Zotac RTX 5070 Ti 16GB Graphics Card",
+//   },
+// ];
+function ShopDetail({product}:{product:Product}) {
   return (
     <div className="relative w-full">
       <div className="bg-[url(/images/p-img.png)] bg-no-repeat bg-contain absolute -top-32 left-0  w-full h-full" />
@@ -51,13 +57,13 @@ function ShopDetail() {
       <div className="flex flex-wrap gap-4">
         <div className="bg-[url(/images/gradient-bg.png)]  bg-no-repeat bg-contain absolute  w-[100%] h-full" />
         <div className=" md:w-[50%] px-4">
-          <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+          <EmblaCarousel slides={product.images} options={OPTIONS} />
         </div>
         <div className="md:w-[45%] px-4">
           <div className="flex flex-col gap-2">
-            <div className="flex ">
+            <div className="flex justify-between">
               <h1 className="text-xl md:text-3xl font-bold tracking-widest pr-8 uppercase">
-                Odin 1.0 – Ryzen 9 9950X & RTX 5070 Ti 16GB
+                {product.productName}
               </h1>
               <span className="flex items-center gap-1 font-semibold">
                 <span>
@@ -65,7 +71,7 @@ function ShopDetail() {
                 </span>
                 <span className="text-gradient text-4xl tracking-wider">
                   {" "}
-                  1500
+                  {product.price}
                 </span>
               </span>
             </div>
@@ -74,13 +80,48 @@ function ShopDetail() {
             </p>
             <div className="w-full bg-custom-gradient h-[.9px] " />
             <div className="text-white flex flex-col gap-4 py-4">
-              {specs.map((sp, idx) => (
-                <div key={idx}>
+         
+                <div >
                   <div className="flex gap-5 items-center ">
-                    {sp.icon} {sp.title}
+                    <ProcessorIcon /> {product.details.cpu}
                   </div>
                 </div>
-              ))}
+                <div >
+                  <div className="flex gap-5 items-center ">
+                    <CpuCase  /> {product.details.cpuCase}
+                  </div>
+                </div>
+                <div >
+                  <div className="flex gap-5 items-center ">
+                    <CpuCase /> {product.details.cpuCooler}
+                  </div>
+                </div>
+                <div >
+                  <div className="flex gap-5 items-center ">
+                    <GraphicCardIcon /> {product.details.gpuManufactured} {product.details.graphicCards}
+                  </div>
+                </div>
+                <div >
+                  <div className="flex gap-5 items-center ">
+                    <MotherboardIcon /> {product.details.motherboard}
+                  </div>
+                </div>
+                <div >
+                  <div className="flex gap-5 items-center ">
+                    <RamIcon /> {product.details.ram}
+                  </div>
+                </div>
+                <div >
+                  <div className="flex gap-5 items-center ">
+                    <StorageIcon /> {product.details.storage}
+                  </div>
+                </div>
+                <div >
+                  <div className="flex gap-5 items-center ">
+                    <PsuIcon /> {product.details.powerSupply}
+                  </div>
+                </div>
+            
             </div>
             <div className="flex gap-8">
               <ArrowBtn title="add to cart" />{" "}

@@ -34,7 +34,7 @@ function ShopCard({
   details,
 }: Product) {
   return (
-    <Link href={`/shop/${_id}`} className="bg-[#2A292959]  rounded-2xl group w-[300px]  text-white max-w-sm p-5 flex flex-col gap-4 shadow-lg">
+    <Link href={`/shop/${_id}`} className="bg-[#2A292959]  rounded-2xl group w-[300px]  text-white max-w-sm p-5 flex flex-col gap-4 ">
       <div className="flex justify-between relative py-2">
         <div className="absolute bg-custom-gradient w-[300px] -left-5 h-2 -top-5 rounded-t-2xl z-[10] group-hover:h-72  transition-all duration-500" />
         <div className="flex flex-col gap-8  justify-center text-xs font-semibold z-20 tracking-widest text-white/70">
@@ -52,7 +52,7 @@ function ShopCard({
           </div>
         </div>
         <Image
-          src={images?.[0].file ? images?.[0].file : ""}
+          src={images?.[0]?.file ? images?.[0].file : ""}
           width={500}
           height={500}
           alt="PC Build"
@@ -70,35 +70,43 @@ function ShopCard({
       <div className="grid grid-cols-2 gap-4 text-xs text-white/90">
      
         <div className="flex gap-1 items-center">
-          <ProcessorIcon/>
+            <div className="w-1/5" >
+          <ProcessorIcon />
+          </div>
           <div>
             {" "}
             <p className="font-medium">{details?.processorManufactured}</p>
-            <p>{details?.processor}</p>
+            <p className="text-[10px]">{details?.processor}</p>
           </div>
         </div>
         <div className="flex gap-1 items-center">
+          <div className="w-1/5" >
           <GraphicCardIcon />
+          </div>
           <div>
             {" "}
           <p className="font-medium">{details?.gpuManufactured}</p>
-            <p>{details?.graphicCards}</p>
+            <p className="text-[10px]">{details?.graphicCards}</p>
           </div>
         </div>
         <div className="flex gap-1 items-center">
+              <div className="w-1/5" >
           <RamIcon/>
+          </div>
           <div>
             {" "}
             <p className="font-medium">{details?.ramManufactured}</p>
-            <p>{details?.ram}</p>
+            <p className="text-[10px]">{details?.ram}</p>
           </div>
         </div>
         <div className="flex gap-1 items-center">
+          <div className="w-1/5" >
           <MotherboardIcon />
+          </div>
           <div>
             {" "}
             <p className="font-medium">Motherboard</p>
-            <p>{details?.motherboard}</p>
+            <p className="text-[10px]">{details?.motherboard}</p>
           </div>
         </div>
       

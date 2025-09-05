@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import Cookies from "js-cookie";
 export const productApi = createApi({
   reducerPath: "productApi",
-  baseQuery:  fetchBaseQuery({
+  baseQuery: fetchBaseQuery({
     baseUrl: "https://1b75nbwh-8000.inc1.devtunnels.ms",
     prepareHeaders: (headers) => {
       // headers.set("Content-Type", "application/json");
@@ -11,7 +11,7 @@ export const productApi = createApi({
       }
       return headers;
     },
-  }), 
+  }),
   tagTypes: ["Product", "Cart"],
   endpoints: (builder) => ({
     // addProduct: builder.mutation<any, { name: string; price: number; [key: string]: any }>({
@@ -23,8 +23,8 @@ export const productApi = createApi({
     //   invalidatesTags: ["Product"],
     // }),
 
-    getAllProducts: builder.query<ProductsResponse, { limit:string }>({
-      query: ({limit}) => `/product/getAllProducts?limit=${limit}`,
+    getAllProducts: builder.query<ProductsResponse, { limit: string }>({
+      query: ({ limit }) => `/product/getAllProducts?limit=${limit}`,
       providesTags: ["Product"],
     }),
 
@@ -33,7 +33,10 @@ export const productApi = createApi({
       providesTags: (result, error, id) => [{ type: "Product", id }],
     }),
 
-    filterProducts: builder.query<ProductsResponse, Record<string, string | number>>({
+    filterProducts: builder.query<
+      ProductsResponse,
+      Record<string, string | number>
+    >({
       query: (params) => ({
         url: "/products/filter",
         params,
@@ -42,11 +45,31 @@ export const productApi = createApi({
     }),
 
     getFilters: builder.query<CpuGraphicResponse, void>({
-      query: () => "/products/filters",
+      query: () => "/product/getFilters",
     }),
-    addToCart: builder.mutation<CartResponse, { productId: string; quantity: number }>({
+    addToCart: builder.mutation<
+      CartResponse,
+      { productId: string; quantity: number }
+    >({
       query: (body) => ({
         url: "/cart/add",
+        method: "POST",
+        body,
+      }),
+      invalidatesTags: ["Cart"],
+    }),
+    aiSuggestion: builder.mutation<
+      SystemBenchmark,
+      {
+        Processor: string;
+        GraphicCard: string;
+        RAM: string;
+        ScreenResolution: string;
+        FavoriteGames: string[];
+      }
+    >({
+      query: (body) => ({
+        url: "/product/aiSuggestionForm",
         method: "POST",
         body,
       }),
@@ -69,11 +92,11 @@ export const productApi = createApi({
 });
 
 export const {
-//   useAddProductMutation,
   useGetAllProductsQuery,
   useGetSingleProductQuery,
   useFilterProductsQuery,
   useGetFiltersQuery,
+  useAiSuggestionMutation,
   useAddToCartMutation,
   useRemoveFromCartMutation,
   useGetCartQuery,

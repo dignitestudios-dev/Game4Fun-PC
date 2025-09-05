@@ -1,8 +1,11 @@
 import GradientUnderlineTitle from "@/components/ui/gradient-underlined-title"
 import StyledHeader from "@/components/ui/styled-title"
 import FAQCard from "./ui/faq-card"
+import { useGetFaqQuery } from "@/services/faq-api"
 
 function FAQ() {
+ const {data} =  useGetFaqQuery();
+ console.log(data)
   return (
     <section id="faq" className="md:px-12  py-24">
         <div className="flex flex-col items-center justify-center gap-4 w-full" >
@@ -14,8 +17,8 @@ function FAQ() {
         </div>
         <div className="grid grid-col-1 lg:grid-cols-2 gap-4 items-center p-12 md:px-20" >
 
-             {[1, 2, 3,4,5,6,7,8,9,10].map((m, idx) => (
-          <FAQCard key={idx} />
+             {data?.data.map((faq, idx) => (
+          <FAQCard faq={faq}  key={idx} />
         ))}
         </div>
         

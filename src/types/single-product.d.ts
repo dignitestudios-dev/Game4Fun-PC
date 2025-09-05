@@ -1,4 +1,4 @@
- interface ProductImage {
+interface ProductImage {
   _id: string;
   file: string;
   fileExtension: string;
@@ -7,7 +7,7 @@
   __v: number;
 }
 
- interface ProductDetails {
+interface ProductDetails {
   _id: string;
   productId: string;
   cpu: string;
@@ -37,8 +37,16 @@
   updatedAt: string;
   __v: number;
 }
-
- interface Product {
+interface Game {
+  _id: string;
+  productId: string;
+  gameName: string;
+  image: string;
+  createdAt: string;
+  updatedAt: string;
+  __v: number;
+}
+interface Product {
   _id: string;
   productName: string;
   description: string;
@@ -49,9 +57,10 @@
   updatedAt: string;
   __v: number;
   details: ProductDetails;
+  supportedGames: Game[];
 }
 
- interface SingleProductResponse {
+interface SingleProductResponse {
   success: boolean;
   product: Product;
 }
