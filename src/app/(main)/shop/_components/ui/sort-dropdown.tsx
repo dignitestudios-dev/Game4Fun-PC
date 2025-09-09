@@ -1,20 +1,17 @@
 "use client";
-import { useState } from "react";
+import React, { SetStateAction, useState } from "react";
 import { ChevronDown } from "lucide-react";
 
-const SortDropdown = () => {
+const SortDropdown = ({setSortBy , sortBy}:{setSortBy:React.Dispatch<SetStateAction<{label:string; val:string}>> ,sortBy:{label:string , val:string}}) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState("Sort By");
-
-  const options = [
-    "By Popularity",
-    "Latest",
-    "Alphabetical (Ascending)",
-    "Alphabetical (Descending)",
-  ];
-
-  const handleSelect = (option: string) => {
-    setSelected(option);
+const options = [
+  // { label: "By Popularity", value: "popularity" },
+  { label: "Latest", value: "latest" },
+  { label: "Alphabetical (Ascending)", value: "alphabetic_asc" },
+  { label: "Alphabetical (Descending)", value: "alphabetic_desc" },
+];
+  const handleSelect = (option: {label:string; val:string}) => {
+    setSortBy(option);
     setIsOpen(false);
   };
 
@@ -23,9 +20,9 @@ const SortDropdown = () => {
       {/* Dropdown Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-between w-56 bg-[#1d1d1d] border border-[#4c4c4c] text-white px-4 py-2 rounded-full shadow-sm"
+        className="flex items-center justify-between min-w-56 bg-[#1d1d1d] border border-[#4c4c4c] text-white px-4 py-2 rounded-full shadow-sm"
       >
-        {selected}
+        {sortBy.label}
         <ChevronDown className="h-4 w-4 ml-2" />
       </button>
 
@@ -35,12 +32,12 @@ const SortDropdown = () => {
           {options.map((option, idx) => (
             <button
               key={idx}
-              onClick={() => handleSelect(option)}
+              onClick={() => handleSelect({label:option.label , val:option.value})}
               className={`block w-full text-left px-4 py-2 rounded-md text-white hover:bg-[#3a3a3a] ${
-                selected === option ? "bg-[#3a3a3a]" : ""
+                sortBy.val === option.value ? "bg-[#3a3a3a]" : ""
               }`}
             >
-              {option}
+              {option.label}
             </button>
           ))}
         </div>

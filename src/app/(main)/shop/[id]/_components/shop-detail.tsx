@@ -1,3 +1,4 @@
+"use client";
 import { EmblaOptionsType } from "embla-carousel";
 import EmblaCarousel from "./embla-crousel";
 import GraphicCardIcon from "@/components/icons/graphic-card-icon";
@@ -10,6 +11,9 @@ import RamIcon from "@/components/icons/ram-icon";
 import MotherboardIcon from "@/components/icons/mother-board-icon";
 import PsuIcon from "@/components/icons/psu-icon";
 import StorageIcon from "@/components/icons/storage-icon";
+import { useAddToCartMutation } from "@/services/product-api";
+import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 const OPTIONS: EmblaOptionsType = {};
 // const SLIDE_COUNT = 10;
 // const SLIDES = [
@@ -48,7 +52,35 @@ const OPTIONS: EmblaOptionsType = {};
 //     title: "Zotac RTX 5070 Ti 16GB Graphics Card",
 //   },
 // ];
-function ShopDetail({product}:{product:Product}) {
+function ShopDetail({ product }: { product: Product }) {
+  const [addToCart] = useAddToCartMutation();
+  const router = useRouter();
+  const handleAddCart = async () => {
+    try {
+      const res = await addToCart({
+        action: "add",
+        quantity: 1,
+        productId: product._id,
+      }).unwrap();
+      toast.success(res.message, {
+        style: {
+          border: "2px solid #d744d9",
+          background: "black",
+          color: "white",
+          padding: "16px",
+        },
+        iconTheme: {
+          primary: "#d744d9", // checkmark color
+          secondary: "black", // circle background
+        },
+      });
+    } catch (error: any) {//eslint-disable-line
+      
+
+      console.log(error);
+      // toast.error(error.data.message);
+    }
+  };
   return (
     <div className="relative w-full">
       <div className="bg-[url(/images/p-img.png)] bg-no-repeat bg-contain absolute -top-32 left-0  w-full h-full" />
@@ -80,52 +112,83 @@ function ShopDetail({product}:{product:Product}) {
             </p>
             <div className="w-full bg-custom-gradient h-[.9px] " />
             <div className="text-white flex flex-col gap-4 py-4">
-         
-                <div >
-                  <div className="flex gap-5 items-center ">
-                    <ProcessorIcon /> {product.details.cpu}
-                  </div>
+              <div>
+                <div className="flex gap-5 items-center ">
+                  <ProcessorIcon /> {product.details.cpu}
                 </div>
-                <div >
-                  <div className="flex gap-5 items-center ">
-                    <CpuCase  /> {product.details.cpuCase}
-                  </div>
+              </div>
+              <div>
+                <div className="flex gap-5 items-center ">
+                  <CpuCase /> {product.details.cpuCase}
                 </div>
-                <div >
-                  <div className="flex gap-5 items-center ">
-                    <CpuCase /> {product.details.cpuCooler}
-                  </div>
+              </div>
+              <div>
+                <div className="flex gap-5 items-center ">
+                  <CpuCase /> {product.details.cpuCooler}
                 </div>
-                <div >
-                  <div className="flex gap-5 items-center ">
-                    <GraphicCardIcon /> {product.details.gpuManufactured} {product.details.graphicCards}
-                  </div>
+              </div>
+              <div>
+                <div className="flex gap-5 items-center ">
+                  <GraphicCardIcon /> {product.details.gpuManufactured}{" "}
+                  {product.details.graphicCards}
                 </div>
-                <div >
-                  <div className="flex gap-5 items-center ">
-                    <MotherboardIcon /> {product.details.motherboard}
-                  </div>
+              </div>
+              <div>
+                <div className="flex gap-5 items-center ">
+                  <MotherboardIcon /> {product.details.motherboard}
                 </div>
-                <div >
-                  <div className="flex gap-5 items-center ">
-                    <RamIcon /> {product.details.ram}
-                  </div>
+              </div>
+              <div>
+                <div className="flex gap-5 items-center ">
+                  <RamIcon /> {product.details.ram}
                 </div>
-                <div >
-                  <div className="flex gap-5 items-center ">
-                    <StorageIcon /> {product.details.storage}
-                  </div>
+              </div>
+              <div>
+                <div className="flex gap-5 items-center ">
+                  <StorageIcon /> {product.details.storage}
                 </div>
-                <div >
-                  <div className="flex gap-5 items-center ">
-                    <PsuIcon /> {product.details.powerSupply}
-                  </div>
+              </div>
+              <div>
+                <div className="flex gap-5 items-center ">
+                  <PsuIcon /> {product.details.powerSupply}
                 </div>
-            
+              </div>
             </div>
             <div className="flex gap-8">
-              <ArrowBtn title="add to cart" />{" "}
-              <CardBtn title="but now" bgColor="bg-[#171616]" />
+              <button onClick={handleAddCart}>
+                <ArrowBtn title="add to cart" />{" "}
+              </button>
+              <button
+                onClick={async () => {
+                  try {
+                    const res = await addToCart({
+                      action: "add",
+                      quantity: 1,
+                      productId: product._id,
+                    }).unwrap();
+                    toast.success(res.message, {
+                      style: {
+                        border: "2px solid #d744d9",
+                        background: "black",
+                        color: "white",
+                        padding: "16px",
+                      },
+                      iconTheme: {
+                        primary: "#d744d9",
+                        secondary: "black",
+                      },
+                    });
+                    router.push("/cart");
+                  } catch (error: any) {       //eslint-disable-line
+             
+
+                    console.log(error);
+                    // toast.error(error.data.message);
+                  }
+                }}
+              >
+                <CardBtn title="buy now" bgColor="bg-[#171616]" />
+              </button>
             </div>
           </div>
         </div>

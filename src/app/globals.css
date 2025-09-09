@@ -212,3 +212,39 @@ body {
     transform: rotate(-80deg);
   }
 }
+
+Hide native checkbox
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+/* Style the custom checkbox */
+.custom-checkbox span {
+  display: inline-block;
+  width: 1rem;       /* 16px */
+  height: 1rem;
+  background-color: black;
+  border: 2px solid #ec4899; /* Tailwind pink-500 */
+  border-radius: 0.25rem;    /* slightly rounded */
+  position: relative;
+  cursor: pointer;
+}
+
+/* Checkmark */
+.custom-checkbox span::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 4px;
+  top: 0px;
+  width: 4px;
+  height: 8px;
+  border: solid #ec4899; /* pink */
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Show checkmark when checked */
+.custom-checkbox input[type="checkbox"]:checked + span::after {
+  display: block;
+}

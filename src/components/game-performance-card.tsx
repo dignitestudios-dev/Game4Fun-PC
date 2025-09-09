@@ -44,7 +44,7 @@ const GamePerformanceCard: React.FC<Props> = ({ system }) => {
       {activeBenchmark && (
         <div className="bg-[#1c1b1b] text-white p-6 rounded-2xl shadow-lg flex gap-6 w-full">
           {/* Left side - Game Cover */}
-          <div className="flex flex-col items-center w-1/3">
+          <div className="flex flex-col items-center w-[15%]">
             <Image
               width={500}
               height={500}

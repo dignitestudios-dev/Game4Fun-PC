@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import CartCard from './ui/cart-card'
 import Accordion from './ui/accordion'
@@ -18,12 +19,17 @@ import Accordion from './ui/accordion'
     },
   ];
 
-function Cart() {
+function Cart({cart}:{cart:Cart}) {
   return (
     <div className='w-full md:w-[45%]' >
       <h1 className='text-5xl font-semibold'>Your cart</h1>
       <p>Not ready to checkout? Continue Shopping</p>
-      <CartCard/>
+      {cart?.items.length > 0 ? cart?.items.map((c,idx)=>(
+        <CartCard item={c} key={idx} cartId={cart._id}/>
+
+      )): <div className='text-center py-12'>
+      No Items Found
+      </div>}
       <Accordion items={accordionData}/>
     </div>
   )

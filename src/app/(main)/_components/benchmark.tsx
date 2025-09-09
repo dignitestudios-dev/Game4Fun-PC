@@ -1,6 +1,6 @@
 "use client";
 import GradientUnderlineTitle from "@/components/ui/gradient-underlined-title";
-import React, { useState } from "react";
+import React from "react";
 import BenchmarkDropdown from "./ui/benchmark-dropdown";
 import ArrowBtn from "@/components/ui/arrow-btn";
 import ProcessorIcon from "@/components/icons/processor-icon";
@@ -39,15 +39,14 @@ function Benchmark() {
       FavoriteGames: data.game,
     };
     try {
-      const res = await aiSuggest(newData).unwrap();
-      console.log(res);
+     await aiSuggest(newData).unwrap();
     } catch (error: any) { //eslint-disable-line
       toast.error(error?.data.message);
     }
   };
   if (isLoading) return <Loader />;
   return (
-    <section className="p-8 w-full" id="benchmark">
+    <section className="md:p-8 w-full" id="benchmark">
       <div className="flex flex-col items-center">
         <h4 className="uppercase leading-8 text-gradient tracking-widest font-semibold text-sm">
           pc benchmark

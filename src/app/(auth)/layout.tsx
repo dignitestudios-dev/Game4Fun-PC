@@ -6,10 +6,10 @@ export default function layout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <>
+  return <div className="relative" >
 
 <AuthNavbar/>
   {children}
   <Footer/>
-  </>;
+  </div>;
 }

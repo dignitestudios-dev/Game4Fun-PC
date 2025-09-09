@@ -8,7 +8,7 @@ import DeleteAccount from "./delete-account";
 function Settings() {
   const [active, setActive] = useState(0);
   return (
-    <div className="p-12 z-50 relative">
+    <div className="p-12  relative">
       <div className="bg-[#2A2929CC] rounded-2xl py-8 ">
         <div className="flex ">
           <div className="w-[20%] p-3 relative">

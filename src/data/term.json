@@ -1,0 +1,182 @@
+{
+  "meta": {
+    "effectiveDate": "July 26, 2025",
+    "governingLaw": "State of Florida, United States"
+  },
+  "sections": [
+    {
+      "type": "header",
+      "title": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "content": "By using game4funpcs.com or purchasing through our site, phone, or any other method, you agree to be bound by these Terms. These terms apply to all sales and services unless a separate signed agreement exists."
+    },
+    {
+      "type": "paragraph",
+      "content": "Your electronic agreement to these terms during checkout or any communication with us constitutes a binding legal contract."
+    },
+    {
+      "type": "subheader",
+      "title": "Notice of Arbitration Clause:"
+    },
+    {
+      "type": "paragraph",
+      "content": "By using our services, you agree that any dispute will be resolved through binding arbitration in Polk County, Florida, and not in court."
+    },
+    {
+      "type": "header",
+      "title": "A. General Terms and Conditions"
+    },
+    {
+      "type": "paragraph",
+      "content": "Product Listings: Images or descriptions may vary slightly from delivered items. Specifications can change without notice."
+    },
+    {
+      "type": "paragraph",
+      "content": "Order Acceptance: Orders are confirmed upon payment or written approval. We may cancel or refuse orders at our sole discretion."
+    },
+    {
+      "type": "paragraph",
+      "content": "Sales Rep Limitations: Verbal promises are not binding. Only written statements by a company officer are enforceable."
+    },
+    {
+      "type": "paragraph",
+      "content": "Payment Methods: We accept credit/debit cards, approved financing, and other authorized forms. Financing fees are non-refundable."
+    },
+    {
+      "type": "paragraph",
+      "content": "Shipping Responsibility: All shipments include basic insurance. Address errors or rerouting fees are the customer’s responsibility ($5–$50)."
+    },
+    {
+      "type": "paragraph",
+      "content": "Order Confirmation: Customers must review order details after checkout or via confirmation email."
+    },
+    {
+      "type": "list",
+      "title": "Cancellations",
+      "items": [
+        "4.9% fee if payment was already processed",
+        "15% restocking fee if build has entered Stage 4 (assembly)"
+      ]
+    },
+    {
+      "type": "table",
+      "title": "Returns and Refunds",
+      "columns": [
+        "Condition",
+        "Eligible",
+        "Restocking Fee",
+        "Shipping Funds"
+      ],
+      "rows": [
+        ["Defective (30/60 days)", "Yes", "No", "No"],
+        ["Customer remorse/ no defect", "Yes", "15%", "No"],
+        ["Software or special orders", "No", "N/A", "No"]
+      ],
+      "note": "Refunds are based on current hardware value minus applicable fees. Software sales are final."
+    },
+    {
+      "type": "paragraph",
+      "content": "Right to Refuse Service: We may cancel orders due to fraud, abuse, policy violations, or unverifiable details."
+    },
+    {
+      "type": "paragraph",
+      "content": "Assumption of Risk for Mods: Users requesting overclocking, BIOS mods, or liquid cooling accept full risk. Warranty may be void."
+    },
+    {
+      "type": "paragraph",
+      "content": "Third-Party Software: GAME4FUNPCS is not liable for issues with third-party software or user-installed programs."
+    },
+    {
+      "type": "paragraph",
+      "content": "Disclaimer of Warranties: All systems are sold “as-is” unless otherwise stated. Implied warranties are disclaimed to the extent permitted by law."
+    },
+    {
+      "type": "paragraph",
+      "content": "Force Majeure: We are not liable for delays due to events beyond our control."
+    },
+    {
+      "type": "paragraph",
+      "content": "Digital Signatures and Consent: Your use of our services signifies your consent to digital records and e-signatures under U.S. E-SIGN laws."
+    },
+    {
+      "type": "paragraph",
+      "content": "Local Florida Support: Customers in Florida may drop off or pick up systems for service. No shipping required for local support."
+    },
+    {
+      "type": "paragraph",
+      "content": "Out-of-Warranty Support: We may continue to offer labor for upgrades even after warranty expires, at our discretion and subject to quote."
+    },
+    {
+      "type": "header",
+      "title": "B. Open Box and Certified Refurbished Systems"
+    },
+    {
+      "type": "list",
+      "title": "Open Box Systems",
+      "items": [
+        "Open Box systems are lightly used or returned units inspected and verified for functionality.",
+        "They include a 90-day limited hardware warranty, extendable at the time of purchase.",
+        "Lifetime labor for upgrades is included if parts are purchased through GAME4FUNPCS.",
+        "Cosmetic wear (scratches, scuffs, discoloration) is not covered under warranty or grounds for return.",
+        "All Open Box sales are final unless hardware is Dead on Arrival (DOA) within 7 days."
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Certified Refurbished Systems",
+      "items": [
+        "Refurbished systems are repaired or restored to full functionality and certified by GAME4FUNPCS.",
+        "Include a 90-day limited hardware warranty, extendable at the time of purchase.",
+        "Lifetime labor for upgrades applies to the original purchaser, provided parts are purchased through GAME4FUNPCS.",
+        "Cosmetic damage is not covered and is disclosed prior to sale.",
+        "Returns are only accepted if hardware is DOA within 7 days of delivery."
+      ]
+    },
+    {
+      "type": "header",
+      "title": "C. What We Guarantee"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Transparent and easy-to-understand return policies",
+        "Free labor to install compatible parts bought from us",
+        "Lifetime support and diagnostics for original owners",
+        "Fast, honest turnaround on repairs and claims"
+      ]
+    },
+    {
+      "type": "header",
+      "title": "D. Dispute Resolution"
+    },
+    {
+      "type": "list",
+      "items": [
+        "All claims shall be settled by binding arbitration in Polk County, Florida.",
+        "Claims under $5,000 may be resolved in small claims court in Polk County.",
+        "You may opt out of arbitration within 30 days of purchase by submitting a written notice."
+      ]
+    },
+    {
+      "type": "header",
+      "title": "E. Entire Agreement"
+    },
+    {
+      "type": "paragraph",
+      "content": "These Terms, combined with our Warranty and Privacy policies, constitute the full agreement between the customer and GAME4FUNPCS."
+    },
+    {
+      "type": "header",
+      "title": "F. Contact Us"
+    },
+    {
+      "type": "contact",
+      "company": "GAME4FUNPCS",
+      "email": "game4funpcs@gmail.com",
+      "phone": "(689) 269-0097",
+      "address": "Polk County, Florida, USA"
+    }
+  ]
+}

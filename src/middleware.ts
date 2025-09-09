@@ -10,6 +10,7 @@ export function middleware(request: NextRequest) {
     "/create-profile",
     "/forgot-password",
     "/verification",
+    "/cart"
   ];
 
 
@@ -27,5 +28,6 @@ export const config = {
     "/create-profile",
     "/forgot-password",
     "/verification",
+    // "/cart"
   ],
 };

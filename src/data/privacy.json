@@ -1,0 +1,170 @@
+{
+  "meta": {
+    "effectiveDate": "July 26, 2025",
+    "governingLaw": "State of Florida, United States"
+  },
+  "sections": [
+    {
+      "type": "header",
+      "title": "Summary"
+    },
+    {
+      "type": "list",
+      "items": [
+        "We collect only the information needed to process your orders and provide excellent service.",
+        "We do not sell your data",
+        "You stay in control",
+        "We never track you for ads",
+        "This Privacy Policy is part of the overall agreement between the customer and GAME4FUNPCS, including our Terms and Conditions and Limited Warranty Policy."
+      ]
+    },
+    {
+      "type": "header",
+      "title": "A. What Information We Collect"
+    },
+    {
+      "type": "list",
+      "title": "When you place an order or contact us, we may collect:",
+      "items": [
+        "Name",
+        "Email address",
+        "Phone number",
+        "Shipping and billing addresses",
+        "Payment info (processed securely)",
+        "Product preferences or system information"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "We retain data only as long as necessary to:",
+      "items": [
+        "Fulfill your order",
+        "Provide support",
+        "Comply with legal or tax obligations",
+        "Enforce our Terms and Warranty"
+      ],
+      "note": "Typically no longer than 7 years, unless required by law."
+    },
+    {
+      "type": "header",
+      "title": "B. How We Use Your Information"
+    },
+    {
+      "type": "list",
+      "title": "Your information is used to:",
+      "items": [
+        "Process orders and payments",
+        "Provide customer service and shipping updates",
+        "Verify identity to prevent fraud"
+      ],
+      "note": "We never sell, rent, or share your personal information for marketing purposes."
+    },
+    {
+      "type": "header",
+      "title": "C. Who Has Access"
+    },
+    {
+      "type": "paragraph",
+      "content": "Only trusted GAME4FUNPCS staff and essential service providers (e.g., shipping carriers, payment processors, warranty support) may access your information. All third parties are bound by confidentiality and data protection agreements."
+    },
+    {
+      "type": "header",
+      "title": "D. Cookies and Third-Party Tracking"
+    },
+    {
+      "type": "list",
+      "title": "We may allow limited third-party services such as:",
+      "items": [
+        "Google Analytics (anonymous behavior tracking)",
+        "Meta Pixel (site usage insights)",
+        "Financing partners (e.g., Affirm) to present financing options"
+      ],
+      "note": "You can opt out of tracking cookies via your browser settings or extensions. All third-party policies apply separately and are accessible via their platforms."
+    },
+    {
+      "type": "header",
+      "title": "E. Data Security"
+    },
+    {
+      "type": "list",
+      "title": "We protect your data with:",
+      "items": [
+        "SSL encryption",
+        "Secure payment processing",
+        "Internal access controls and industry-standard safeguards"
+      ],
+      "note": "No system is 100% foolproof. In case of a breach, we will notify affected users in compliance with Fla. Stat. § 501.171 and any other applicable laws."
+    },
+    {
+      "type": "header",
+      "title": "F. Access & Control"
+    },
+    {
+      "type": "list",
+      "title": "You have the right to:",
+      "items": [
+        "Access your stored data",
+        "Update or correct it",
+        "Request its deletion"
+      ],
+      "note": "To do so, please email us at game4funpcs@gmail.com with your full name and order number. We will respond within a reasonable time as required by law."
+    },
+    {
+      "type": "header",
+      "title": "G. Children’s Privacy"
+    },
+    {
+      "type": "paragraph",
+      "content": "We do not knowingly collect personal data from individuals under age 13. If you believe a child has submitted information to us, please contact us to have it removed."
+    },
+    {
+      "type": "header",
+      "title": "H. Changes to This Policy"
+    },
+    {
+      "type": "paragraph",
+      "content": "We may update this Privacy Policy to reflect changes in practices, services, or laws. Major updates will be posted on our website or emailed to affected customers before taking effect."
+    },
+    {
+      "type": "header",
+      "title": "I. Contact Us"
+    },
+    {
+      "type": "contact",
+      "company": "GAME4FUNPCS",
+      "email": "game4funpcs@gmail.com",
+      "phone": "(689) 269-0097",
+      "address": "Polk County, Florida, USA"
+    },
+    {
+      "type": "header",
+      "title": "J. Disclosure of Information"
+    },
+    {
+      "type": "list",
+      "title": "We may disclose your information:",
+      "items": [
+        "To comply with legal obligations or law enforcement requests",
+        "To prevent fraud, abuse, or violations of our Terms",
+        "During a business transaction such as a merger, sale, or restructuring"
+      ],
+      "note": "We will take steps to protect your information during such events."
+    },
+    {
+      "type": "header",
+      "title": "K. State-Specific Rights"
+    },
+    {
+      "type": "paragraph",
+      "content": "Depending on your state of residence, you may have specific legal rights, including the right to request your data, correct or delete it, and opt out of its sale or sharing (we do not sell your data)."
+    },
+    {
+      "type": "subheader",
+      "title": "Florida Residents:"
+    },
+    {
+      "type": "paragraph",
+      "content": "You are protected under the Florida Deceptive and Unfair Trade Practices Act (FDUTPA). To report misuse, contact the Florida Attorney General at myfloridalegal.com."
+    }
+  ]
+}
