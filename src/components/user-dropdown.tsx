@@ -40,13 +40,9 @@ export default function UserDropdown() {
     return () => document.body.classList.remove("overflow-hidden");
   }, [popup]);
 
-  // const handleClose = () => {
-  //   setPopup(!popup);
-  // };
   return (
     <div className="relative z-[999999999999999999]" ref={dropdownRef}>
       <TermsPopup isOpen={popup} onClose={() => setPopup(false)} />
-      {/* <PrivacyPopup isOpen={privacyPopup} onClose={()=>setPrivacyPopup(false)} /> */}
       <WarrantyPopup
         isOpen={warrantyPopup}
         onClose={() => setWarrantyPopup(false)}
@@ -72,7 +68,6 @@ export default function UserDropdown() {
         </div>
       </button>
 
-      {/* Dropdown */}
       {isOpen && (
       <div className="absolute right-0 my-2 py-2 w-48 rounded-2xl 
   bg-white/90 dark:bg-neutral-900/90 shadow-lg 
@@ -139,8 +134,6 @@ export default function UserDropdown() {
             <li>
               <button
                 onClick={async () => {
-                  // const res = await logout({});
-                  // console.log(res)
                   Cookies.remove("token");
                   toast.success("Logout Successfully");
                   setIsOpen(!isOpen);
