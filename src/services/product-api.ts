@@ -13,11 +13,8 @@ const baseQuery = fetchBaseQuery({
 
 const baseQueryWithReauth: typeof baseQuery = async (args, api, extraOptions) => {
   const result = await baseQuery(args, api, extraOptions);
-
   if (result.error && result.error.status === 401) {
-    // clear token if you want
     Cookies.remove("token");
-    // redirect to login
     window.location.href = "/sign-in";
   }
 

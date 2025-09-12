@@ -211,7 +211,7 @@ const CyclingImageAnimation: React.FC = () => {
   };
 
   return (
-    <div className="w-1/2 relative h-[80vh] z-10 hidden md:block overflow-hidden">
+    <div className="w-1/2 relative max-h-[650px] h-[600px] z-10 hidden md:block overflow-hidden">
       {imageSets[currentImageSet].map((imageConfig: ImageConfig, index: number) => (
         <motion.div
           key={`image-${currentImageSet}-${index}-${animationPhase}`}

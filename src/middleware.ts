@@ -25,9 +25,9 @@ export const config = {
   matcher: [
     "/sign-in",
     "/sign-up",
-    "/create-profile",
+    // "/create-profile",
     "/forgot-password",
-    "/verification",
+    // "/verification",
     // "/cart"
   ],
 };

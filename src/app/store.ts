@@ -1,4 +1,5 @@
 import { authApi } from "@/services/auth-api";
+import { contactApi } from "@/services/contact-api";
 import { faqApi } from "@/services/faq-api";
 import { productApi } from "@/services/product-api";
 import { configureStore } from "@reduxjs/toolkit";
@@ -9,13 +10,15 @@ export const store = configureStore({
     [authApi.reducerPath]: authApi.reducer,
     [productApi.reducerPath]: productApi.reducer,
     [faqApi.reducerPath]: faqApi.reducer,
+    [contactApi.reducerPath]: contactApi.reducer,
   },
 
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware()
       .concat(authApi.middleware)
       .concat(productApi.middleware)
-      .concat(faqApi.middleware),
+      .concat(faqApi.middleware)
+      .concat(contactApi.middleware),
 });
 setupListeners(store.dispatch);
 export type RootState = ReturnType<typeof store.getState>;
