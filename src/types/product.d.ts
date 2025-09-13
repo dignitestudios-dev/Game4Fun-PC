@@ -18,6 +18,8 @@
   ram: string;
   gpuManufactured:string;
   pcRam:number;
+  powerSupply:string;
+  operatingSystems:string;
   processor:string;
   processorManufactured:string;
   ramManufactured:string;
@@ -38,6 +40,7 @@
   isDeleted: boolean;
   createdAt: string;
   updatedAt: string;
+  supportedGames: Game[];
   __v: number;
   details: ProductDetails;
 }

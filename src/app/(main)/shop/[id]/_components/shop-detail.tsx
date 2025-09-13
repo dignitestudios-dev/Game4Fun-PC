@@ -150,7 +150,7 @@ function ShopDetail({ product }: { product: Product }) {
               </div>
               <div>
                 <div className="flex gap-5 items-center ">
-                  <PsuIcon /> {product.details.powerSupply}
+                  <PsuIcon /> {product.details?.powerSupply}
                 </div>
               </div>
             </div>

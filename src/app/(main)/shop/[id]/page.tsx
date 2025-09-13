@@ -7,7 +7,8 @@ import SupportedGames from "./_components/supported-games";
 import SuggestedPcBuilds from "./_components/suggested-pc-builds";
 import { useGetSingleProductQuery } from "@/services/product-api";
 import Loader from "@/components/ui/loader";
-// import GamePerformanceCard from "@/components/game-performance-card";
+import GamePerformanceCard from "@/components/game-performance-card";
+import SingleGamePerformanceCard from "./_components/single-game-performance-card";
 
 function Page({ params }: { params: Promise<{ id: string }> }) {
   const { id } = React.use(params);
@@ -22,7 +23,7 @@ function Page({ params }: { params: Promise<{ id: string }> }) {
           <Specification product={data.product!} />
           <SupportedGames product={data.product!} />
           {/* <BenchmarkScore product={data?.product!} /> */}
-          {/* <GamePerformanceCard/> */}
+          <SingleGamePerformanceCard games={data.product.supportedGames!} />
           <SuggestedPcBuilds />
         </div>
       </Suspense>

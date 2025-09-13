@@ -97,9 +97,9 @@ const CyclingImageAnimation: React.FC = () => {
       {
         src: "/images/hero/gp1.png",
         alt: "pc8",
-        className: "absolute right-32 bottom-32  ",
-        width: 400,
-        height: 400,
+        className: "absolute right-32 bottom-28  ",
+        width: 420,
+        height: 420,
         animationConfig: {
                enter: { x: "100%", opacity: 0 },
             exit: { x: "100%", opacity: 0 },
@@ -109,9 +109,9 @@ const CyclingImageAnimation: React.FC = () => {
       {
         src: "/images/hero/gp2.png",
         alt: "pc9",
-        className: "absolute left-10 top-20",
-        width: 400,
-        height: 400,
+        className: "absolute left-10 top-16",
+        width: 420,
+        height: 420,
         animationConfig: {
           enter: { x: "-100%", y: "100%", opacity: 0 },
           exit: { x: "-100%", y: "100%", opacity: 0 },

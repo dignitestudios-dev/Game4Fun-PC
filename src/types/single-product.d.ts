@@ -37,15 +37,34 @@ interface ProductDetails {
   updatedAt: string;
   __v: number;
 }
-interface Game {
+ interface Game {
   _id: string;
   productId: string;
   gameName: string;
   image: string;
+  description: string;
   createdAt: string;
   updatedAt: string;
   __v: number;
+
+  // 🔹 FPS stats
+  ultraMinimumFPS: number;
+  ultraAverageFPS: number;
+  ultraMaximumFPS: number;
+
+  highMinimumFPS: number;
+  highAverageFPS: number;
+  highMaximumFPS: number;
+
+  mediumMinimumFPS: number;
+  mediumAverageFPS: number;
+  mediumMaximumFPS: number;
+
+  lowMinimumFPS: number;
+  lowAverageFPS: number;
+  lowMaximumFPS: number;
 }
+
 interface Product {
   _id: string;
   productName: string;
