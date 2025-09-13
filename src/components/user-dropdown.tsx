@@ -62,8 +62,8 @@ export default function UserDropdown() {
             />
           </div>
         </div>
-        <div className="flex items-center gap-1">
-          <h3 className="text-sm font-medium text-foreground">Hi John Alex</h3>
+        <div className=" hidden md:flex items-center gap-1">
+          <h3 className="text-sm font-medium text-foreground">Hi {data.fullName}</h3>
           <ChevronDown />
         </div>
       </button>

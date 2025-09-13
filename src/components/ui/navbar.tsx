@@ -114,7 +114,26 @@ function Navbar() {
           )}
         </div>
 
-        <div className="md:hidden z-50">
+        <div className="md:hidden z-50 flex gap-2">
+          {" "}
+          {Cookies.get("token") && data && (
+            <Link
+              href="/cart"
+              className="bg-[linear-gradient(to_right,#C100FF,#FFBE96)] p-[1.2px] rounded-full flex"
+            >
+              <div className="bg-white dark:bg-black rounded-full w-12 h-12 flex items-center justify-center">
+                <Image
+                  src="/images/cart-icon.png"
+                  alt="cart"
+                  width={23}
+                  height={23}
+                />
+              </div>
+            </Link>
+          )}
+          {Cookies.get("token") && data && (
+               <UserDropdown />
+          )}
           <button onClick={() => setSidebarOpen(!sidebarOpen)}>
             {sidebarOpen ? (
               <X size={28} className="text-white" />
@@ -155,6 +174,13 @@ function Navbar() {
               </Link>
             );
           })}
+          {/* <Link
+            href={"/cart"}
+            onClick={() => setSidebarOpen(false)}
+            className="hover:text-gradient transition"
+          >
+            {"Cart"}
+          </Link> */}
         </div>
       </div>
     </>

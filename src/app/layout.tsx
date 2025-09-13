@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="overflow-x-hidden">
       <body
         suppressHydrationWarning
         className={`${inter.className} antialiased max-w-screen-2xl mx-auto scroll-smooth overflow-x-hidden`}

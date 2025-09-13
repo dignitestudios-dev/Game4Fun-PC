@@ -37,13 +37,13 @@ function ChangePassword() {
     }
   };
   return (
-    <div className="py-2 pl-8 w-full h-screen">
+    <div className="py-2 md:pl-8 w-full md:h-screen">
       <h1 className="uppercase text-gradient text-2xl font-semibold mb-8 tracking-wider">
         Change password
       </h1>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col gap-3 w-[400px]"
+        className="flex flex-col gap-3 md:w-[400px]"
       >
         <Input label="Old Password" {...register("oldPassword")} />
         <FormErrorMessage message={errors?.oldPassword?.message} />

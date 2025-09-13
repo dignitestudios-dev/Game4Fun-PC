@@ -22,7 +22,7 @@ function DeleteAccount() {
     }
   };
   return (
-    <div className="py-2 pl-8 w-full h-screen">
+    <div className="py-2 md:pl-8 w-full md:h-screen">
       <h1 className="uppercase text-gradient text-2xl font-semibold mb-4 tracking-wider">
         Delete Account
       </h1>
@@ -31,7 +31,7 @@ function DeleteAccount() {
         including your profile, account information, and any saved preferences,
         will be removed from our system.{" "}
       </p>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-3 w-[500px]">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-3 md:w-[500px]">
         <Input label="Enter Password" value={pass} onChange={e=>setPass(e.target.value)} />
         <p className="text-[#ADADAD] text-sm">
           You must enter your password in order to delete your account
