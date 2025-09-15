@@ -31,7 +31,8 @@ function GameTagsInput({ title, icon, name, error, setValue, watch }: Props) {
   };
 
   return (
-    <div className="bg-[#1b1a1a] relative p-3 rounded-2xl md:w-[40%] w-[80%]">
+    <div className="flex flex-col   md:w-[40%] w-[80%]">
+    <div className="bg-[#1b1a1a] relative p-3 rounded-2xl">
       <div className="flex gap-4 items-center">
         {icon}
         <div className="w-full">
@@ -48,16 +49,21 @@ function GameTagsInput({ title, icon, name, error, setValue, watch }: Props) {
             />
           </div>
           {/* Tags Display */}
-          <div className="flex flex-wrap gap-2 mt-2">
+       
+          {error && <p className="text-red-500 text-xs mt-1">{error}</p>}
+        </div>
+      </div>
+    </div>
+       <div className="flex flex-wrap gap-2 mt-2">
             {tags.map((tag, idx) => (
               <span
                 key={idx}
-                className="bg-purple-600 text-white px-3 py-1 rounded-full text-xs flex items-center gap-2"
+                className="bg-[#1b1a1a] text-white px-3 py-3 rounded-xl text-xs flex items-center gap-2"
               >
                 {tag}
                 <button
                   type="button"
-                  className="ml-1 text-red-300 hover:text-red-500"
+                  className="ml-1 text-white hover:text-red-500"
                   onClick={() => removeTag(tag)}
                 >
                   ✕
@@ -65,10 +71,7 @@ function GameTagsInput({ title, icon, name, error, setValue, watch }: Props) {
               </span>
             ))}
           </div>
-          {error && <p className="text-red-500 text-xs mt-1">{error}</p>}
-        </div>
-      </div>
-    </div>
+          </div>
   );
 }
 

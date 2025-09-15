@@ -19,7 +19,6 @@ import Loader from "@/components/ui/loader";
 
 function Benchmark() {
   const [aiSuggest, { data, isLoading }] = useAiSuggestionMutation();
-
   const {
     register,
     handleSubmit,
@@ -29,7 +28,11 @@ function Benchmark() {
   } = useForm<BenchmarkFormData>({
     resolver: zodResolver(BenchmarkSchema),
   });
-
+  const tags: string[] = watch("game") || [];
+  const removeTag = (tag: string) => {
+    const newTags = tags.filter((t) => t !== tag);
+    setValue("game", newTags, { shouldValidate: true });
+  };
   const onSubmit = async (data: BenchmarkFormData) => {
     const newData = {
       Processor: data.processor,
@@ -89,6 +92,7 @@ function Benchmark() {
               error={errors.resolution?.message}
             />
 
+{/* <div className=""> */}
             <GameTagsInput
               icon={<GameIcon width="90" height="90" />}
               title="Game"
@@ -97,6 +101,22 @@ function Benchmark() {
               watch={watch}
               error={errors.game?.message}
             />
+               {/* {tags.map((tag, idx) => (
+              <span
+                key={idx}
+                className="bg-purple-600 text-white px-3 py-1 rounded-full text-xs flex items-center gap-2"
+              >
+                {tag}
+                <button
+                  type="button"
+                  className="ml-1 text-red-300 hover:text-red-500"
+                  onClick={() => removeTag(tag)}
+                >
+                  ✕
+                </button>
+              </span>
+            ))}
+             </div> */}
             <button type="submit" className="w-full flex justify-center mt-6">
               <ArrowBtn title="get results" />
             </button>
