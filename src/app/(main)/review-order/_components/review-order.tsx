@@ -5,11 +5,9 @@ import OrderSummary from "./order-summary";
 import { useGetCartQuery } from "@/services/product-api";
 import CartCard from "../../cart/_components/ui/cart-card";
 
-import {useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import toast from "react-hot-toast";
-import {
-  useStripe,
-} from "@stripe/react-stripe-js";
+import { useStripe } from "@stripe/react-stripe-js";
 import { useCheckoutMutation } from "@/services/checkout-api";
 import CardNumberWithBrand from "./ui/card-number-brand";
 import Loader from "@/components/ui/loader";
@@ -17,9 +15,10 @@ import Loader from "@/components/ui/loader";
 function ReviewOrder() {
   const { data } = useGetCartQuery();
   const params = useSearchParams();
-
+  const last4 = params.get("last4");
+  const brand = params.get("brand");
   const stripe = useStripe();
-  const [checkout , {isLoading}] = useCheckoutMutation();
+  const [checkout, { isLoading }] = useCheckoutMutation();
 
   const [showPopup, setShowPopup] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -59,7 +58,6 @@ function ReviewOrder() {
 
       if (res?.data?.success) {
         const clientSecret = res.data.data.clientSecret;
-
         const { error: confirmError, paymentIntent } =
           await stripe.confirmCardPayment(clientSecret, {
             payment_method: paymentMethodId,
@@ -79,7 +77,8 @@ function ReviewOrder() {
           toast.error((res.error.data as any)?.message); //eslint-disable-line
         }
       }
-    } catch (err: any) { //eslint-disable-line
+    } catch (err: any) {  //eslint-disable-line
+    
       console.error(err);
       toast.error("Something went wrong");
     } finally {
@@ -87,7 +86,7 @@ function ReviewOrder() {
     }
   };
 
-  if(loading || isLoading) return <Loader/>
+  if (loading || isLoading) return <Loader />;
 
   return (
     <div>
@@ -95,19 +94,19 @@ function ReviewOrder() {
       <div className="w-[90%] mx-auto flex md:flex-row flex-col justify-between">
         <div className="md:w-[45%] flex flex-col gap-3">
           <h1 className="text-2xl font-semibold">Delivery Address</h1>
-          <p>{params.get("address")}</p>
+          <p className="w-full bg-[#1d1d1d] px-2 py-4 rounded-full border border-[#4d4d4d]">{params.get("address")}</p>
 
           <h1 className="text-2xl font-semibold">Payment Method</h1>
 
           {/* Show masked card from params */}
-          <CardNumberWithBrand cardNumber={params.get("cardNumber")} />
+          <CardNumberWithBrand last4={last4} brand={brand!} />
 
           <h1 className="text-2xl font-semibold mt-4">Order</h1>
           {data?.cart.items.map((c, idx) => (
             <CartCard key={idx} cartId={data?.cart._id} item={c} />
           ))}
         </div>
-{/* 
+        {/* 
        
         <button onClick={handlePlaceOrder} disabled={loading}>
           <CardBtn
@@ -115,12 +114,13 @@ function ReviewOrder() {
             bgColor="bg-[#141414]"
           />
         </button> */}
-
-        <OrderSummary
+{data?.cart &&       <OrderSummary
+        data={data.cart}
           showPopup={showPopup}
           setShowPopup={setShowPopup}
           handlePlaceOrder={handlePlaceOrder}
-        />
+        />  }
+     
       </div>
     </div>
   );

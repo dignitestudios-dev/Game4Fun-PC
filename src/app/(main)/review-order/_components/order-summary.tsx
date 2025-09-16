@@ -7,9 +7,10 @@ import React, { SetStateAction } from 'react'
 interface Props {
   handlePlaceOrder:()=> void
   showPopup:boolean;
-  setShowPopup:React.Dispatch<SetStateAction<boolean>>
+  setShowPopup:React.Dispatch<SetStateAction<boolean>>;
+  data: Cart
 }
-function OrderSummary({handlePlaceOrder , showPopup }:Props) {
+function OrderSummary({handlePlaceOrder , showPopup ,data}:Props) {
   const router = useRouter()
 
 
@@ -19,7 +20,7 @@ function OrderSummary({handlePlaceOrder , showPopup }:Props) {
          <div className="mt-4">
         <div className="flex justify-between py-2 text-sm">
           <span>Subtotal</span>
-          <span>$1500</span>
+          <span>${data.totalPrice}</span>
         </div>
         <div className="flex justify-between py-2 text-sm border-b border-white/20">
           <span>Shipping</span>
@@ -27,7 +28,7 @@ function OrderSummary({handlePlaceOrder , showPopup }:Props) {
         </div>
         <div className="flex justify-between py-2 font-semibold">
           <span>Total</span>
-          <span>${1500}</span>
+          <span>${data.totalPrice}</span>
         </div>
       </div>
       <div className='flex justify-center items-center py-6'>

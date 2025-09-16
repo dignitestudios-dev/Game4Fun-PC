@@ -4,36 +4,11 @@
 import React, { JSX } from "react";
 
 type Props = {
-  cardNumber?: string | null; // raw card number or last4 from params
+  last4?: string | null; // raw card number or last4 from params
   className?: string;
-  placeholder?: string;
+  brand: string;
 };
 
-function detectCardBrand(num?: string | null) {
-  if (!num) return "unknown";
-  const n = num.replace(/\s+/g, "");
-  if (/^4/.test(n)) return "visa";
-  if (/^(5[1-5]|2(2[2-9]|[3-6]\d|7[01]|720))/.test(n)) return "mastercard";
-  if (/^3[47]/.test(n)) return "amex";
-  if (/^(6011|65|64[4-9]|622)/.test(n)) return "discover";
-  if (/^35/.test(n)) return "jcb";
-  return "unknown";
-}
-
-function maskCardNumber(num?: string | null) {
-  if (!num) return "";
-  const digits = num.replace(/\D/g, "");
-  if (!digits) return "";
-
-  // if we only have last4 (common when passed via params): e.g. "4242" -> show **** **** **** 4242
-  if (digits.length <= 4) {
-    return "**** **** **** " + digits.padStart(4, "*");
-  }
-
-  // otherwise format as groups of 4 and mask all but last 4
-  const last4 = digits.slice(-4);
-  return "**** **** **** " + last4;
-}
 
 /* Simple inline SVG icons */
 const Icons: Record<string, JSX.Element> = {
@@ -79,10 +54,8 @@ const Icons: Record<string, JSX.Element> = {
   ),
 };
 
-export default function CardNumberWithBrand({ cardNumber, className = "", placeholder = "**** **** **** 4242" }: Props) {
-  const brand = detectCardBrand(cardNumber);
-  const masked = maskCardNumber(cardNumber) || placeholder;
-  const last4 = (cardNumber || "").replace(/\D/g, "").slice(-4);
+export default function CardNumberWithBrand({ last4, className = "", brand }: Props) {
+
 
   return (
     <div
@@ -94,11 +67,11 @@ export default function CardNumberWithBrand({ cardNumber, className = "", placeh
 
       <div className="flex-1">
         <label className="sr-only">Card number</label>
-        <div className="text-sm tracking-widest">
-          {masked}
-        </div>
+        {/* <div className="text-sm tracking-widest">
+          **** **** ****
+        </div> */}
         {last4 ? (
-          <div className="text-xs text-gray-400 mt-1">ending •••• {last4}</div>
+          <div className="text-xs text-gray-400 mt-1">**** **** **** {last4}</div>
         ) : null}
       </div>
     </div>

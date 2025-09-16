@@ -11,7 +11,11 @@ const baseQuery = fetchBaseQuery({
   },
 });
 
-const baseQueryWithReauth: typeof baseQuery = async (args, api, extraOptions) => {
+const baseQueryWithReauth: typeof baseQuery = async (
+  args,
+  api,
+  extraOptions
+) => {
   const result = await baseQuery(args, api, extraOptions);
   if (result.error && result.error.status === 401) {
     Cookies.remove("token");
@@ -36,7 +40,8 @@ export const productApi = createApi({
       providesTags: (result, error, id) => [{ type: "Product", id }],
     }),
 
-    filterProducts: builder.query<ProductsResponse, Record<string, any>>({ //eslint-disable-line
+    filterProducts: builder.query<ProductsResponse, Record<string, any>>({  //eslint-disable-line
+    
       query: (params) => ({
         url: `/product/filterProducts`,
         method: "GET",
@@ -49,7 +54,10 @@ export const productApi = createApi({
       query: () => "/product/getFilters",
     }),
 
-    addToCart: builder.mutation<CartResponse, { productId: string; quantity: number; action: string }>({
+    addToCart: builder.mutation<
+      CartResponse,
+      { productId: string; quantity: number; action: string }
+    >({
       query: (body) => ({
         url: "/product/addToCart",
         method: "POST",
@@ -75,8 +83,28 @@ export const productApi = createApi({
       }),
       invalidatesTags: ["Cart"],
     }),
+    aiPcBuilder: builder.mutation<
+      BudgetRequirements,
+      {
+        minBudgetRange: string;
+        maxBudgetRange: string;
+        useCase: string;
+        performancePreference: string;
+        preferredBrands: string;
+        extraDescription?: string; // optional if sometimes empty
+      }
+    >({
+      query: (body) => ({
+        url: "/product/aiBudgetSuggestionForm",
+        method: "POST",
+        body,
+      }),
+    }),
 
-    removeFromCart: builder.mutation<RemoveCartResponse, { cartId: string; productId: string }>({
+    removeFromCart: builder.mutation<
+      RemoveCartResponse,
+      { cartId: string; productId: string }
+    >({
       query: ({ cartId, productId }) => ({
         url: `/product/removeFromCart?cartId=${cartId}&productId=${productId}`,
         method: "DELETE",
@@ -99,5 +127,6 @@ export const {
   useAiSuggestionMutation,
   useAddToCartMutation,
   useRemoveFromCartMutation,
+  useAiPcBuilderMutation,
   useGetCartQuery,
 } = productApi;

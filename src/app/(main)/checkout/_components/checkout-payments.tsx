@@ -16,7 +16,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 function CheckoutPayments({ data }: { data: Cart }) {
   const searchParams = useSearchParams();
   const stripe = useStripe();
-  const router = useRouter()
+  const router = useRouter();
   const elements = useElements();
   const [loading, setLoading] = useState(false);
   const [cardHolderName, setCardHolderName] = useState("");
@@ -54,14 +54,17 @@ function CheckoutPayments({ data }: { data: Cart }) {
       //   zipCode: params.get("zipCode")!,
       // };
 
-         const params = new URLSearchParams(searchParams.toString());
+      const params = new URLSearchParams(searchParams.toString());
       params.set("paymentMethodId", paymentMethod!.id);
       params.set("cartId", data._id);
       params.set("cardHolder", cardHolderName);
+      params.set("last4", paymentMethod.card?.last4 ?? "");
+      params.set("brand", paymentMethod.card?.brand ?? "");
 
       // push to next page
       router.push(`/review-order?${params.toString()}`);
-    } catch (err: any) {//eslint-disable-line
+    } catch (err: any) {   //eslint-disable-line
+   
       console.log(err);
       toast.error("Something went wrong.");
     } finally {

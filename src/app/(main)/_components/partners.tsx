@@ -5,13 +5,13 @@ import React from 'react'
 
 
   const logos = [
-    { src: "/images/logo.png", alt: "NVIDIA" },
-    { src: "/images/logo.png", alt: "AMD" },
-    { src: "/images/logo.png", alt: "ASUS ROG" },
+    { src: "/images/nvidia.png", alt: "NVIDIA" },
+    { src: "/images/amd.png", alt: "AMD" },
+    { src: "/images/rog.png", alt: "ASUS ROG" },
     { src: "/images/logo.png", alt: "Main Logo", center: true },
-    { src: "/images/logo.png", alt: "Gigabyte" },
-    { src: "/images/logo.png", alt: "Intel" },
-    { src: "/images/logo.png", alt: "MSI" },
+    { src: "/images/giga.png", alt: "Gigabyte" },
+    { src: "/images/intel.png", alt: "Intel" },
+    { src: "/images/msi.png", alt: "MSI" },
   ];
 
 
@@ -49,8 +49,8 @@ function Partners() {
             <Image
               src={logo.src}
               alt={logo.alt}
-              width={logo.center ? 80 : 50}
-              height={logo.center ? 80 : 50}
+              width={logo.center ? 80 : 70}
+              height={logo.center ? 80 : 70}
               className={`${logo.center ? "scale-150" : ""}`}
             />
           </div>

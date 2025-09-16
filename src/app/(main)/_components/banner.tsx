@@ -1,9 +1,13 @@
+"use client"
 import ArrowBtn from "@/components/ui/arrow-btn";
-
 import CyclingImageAnimation from "@/components/cycling-image-animation";
+import { useState } from "react";
+import GetFreeQuote from "./ui/get-free-quote";
+
 function Banner() {
+    const [isOpen, setIsOpen] = useState(false);
   return (
-    <section className="flex items-center px-4 pb-12 md:px-12 relative overflow-hidden">
+    <section className="flex  items-center px-4 pb-12 md:px-12 relative overflow-hidden">
       <div className="bg-[url(/images/gradient-bg.png)] bg-no-repeat bg-contain absolute -right-32  w-[70%] h-full" />
       <div className="w-full md:w-1/2 flex flex-col gap-6 items-start ">
         <h3 className="text-gradient uppercase font-semibold text-sm tracking-widest">
@@ -19,11 +23,12 @@ function Banner() {
           player, or content creator, we deliver powerful pcs designed around
           your style—and built to last.
         </p>
-        <button className="flex gap-2 items-center">
+        <button onClick={()=>setIsOpen(!isOpen)} className="flex gap-2 items-center">
           <ArrowBtn title="GET FREE QUOTE" />
         </button>
       </div>
       <CyclingImageAnimation/>
+      <GetFreeQuote isOpen={isOpen} setIsOpen={setIsOpen} />
     </section>
   );
 }

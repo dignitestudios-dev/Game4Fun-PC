@@ -13,7 +13,7 @@ export const contactApi = createApi({
   }),
   endpoints: (builder) => ({
     submitMessage: builder.mutation<
-      any,//eslint-disable-line
+      any, //eslint-disable-line
       { fullName: string; email: string; message: string }
     >({
       query: (body) => ({
@@ -41,9 +41,29 @@ export const contactApi = createApi({
         zipCode: string;
       }
     >({
-     
       query: (body) => ({
         url: "/payment/AddContactInfo",
+        method: "POST",
+        body,
+      }),
+      //   invalidatesTags: ["Product"],
+    }),
+    postQuote: builder.mutation<
+      { success: boolean; message: string }, 
+      {
+        fullName: string;
+        emailAddress: string;
+        minBudgetRange: string;
+        maxBudgetRange: string;
+        preferredCPUBrand: string;
+        preferredGPUBrand: string;
+        ram: string;
+        storage: string;
+        additionalFeature: string;
+      }
+    >({
+      query: (body) => ({
+        url: "/contact/submitQuotation",
         method: "POST",
         body,
       }),
@@ -52,4 +72,9 @@ export const contactApi = createApi({
   }),
 });
 
-export const { useSubmitMessageMutation , useGetContactInfoQuery , usePostContactInfoMutation } = contactApi;
+export const {
+  useSubmitMessageMutation,
+  useGetContactInfoQuery,
+  usePostContactInfoMutation,
+  usePostQuoteMutation
+} = contactApi;
