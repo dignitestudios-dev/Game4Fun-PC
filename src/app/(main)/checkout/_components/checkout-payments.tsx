@@ -65,7 +65,7 @@ function CheckoutPayments({ data }: { data: Cart }) {
       router.push(`/review-order?${params.toString()}`);
     } catch (err: any) {   //eslint-disable-line
    
-      console.log(err);
+      console.error(err);
       toast.error("Something went wrong.");
     } finally {
       setLoading(false);

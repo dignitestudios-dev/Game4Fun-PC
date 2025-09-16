@@ -49,7 +49,7 @@ function CreateProfileForm() {
     data.append("profilePicture", file);
 
     const res = await complete(data).unwrap();
-    console.log(res)
+
     if (res.error) {
       if ("data" in res.error) {
         toast.error((res.error.data as any)?.message); // eslint-disable-line

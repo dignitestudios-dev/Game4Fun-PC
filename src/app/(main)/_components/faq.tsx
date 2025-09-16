@@ -5,7 +5,7 @@ import { useGetFaqQuery } from "@/services/faq-api"
 
 function FAQ() {
  const {data} =  useGetFaqQuery();
- console.log(data)
+
   return (
     <section id="faq" className="md:px-12  py-24">
         <div className="flex flex-col items-center justify-center gap-4 w-full" >

@@ -77,7 +77,7 @@ function ShopDetail({ product }: { product: Product }) {
     } catch (error: any) {//eslint-disable-line
       
 
-      console.log(error);
+      console.error(error);
       // toast.error(error.data.message);
     }
   };
@@ -182,7 +182,7 @@ function ShopDetail({ product }: { product: Product }) {
                   } catch (error: any) {       //eslint-disable-line
              
 
-                    console.log(error);
+                    console.error(error);
                     // toast.error(error.data.message);
                   }
                 }}
