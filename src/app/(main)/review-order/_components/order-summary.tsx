@@ -2,16 +2,17 @@
 import Popup from '@/components/popup';
 import CardBtn from '@/components/ui/card-btn'
 import { useRouter } from 'next/navigation';
-import React, { useState } from 'react'
+import React, { SetStateAction } from 'react'
 
-
-function OrderSummary() {
+interface Props {
+  handlePlaceOrder:()=> void
+  showPopup:boolean;
+  setShowPopup:React.Dispatch<SetStateAction<boolean>>
+}
+function OrderSummary({handlePlaceOrder , showPopup }:Props) {
   const router = useRouter()
-    const [showPopup, setShowPopup] = useState(false);
 
-  const handlePlaceOrder = () => {
-    setShowPopup(true);
-  };
+
   return (
        <div className='md:w-[45%]' >
       <h1 className='text-2xl font-semibold'>Order Summary</h1>
@@ -36,7 +37,7 @@ function OrderSummary() {
       {/* <CartCard/>
       <Accordion items={accordionData}/> */}
     </div>
-    {showPopup && <Popup title='Order Placed Successfully' description='Figma ipsum component variant main layer. Pixel vector boolean vector device vector.' onClose={()=>router.push("/order-placed")} />}
+    {showPopup && <Popup title='Order Placed Successfully' description='Figma ipsum component variant main layer. Pixel vector boolean vector device vector.' onClose={()=>router.push("/")} />}
     </div>
   )
 }

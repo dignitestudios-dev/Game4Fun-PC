@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import Cookies from "js-cookie";
-export const contactApi = createApi({
-  reducerPath: "contactApi",
+export const checkoutApi = createApi({
+  reducerPath: "checkoutApi",
   baseQuery: fetchBaseQuery({
     baseUrl: "https://1b75nbwh-8000.inc1.devtunnels.ms",
     prepareHeaders: (headers) => {
@@ -12,26 +12,11 @@ export const contactApi = createApi({
     },
   }),
   endpoints: (builder) => ({
-    submitMessage: builder.mutation<
-      any,//eslint-disable-line
-      { fullName: string; email: string; message: string }
-    >({
-      query: (body) => ({
-        url: "contact/submitContactForm",
-        method: "POST",
-        body,
-      }),
-      //   invalidatesTags: ["Product"],
-    }),
-    getContactInfo: builder.query({
-      query: () => ({
-        url: "/payment/getContactInfo",
-        method: "GET",
-      }),
-    }),
-    postContactInfo: builder.mutation<
-      any, //eslint-disable-line
+    checkout: builder.mutation<
+      CheckoutResponse,
       {
+        paymentMethodId: string;
+        cartId: string;
         firstName: string;
         lastName: string;
         address: string;
@@ -41,15 +26,16 @@ export const contactApi = createApi({
         zipCode: string;
       }
     >({
-     
       query: (body) => ({
-        url: "/payment/AddContactInfo",
+        url: "/payment/checkOut",
         method: "POST",
         body,
       }),
+      //   invalidatesTags: ["Product"],
+
       //   invalidatesTags: ["Product"],
     }),
   }),
 });
 
-export const { useSubmitMessageMutation , useGetContactInfoQuery , usePostContactInfoMutation } = contactApi;
+export const { useCheckoutMutation } = checkoutApi;

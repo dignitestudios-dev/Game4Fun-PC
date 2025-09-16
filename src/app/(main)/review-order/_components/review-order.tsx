@@ -1,59 +1,126 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import ReviewBanner from "./review-banner";
 import OrderSummary from "./order-summary";
-import Input from "@/components/ui/input";
-import Image from "next/image";
+import { useGetCartQuery } from "@/services/product-api";
+import CartCard from "../../cart/_components/ui/cart-card";
 
+import {useSearchParams } from "next/navigation";
+import toast from "react-hot-toast";
+import {
+  useStripe,
+} from "@stripe/react-stripe-js";
+import { useCheckoutMutation } from "@/services/checkout-api";
+import CardNumberWithBrand from "./ui/card-number-brand";
+import Loader from "@/components/ui/loader";
 
 function ReviewOrder() {
+  const { data } = useGetCartQuery();
+  const params = useSearchParams();
+
+  const stripe = useStripe();
+  const [checkout , {isLoading}] = useCheckoutMutation();
+
+  const [showPopup, setShowPopup] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const handlePlaceOrder = async () => {
+    if (!stripe) {
+      toast.error("Stripe not loaded yet");
+      return;
+    }
+    if (!data?.cart?._id) {
+      toast.error("Cart not found");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const paymentMethodId = params.get("paymentMethodId");
+      if (!paymentMethodId) {
+        toast.error("Missing payment method");
+        return;
+      }
+
+      const payload = {
+        paymentMethodId,
+        cartId: data.cart._id,
+        firstName: params.get("firstName")!,
+        lastName: params.get("lastName")!,
+        address: params.get("address")!,
+        appartment: params.get("appartment")!,
+        country: params.get("country")!,
+        city: params.get("city")!,
+        zipCode: params.get("zipCode")!,
+      };
+
+      const res = await checkout(payload);
+
+      if (res?.data?.success) {
+        const clientSecret = res.data.data.clientSecret;
+
+        const { error: confirmError, paymentIntent } =
+          await stripe.confirmCardPayment(clientSecret, {
+            payment_method: paymentMethodId,
+          });
+
+        if (confirmError) {
+          toast.error(confirmError.message || "Payment confirmation failed");
+          return;
+        }
+
+        if (paymentIntent?.status === "succeeded") {
+          toast.success("Payment successful 🎉");
+          setShowPopup(true);
+        }
+      } else if (res.error) {
+        if ("data" in res.error && res.error.data) {
+          toast.error((res.error.data as any)?.message); //eslint-disable-line
+        }
+      }
+    } catch (err: any) { //eslint-disable-line
+      console.error(err);
+      toast.error("Something went wrong");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if(loading || isLoading) return <Loader/>
+
   return (
     <div>
       <ReviewBanner />
       <div className="w-[90%] mx-auto flex md:flex-row flex-col justify-between">
         <div className="md:w-[45%] flex flex-col gap-3">
           <h1 className="text-2xl font-semibold">Delivery Address</h1>
-          <Input label="Address" />
-          <h1 className="text-2xl font-semibold">Payment Method</h1>
-          {/* <div className="relative" >
-            <Image src={"/images/master.png"} alt="master" width={50} height={50} className=" absolute top-[20%] left-5" />
-             <input
-        placeholder=""
-        className="w-full px-4 py-3 pl-20 rounded-full bg-[#1d1d1d] border border-[#FFFFFF36] text-[#FFFFFF] placeholder-[#FFFFFF36] focus:outline-none focus:border-purple-500 transition"
-      />
-      </div> */}
-          <div className="w-full flex px-4 py-3 gap-2 items-center rounded-full bg-[#1d1d1d] border border-[#FFFFFF36] text-[#FFFFFF] placeholder-[#FFFFFF36] focus:outline-none focus:border-purple-500 transition">
-      
-            <div className="w-10 h-8">
-                   <Image src={"/images/master.png"} alt="master" width={50} height={50} className=" " />
-            </div>
+          <p>{params.get("address")}</p>
 
-            {/* Masked Number */}
-            <span className="tracking-widest text-sm">
-              **** **** **** {1234}
-            </span>
-          </div>
-          <h1  className="text-2xl font-semibold">Order</h1>
-              <div>
-                <div className="flex items-center gap-4">
-                  <div className="border border-[#5a5a5a] p-2 rounded-3xl">
-                    <Image src={"/images/pc-2.png"} alt="pc" width={100} height={100} />
-                  </div>
-                  <div className="flex justify-between w-full" >
-                    <div className="space-y-1">
-                      <h1 className="text-lg font-semibold">
-                        Odin 1.0 – Ryzen 9 9950X & RTX 5070 Ti 16GB
-                      </h1>
-                      <h5 className="text-sm">Quantity: 1</h5>
-                      <sup>$</sup> <span className="text-gradient text-lg font-bold">1500</span>
-                    </div>
-                    {/* <div>
-                      <button className="text-red-600 underline" >Remove</button>
-                    </div> */}
-                  </div>
-                </div>
-              </div>
+          <h1 className="text-2xl font-semibold">Payment Method</h1>
+
+          {/* Show masked card from params */}
+          <CardNumberWithBrand cardNumber={params.get("cardNumber")} />
+
+          <h1 className="text-2xl font-semibold mt-4">Order</h1>
+          {data?.cart.items.map((c, idx) => (
+            <CartCard key={idx} cartId={data?.cart._id} item={c} />
+          ))}
         </div>
-        <OrderSummary />
+{/* 
+       
+        <button onClick={handlePlaceOrder} disabled={loading}>
+          <CardBtn
+            title={loading ? "Processing..." : "Place Order"}
+            bgColor="bg-[#141414]"
+          />
+        </button> */}
+
+        <OrderSummary
+          showPopup={showPopup}
+          setShowPopup={setShowPopup}
+          handlePlaceOrder={handlePlaceOrder}
+        />
       </div>
     </div>
   );

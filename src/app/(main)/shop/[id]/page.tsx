@@ -7,7 +7,7 @@ import SupportedGames from "./_components/supported-games";
 import SuggestedPcBuilds from "./_components/suggested-pc-builds";
 import { useGetSingleProductQuery } from "@/services/product-api";
 import Loader from "@/components/ui/loader";
-import GamePerformanceCard from "@/components/game-performance-card";
+// import GamePerformanceCard from "@/components/game-performance-card";
 import SingleGamePerformanceCard from "./_components/single-game-performance-card";
 
 function Page({ params }: { params: Promise<{ id: string }> }) {

@@ -1,4 +1,5 @@
 import { authApi } from "@/services/auth-api";
+import { checkoutApi } from "@/services/checkout-api";
 import { contactApi } from "@/services/contact-api";
 import { faqApi } from "@/services/faq-api";
 import { productApi } from "@/services/product-api";
@@ -11,6 +12,7 @@ export const store = configureStore({
     [productApi.reducerPath]: productApi.reducer,
     [faqApi.reducerPath]: faqApi.reducer,
     [contactApi.reducerPath]: contactApi.reducer,
+    [checkoutApi.reducerPath]: checkoutApi.reducer,
   },
 
   middleware: (getDefaultMiddleware) =>
@@ -18,7 +20,8 @@ export const store = configureStore({
       .concat(authApi.middleware)
       .concat(productApi.middleware)
       .concat(faqApi.middleware)
-      .concat(contactApi.middleware),
+      .concat(contactApi.middleware)
+      .concat(checkoutApi.middleware),
 });
 setupListeners(store.dispatch);
 export type RootState = ReturnType<typeof store.getState>;

@@ -8,7 +8,7 @@ function CartCard({ item, cartId }: { item: CartItem; cartId: string }) {
     await remove({ cartId, productId: item.productId });
   };
   return (
-    <div>
+    <div className="relative z-50">
       <div className="flex items-center py-4 gap-4">
         <div className="border border-[#5a5a5a] p-2 rounded-3xl">
           <Image

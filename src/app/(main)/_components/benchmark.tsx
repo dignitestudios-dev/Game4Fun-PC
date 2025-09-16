@@ -28,11 +28,11 @@ function Benchmark() {
   } = useForm<BenchmarkFormData>({
     resolver: zodResolver(BenchmarkSchema),
   });
-  const tags: string[] = watch("game") || [];
-  const removeTag = (tag: string) => {
-    const newTags = tags.filter((t) => t !== tag);
-    setValue("game", newTags, { shouldValidate: true });
-  };
+  // const tags: string[] = watch("game") || [];
+  // const removeTag = (tag: string) => {
+  //   const newTags = tags.filter((t) => t !== tag);
+  //   setValue("game", newTags, { shouldValidate: true });
+  // };
   const onSubmit = async (data: BenchmarkFormData) => {
     const newData = {
       Processor: data.processor,
