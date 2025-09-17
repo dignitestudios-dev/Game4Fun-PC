@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Services() {
   return (
-    <section id="#services" className=" relative text-white md:p-12">
+    <section id="services" className=" relative text-white md:p-12">
       <div className=" grid grid-cols-1 lg:grid-cols-2 gap-8  p-6 rounded-lg relative">
         <div className="bg-[url(/images/services-bg.png)] md:block hidden absolute z-20 w-[85%] h-full bg-contain bg-no-repeat left-[45%] top-[57%] -translate-x-1/2 -translate-y-1/2" />
         <div className="flex flex-col justify-start space-y-6 my-8">
