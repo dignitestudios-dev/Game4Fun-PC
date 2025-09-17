@@ -106,6 +106,7 @@ export default function GetFreeQuote({ isOpen, setIsOpen , setPopup }: Props) {
             <label className="text-sm mb-1">Full Name</label>
             <input
               type="text"
+              placeholder="Full Name "
               {...register("fullName")}
               className="bg-[#1919195d] border border-[#505050] rounded-full px-4 py-3 text-sm focus:outline-none focus:border-pink-500"
             />
@@ -119,6 +120,7 @@ export default function GetFreeQuote({ isOpen, setIsOpen , setPopup }: Props) {
             <label className="text-sm mb-1">Email Address</label>
             <input
               type="email"
+                  placeholder="Email "
               {...register("emailAddress")}
               className="bg-[#1919195d] border border-[#505050] rounded-full px-4 py-3 text-sm focus:outline-none focus:border-pink-500"
             />
@@ -135,6 +137,7 @@ export default function GetFreeQuote({ isOpen, setIsOpen , setPopup }: Props) {
             <input
               type="text"
               inputMode="numeric"
+              placeholder="Min Budget"
               min={1}
               {...register("minBudgetRange")}
               className="bg-[#1919195d] border border-[#505050] rounded-full px-4 py-3 text-sm focus:outline-none focus:border-pink-500"
@@ -151,6 +154,7 @@ export default function GetFreeQuote({ isOpen, setIsOpen , setPopup }: Props) {
             <input
               type="text"
               inputMode="numeric"
+              placeholder="Max Budget"
               min={1}
               {...register("maxBudgetRange")}
               className="bg-[#1919195d] border border-[#505050] rounded-full px-4 py-3 text-sm focus:outline-none focus:border-pink-500"
@@ -167,6 +171,7 @@ export default function GetFreeQuote({ isOpen, setIsOpen , setPopup }: Props) {
             <label className="text-sm mb-1">Preferred CPU</label>
             <input
               type="text"
+              placeholder="CPU"
               {...register("preferredCPUBrand")}
               className="bg-[#1919195d] border border-[#505050] rounded-full px-4 py-3 text-sm focus:outline-none focus:border-pink-500"
             />
@@ -182,6 +187,7 @@ export default function GetFreeQuote({ isOpen, setIsOpen , setPopup }: Props) {
             <label className="text-sm mb-1">Preferred GPU</label>
             <input
               type="text"
+              placeholder=" GPU"
               {...register("preferredGPUBrand")}
               className="bg-[#1919195d] border border-[#505050] rounded-full px-4 py-3 text-sm focus:outline-none focus:border-pink-500"
             />
@@ -197,6 +203,7 @@ export default function GetFreeQuote({ isOpen, setIsOpen , setPopup }: Props) {
             <label className="text-sm mb-1">RAM</label>
             <input
               type="text"
+              placeholder="RAM"
               {...register("ram")}
               className="bg-[#1919195d] border border-[#505050] rounded-full px-4 py-3 text-sm focus:outline-none focus:border-pink-500"
             />
@@ -210,6 +217,7 @@ export default function GetFreeQuote({ isOpen, setIsOpen , setPopup }: Props) {
             <label className="text-sm mb-1">Storage</label>
             <input
               type="text"
+              placeholder="Storage"
               {...register("storage")}
               className="bg-[#1919195d] border border-[#505050] rounded-full px-4 py-3 text-sm focus:outline-none focus:border-pink-500"
             />
