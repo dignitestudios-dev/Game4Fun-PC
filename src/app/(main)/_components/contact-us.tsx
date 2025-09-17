@@ -19,6 +19,9 @@ import { ContactFormData, contactSchema } from "@/schemas/contact-schema";
 import { useSubmitMessageMutation } from "@/services/contact-api";
 import toast from "react-hot-toast";
 import { FormErrorMessage } from "@/components/error-message";
+import GetFreeQuote from "./ui/get-free-quote";
+import { useState } from "react";
+import Popup from "@/components/popup";
 
 const info = [
   {
@@ -59,13 +62,16 @@ function ContactUs() {
     register,
     formState: { errors },
   } = useForm<ContactFormData>({ resolver: zodResolver(contactSchema) });
-  const [submit] = useSubmitMessageMutation();
+  const [submit, { isLoading }] = useSubmitMessageMutation();
+  const [isOpen, setIsOpen] = useState(false);
+  const [popup, setPopup] = useState(false);
   const onSubmit = async (data: ContactFormData) => {
     try {
       const res = await submit(data).unwrap();
       toast.success(res.data.message);
-    } catch (error: any) { //eslint-disable-line
-     
+    } catch (error: any) {      //eslint-disable-line
+
+
       toast.error(error.data.message);
     }
   };
@@ -121,24 +127,20 @@ function ContactUs() {
             onSubmit={handleSubmit(onSubmit)}
             className="flex flex-col gap-4 py-6"
           >
-            <Input
-              label="Full Name"
-              type="text"
-              
-              {...register("fullName")}
-            />
+            <Input label="Full Name" type="text" {...register("fullName")} />
             <FormErrorMessage message={errors.fullName?.message} />
-            <Input label="Email" type="email"  {...register("email")} />
+            <Input label="Email" type="email" {...register("email")} />
             <FormErrorMessage message={errors.email?.message} />
             <textarea
               placeholder={"Message"}
               {...register("message")}
               rows={5}
-              className="w-full px-4 py-3 rounded-2xl bg-[#1d1d1d] border border-[#FFFFFF36] text-[#FFFFFF36] placeholder-[#FFFFFF36] focus:outline-none focus:border-purple-500 transition"
+              className="w-full px-4 py-3 rounded-2xl bg-[#1d1d1d] border border-[#FFFFFF36] text-white placeholder-[#FFFFFF36] focus:outline-none focus:border-purple-500 transition"
             />
             <FormErrorMessage message={errors.message?.message} />
             <button
               type="submit"
+              disabled={isLoading}
               className="relative flex justify-start items-center"
             >
               <ArrowBtn title="submit" />
@@ -149,12 +151,12 @@ function ContactUs() {
       <div className="bg-[linear-gradient(to_right,#d642db,#FFBE96)] w-full relative h-[550px] lg:h-[300px] rounded-2xl md:mt-32 md:p-12 p-4">
         <h1 className="text-5xl font-semibold py-8">CUSTOM BUILT YOUR PC</h1>
         <button
-          //   onClick={onDetailsClick}
-          className="flex items-center gap-2 mr-3 text-white font-medium "
+          onClick={() => setIsOpen(true)}
+          className="flex items-center gap-2 cursor-pointer mr-3 text-white font-medium "
         >
           <span
             className={cn(
-              "bg-tansparent text-sm uppercase -mr-4 z-50 p-2 px-1"
+              "bg-tansparent text-sm uppercase  -mr-4 z-50 p-2 px-1"
             )}
           >
             Get a free quote
@@ -177,6 +179,14 @@ function ContactUs() {
           height={500}
         />
       </div>
+      <GetFreeQuote isOpen={isOpen} setIsOpen={setIsOpen} setPopup={setPopup} />
+      {popup && (
+        <Popup
+          title="Submitted"
+          description="Quote Submitted Successfully"
+          onClose={() => setPopup(false)}
+        />
+      )}
     </div>
   );
 }

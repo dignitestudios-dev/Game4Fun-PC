@@ -65,10 +65,10 @@ export default function SidebarFilter({
                 />
                 
                 {/* Custom checkbox */}
-                <span className={`w-4 h-4 rounded-sm border-2 border-pink-500 flex-shrink-0 flex items-center justify-center ${
+                <span className={`w-4 h-4 rounded-sm  flex-shrink-0 flex items-center justify-center ${
                   selected[section.title]?.includes(opt.value) 
-                    ? 'bg-pink-500' 
-                    : 'bg-black'
+                    ? 'bg-pink-500 border border-pink-500' 
+                    : 'bg-[#1c1b1b] border border-white'
                 }`}>
                   {/* Checkmark - only show when checked */}
                   {selected[section.title]?.includes(opt.value) && (

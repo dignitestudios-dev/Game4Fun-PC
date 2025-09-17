@@ -4,13 +4,12 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { SetStateAction } from "react";
 import ArrowBtn from "@/components/ui/arrow-btn";
 import { usePostQuoteMutation } from "@/services/contact-api";
-import toast from "react-hot-toast";
 
 // ✅ Zod Schema
 const formSchema = z.object({
   fullName: z.string().min(2, "Full name is required"),
   emailAddress: z.string().email("Invalid email address"),
- minBudgetRange: z
+  minBudgetRange: z
     .string()
     .refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
       message: "Min budget must be a positive number",
@@ -30,15 +29,17 @@ const formSchema = z.object({
 
 type FormSchemaType = z.infer<typeof formSchema>;
 interface Props {
-    isOpen:boolean;
-    setIsOpen:React.Dispatch<SetStateAction<boolean>>
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<SetStateAction<boolean>>;
+  setPopup: React.Dispatch<SetStateAction<boolean>>;
 }
 
-export default function GetFreeQuote({ isOpen, setIsOpen }:Props) {
-    const [postQuote , {isLoading}] = usePostQuoteMutation()
+export default function GetFreeQuote({ isOpen, setIsOpen , setPopup }: Props) {
+  const [postQuote, { isLoading }] = usePostQuoteMutation();
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<FormSchemaType>({
     resolver: zodResolver(formSchema),
@@ -55,11 +56,23 @@ export default function GetFreeQuote({ isOpen, setIsOpen }:Props) {
     },
   });
 
-  const onSubmit = async(data:FormSchemaType) => {
-    const res =await postQuote(data);
-    if(res.data){
-        toast.success(res.data.message)
-        setIsOpen(false)
+  const onSubmit = async (data: FormSchemaType) => {
+    const res = await postQuote(data);
+    if (res.data) {
+      // toast.success(res.data.message);
+      setIsOpen(false);
+      setPopup(true);
+      reset({
+        fullName: "",
+        emailAddress: "",
+        minBudgetRange: "",
+        maxBudgetRange: "",
+        preferredCPUBrand: "",
+        preferredGPUBrand: "",
+        ram: "",
+        storage: "",
+        additionalFeature: "",
+      });
     }
   };
 
@@ -71,7 +84,7 @@ export default function GetFreeQuote({ isOpen, setIsOpen }:Props) {
       onClick={() => setIsOpen(false)}
     >
       <div
-        className="bg-[#1919195d]  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-[#505050] text-white w-full max-w-3xl flex flex-col justify-center rounded-2xl shadow-lg p-6 relative"
+        className="bg-[#1919195d] my-8 overflow-y-scroll bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-[#505050] text-white w-full max-w-3xl flex flex-col justify-center rounded-2xl shadow-lg p-3 px-6 relative"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close button */}
@@ -82,9 +95,12 @@ export default function GetFreeQuote({ isOpen, setIsOpen }:Props) {
           ✕
         </button>
 
-        <h2 className="text-2xl font-bold mb-6">Get Free Quote</h2>
+        <h2 className="text-2xl font-bold mb-2 pt-2">Get Free Quote</h2>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-2 gap-4">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="grid grid-cols-2 gap-4"
+        >
           {/* Full Name */}
           <div className="flex flex-col col-span-2">
             <label className="text-sm mb-1">Full Name</label>
@@ -93,7 +109,9 @@ export default function GetFreeQuote({ isOpen, setIsOpen }:Props) {
               {...register("fullName")}
               className="bg-[#1919195d] border border-[#505050] rounded-full px-4 py-3 text-sm focus:outline-none focus:border-pink-500"
             />
-            {errors.fullName && <p className="text-red-400 text-xs">{errors.fullName.message}</p>}
+            {errors.fullName && (
+              <p className="text-red-400 text-xs">{errors.fullName.message}</p>
+            )}
           </div>
 
           {/* Email */}
@@ -104,30 +122,44 @@ export default function GetFreeQuote({ isOpen, setIsOpen }:Props) {
               {...register("emailAddress")}
               className="bg-[#1919195d] border border-[#505050] rounded-full px-4 py-3 text-sm focus:outline-none focus:border-pink-500"
             />
-            {errors.emailAddress && <p className="text-red-400 text-xs">{errors.emailAddress.message}</p>}
+            {errors.emailAddress && (
+              <p className="text-red-400 text-xs">
+                {errors.emailAddress.message}
+              </p>
+            )}
           </div>
 
           {/* Budget Range */}
           <div className="flex flex-col">
             <label className="text-sm mb-1">Min Budget Range</label>
             <input
-             type="text"
-  inputMode="numeric"
+              type="text"
+              inputMode="numeric"
+              min={1}
               {...register("minBudgetRange")}
               className="bg-[#1919195d] border border-[#505050] rounded-full px-4 py-3 text-sm focus:outline-none focus:border-pink-500"
             />
-            {errors.minBudgetRange && <p className="text-red-400 text-xs">{errors.minBudgetRange.message}</p>}
+            {errors.minBudgetRange && (
+              <p className="text-red-400 text-xs">
+                {errors.minBudgetRange.message}
+              </p>
+            )}
           </div>
 
           <div className="flex flex-col">
             <label className="text-sm mb-1">Max Budget Range</label>
             <input
-               type="text"
-  inputMode="numeric"
+              type="text"
+              inputMode="numeric"
+              min={1}
               {...register("maxBudgetRange")}
               className="bg-[#1919195d] border border-[#505050] rounded-full px-4 py-3 text-sm focus:outline-none focus:border-pink-500"
             />
-            {errors.maxBudgetRange && <p className="text-red-400 text-xs">{errors.maxBudgetRange.message}</p>}
+            {errors.maxBudgetRange && (
+              <p className="text-red-400 text-xs">
+                {errors.maxBudgetRange.message}
+              </p>
+            )}
           </div>
 
           {/* CPU */}
@@ -138,7 +170,11 @@ export default function GetFreeQuote({ isOpen, setIsOpen }:Props) {
               {...register("preferredCPUBrand")}
               className="bg-[#1919195d] border border-[#505050] rounded-full px-4 py-3 text-sm focus:outline-none focus:border-pink-500"
             />
-            {errors.preferredCPUBrand && <p className="text-red-400 text-xs">{errors.preferredCPUBrand.message}</p>}
+            {errors.preferredCPUBrand && (
+              <p className="text-red-400 text-xs">
+                {errors.preferredCPUBrand.message}
+              </p>
+            )}
           </div>
 
           {/* GPU */}
@@ -149,7 +185,11 @@ export default function GetFreeQuote({ isOpen, setIsOpen }:Props) {
               {...register("preferredGPUBrand")}
               className="bg-[#1919195d] border border-[#505050] rounded-full px-4 py-3 text-sm focus:outline-none focus:border-pink-500"
             />
-            {errors.preferredGPUBrand && <p className="text-red-400 text-xs">{errors.preferredGPUBrand.message}</p>}
+            {errors.preferredGPUBrand && (
+              <p className="text-red-400 text-xs">
+                {errors.preferredGPUBrand.message}
+              </p>
+            )}
           </div>
 
           {/* RAM */}
@@ -160,7 +200,9 @@ export default function GetFreeQuote({ isOpen, setIsOpen }:Props) {
               {...register("ram")}
               className="bg-[#1919195d] border border-[#505050] rounded-full px-4 py-3 text-sm focus:outline-none focus:border-pink-500"
             />
-            {errors.ram && <p className="text-red-400 text-xs">{errors.ram.message}</p>}
+            {errors.ram && (
+              <p className="text-red-400 text-xs">{errors.ram.message}</p>
+            )}
           </div>
 
           {/* Storage */}
@@ -171,7 +213,9 @@ export default function GetFreeQuote({ isOpen, setIsOpen }:Props) {
               {...register("storage")}
               className="bg-[#1919195d] border border-[#505050] rounded-full px-4 py-3 text-sm focus:outline-none focus:border-pink-500"
             />
-            {errors.storage && <p className="text-red-400 text-xs">{errors.storage.message}</p>}
+            {errors.storage && (
+              <p className="text-red-400 text-xs">{errors.storage.message}</p>
+            )}
           </div>
 
           {/* Additional Feature */}
@@ -182,7 +226,11 @@ export default function GetFreeQuote({ isOpen, setIsOpen }:Props) {
               {...register("additionalFeature")}
               className="bg-[#1919195d] border border-[#505050] rounded-2xl px-4 py-3 text-sm focus:outline-none focus:border-pink-500"
             />
-            {errors.additionalFeature && <p className="text-red-400 text-xs">{errors.additionalFeature.message}</p>}
+            {errors.additionalFeature && (
+              <p className="text-red-400 text-xs">
+                {errors.additionalFeature.message}
+              </p>
+            )}
           </div>
 
           {/* Submit Button */}
