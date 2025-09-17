@@ -10,7 +10,7 @@ import { useForm } from "react-hook-form";
 import { useSignUpMutation } from "@/services/auth-api";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
-import Cookies from "js-cookie"; 
+import Cookies from "js-cookie";
 function SignUpForm() {
   const {
     register,
@@ -34,7 +34,7 @@ function SignUpForm() {
       return;
     }
     if (res.data) {
-      Cookies.set('token', res.data.data.token)
+      Cookies.set("token", res.data.data.token);
       toast.success(res.data.message);
       router.push("verification");
     }
@@ -69,7 +69,7 @@ function SignUpForm() {
             className="absolute z-50 top-[30%] right-4"
           >
             {" "}
-            {visible ? <EyeClosed size={20} /> : <Eye size={20} />}
+            {visible ? <Eye size={20} /> : <EyeClosed size={20} />}
           </div>
         </div>
         <div className="relative w-full">
@@ -88,19 +88,51 @@ function SignUpForm() {
             className="absolute z-50 top-[30%] right-4"
           >
             {" "}
-            {visible1 ? <EyeClosed size={20} /> : <Eye size={20} />}
+            {visible1 ? <Eye size={20} /> : <EyeClosed size={20} />}
           </div>
         </div>
         <div className="flex justify-start w-full gap-3">
-          <input type="checkbox" {...register("terms")} />{" "}
+         <input
+  type="checkbox"
+  {...register("terms")}
+  className="
+    appearance-none 
+    h-4 w-4 
+    border-2 border-white 
+    rounded 
+    bg-[#262525] 
+    checked:bg-pink-500 
+    checked:border-pink-500 
+    checked:before:content-['✓'] 
+    checked:before:text-white 
+    checked:before:flex 
+    checked:before:items-center 
+    checked:before:justify-center 
+    checked:before:h-full 
+    checked:before:w-full 
+    checked:before:text-sm 
+    cursor-pointer
+  "
+/>{" "}
           <p className="text-xs">
             I accept the{" "}
-            <span className="text-gradient">
-              <Link href={"/terms-conditions"}> Terms & conditions </Link>
+            <span className="relative">
+              <Link
+                href="/terms-conditions"
+                className="underline-gradient text-gradient"
+              >
+                Terms & conditions
+              </Link>{" "}
             </span>
             and{" "}
-            <span className="text-gradient">
-              <Link href={"/privacy-policy"}> Privacy policy</Link>
+            <span className="relative">
+              <Link
+                href={"/privacy-policy"}
+                className="underline-gradient text-gradient"
+              >
+                {" "}
+                Privacy policy
+              </Link>
             </span>
           </p>
         </div>

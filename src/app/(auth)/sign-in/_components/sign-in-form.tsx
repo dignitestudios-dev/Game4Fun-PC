@@ -75,10 +75,10 @@ function SignInForm() {
         <FormErrorMessage message={errors?.password?.message} />
           <div
             onClick={() => setVisible(!visible)}
-            className="absolute z-50 top-[20%] right-4"
+            className="absolute z-50 top-[30%] right-4"
           >
             {" "}
-            {visible ? <EyeClosed size={20} /> : <Eye size={20} />}
+            {visible ? <Eye size={20} />  : <EyeClosed size={20} />}
           </div>
         </div>
         <button type="submit">
@@ -86,7 +86,7 @@ function SignInForm() {
         </button>
       </form>
       <div className="my-4 flex flex-col gap-4 items-center text-sm">
-        <Link href={"/forgot-password"}>forgot password?</Link>
+        <Link href={"/forgot-password"}>Forgot Password?</Link>
 
         <h1>
           Don’t have an account?{" "}
