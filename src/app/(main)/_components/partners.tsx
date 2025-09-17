@@ -36,7 +36,7 @@ function Partners() {
           <div
             key={index}
             className={`flex items-center justify-center bg-[#2A292959] bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-80 rounded-2xl transition-all duration-300
-              ${logo.center ? "w-72 h-72 -mx-14 relative z-10 rounded-full bg-opacity" : "w-48 h-28 opacity-60 "}`}
+              ${logo.center ? "w-72 h-72 -mx-14 relative z-10 rounded-full bg-opacity" : "w-48 h-28 bg-opacity-60 "}`}
             // style={{
             //   ...(logo.center
             //     ? {

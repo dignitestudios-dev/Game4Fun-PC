@@ -2,8 +2,8 @@ import React from "react";
 import StyledHeader from "./ui/styled-header";
 import PolicyTable from "@/components/policy-table";
 import LocationIcon from "@/components/icons/location-icon";
-import { PhoneIcon } from "lucide-react";
 import EmailIcon from "@/components/icons/email-icon";
+import PhoneIcon from "@/components/icons/phone-icon";
 
 const columns = [
   { key: "condition", label: "Condition" },

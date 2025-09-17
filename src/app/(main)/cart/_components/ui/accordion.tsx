@@ -5,7 +5,7 @@ import { Minus, Plus } from "lucide-react";
 
 type AccordionItem = {
   title: string;
-  content: string;
+  content: any; //eslint-disable-line
 };
 
 type AccordionProps = {
@@ -18,6 +18,8 @@ export default function Accordion({ items }: AccordionProps) {
   const toggle = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+
+
 
   return (
    <div className="text-white transition-all ease-linear">
@@ -41,10 +43,11 @@ export default function Accordion({ items }: AccordionProps) {
       {/* Animated content */}
       <div
         className={`transition-all duration-300 overflow-hidden ${
-          openIndex === index ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+          openIndex === index ? "min-h-10 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="px-4 pb-3 text-sm text-gray-300">{item.content}</div>
+           <div className="px-4 pb-3 text-sm text-gray-300">{item.content}</div> 
+      
       </div>
     </div>
   ))}

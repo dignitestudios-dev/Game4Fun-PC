@@ -16,7 +16,7 @@ type TableProps = {
   data: DataRow[];
 };
 
-export default function PolicyTable({ columns, data }: TableProps) {
+export default function WarrantyTable({ columns, data }: TableProps) {
   return (
    <div className="overflow-x-auto border-[#515151]">
       <table className="min-w-[100px]  bg-[#262626]   rounded-xl overflow-hidden text-sm text-gray-200">
@@ -25,7 +25,7 @@ export default function PolicyTable({ columns, data }: TableProps) {
             {columns.map((col) => (
               <th
                 key={col.key}
-                className="px-12 py-3 text-center border border-[#515151]"
+                className="px-6 py-3 text-center border border-[#515151]"
               >
                 {col.label}
               </th>
@@ -42,7 +42,7 @@ export default function PolicyTable({ columns, data }: TableProps) {
               {columns.map((col) => (
                 <td
                   key={col.key}
-                  className="px-4 py-3 border w-[180px] text-center border-[#515151]"
+                  className="px-2 py-3 border w-[120px] text-center border-[#515151]"
                 >
                   {row[col.key]}
                 </td>

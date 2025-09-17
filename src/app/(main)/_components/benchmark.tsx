@@ -24,9 +24,17 @@ function Benchmark() {
     handleSubmit,
     setValue,
     watch,
+    reset,
     formState: { errors },
   } = useForm<BenchmarkFormData>({
     resolver: zodResolver(BenchmarkSchema),
+    defaultValues: {
+      game: [],
+      graphicCard: "",
+      processor: "",
+      ram: "",
+      resolution: "",
+    },
   });
   // const tags: string[] = watch("game") || [];
   // const removeTag = (tag: string) => {
@@ -42,8 +50,16 @@ function Benchmark() {
       FavoriteGames: data.game,
     };
     try {
-     await aiSuggest(newData).unwrap();
-    } catch (error: any) { //eslint-disable-line
+      await aiSuggest(newData).unwrap();
+      reset({
+        game: [],
+        graphicCard: "",
+        processor: "",
+        ram: "",
+        resolution: "",
+      });
+    } catch (error: any) {   //eslint-disable-line
+   
       toast.error(error?.data.message);
     }
   };
@@ -92,7 +108,7 @@ function Benchmark() {
               error={errors.resolution?.message}
             />
 
-{/* <div className=""> */}
+            {/* <div className=""> */}
             <GameTagsInput
               icon={<GameIcon width="90" height="90" />}
               title="Game"
@@ -101,7 +117,7 @@ function Benchmark() {
               watch={watch}
               error={errors.game?.message}
             />
-               {/* {tags.map((tag, idx) => (
+            {/* {tags.map((tag, idx) => (
               <span
                 key={idx}
                 className="bg-purple-600 text-white px-3 py-1 rounded-full text-xs flex items-center gap-2"

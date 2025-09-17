@@ -23,6 +23,7 @@ function VerificationForm() {
   const {
     handleSubmit,
     setValue,
+    reset,
     formState: { errors },
   } = useForm<VerificationFormData>({
     resolver: zodResolver(verificationSchema),
@@ -33,8 +34,6 @@ function VerificationForm() {
     const newValues = [...values];
     newValues[index] = value.slice(-1);
     setValues(newValues);
-
-    // Update RHF form value
     setValue("otp", newValues.join(""));
 
     if (value && index < newValues.length - 1) {
@@ -103,6 +102,8 @@ function VerificationForm() {
           <button
             type="button"
             onClick={async () => {
+              reset({otp:""});
+              setValues(Array(6).fill(""))
               const res = await resend({ type: "signup" });
               if (res.error) {
                 if ("data" in res.error) {

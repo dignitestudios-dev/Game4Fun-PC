@@ -60,6 +60,7 @@ function ContactUs() {
   const {
     handleSubmit,
     register,
+    reset,
     formState: { errors },
   } = useForm<ContactFormData>({ resolver: zodResolver(contactSchema) });
   const [submit, { isLoading }] = useSubmitMessageMutation();
@@ -68,9 +69,25 @@ function ContactUs() {
   const onSubmit = async (data: ContactFormData) => {
     try {
       const res = await submit(data).unwrap();
-      toast.success(res.data.message);
-    } catch (error: any) {      //eslint-disable-line
-
+      reset({
+        email: "",
+        fullName: "",
+        message: "",
+      });
+       toast.success(res.message, {
+        style: {
+          border: "2px solid #d744d9",
+          background: "black",
+          color: "white",
+          padding: "16px",
+        },
+        iconTheme: {
+          primary: "#d744d9", // checkmark color
+          secondary: "black", // circle background
+        },
+      });
+    } catch (error: any) { //eslint-disable-line
+     
 
       toast.error(error.data.message);
     }

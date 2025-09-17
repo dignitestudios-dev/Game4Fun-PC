@@ -1,4 +1,4 @@
-import ChatWidget from "@/components/chat-widget";
+
 import Footer from "@/components/ui/footer";
 import Navbar from "@/components/ui/navbar";
 
@@ -11,7 +11,7 @@ export default function layout({
     <div>
       <Navbar />
       {children}
-      <ChatWidget />
+      {/* <ChatWidget /> */}
       <Footer />
     </div>
   );

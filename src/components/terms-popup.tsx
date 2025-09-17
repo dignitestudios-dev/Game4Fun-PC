@@ -96,7 +96,7 @@ function TermsPopup({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
 
   return (
     <div
-      className="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
+      className="fixed inset-0 bg-black/70 flex items-center justify-center z-[99999999999999999] "
       onClick={onClose} // close when clicking backdrop
     >
       <div

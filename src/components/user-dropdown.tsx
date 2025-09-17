@@ -114,14 +114,14 @@ export default function UserDropdown() {
                 Warranty
               </button>
             </li>
-            <li>
+            {/* <li>
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="block w-full text-start cursor-pointer px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800"
               >
                 PC Guide
               </button>
-            </li>
+            </li> */}
             <li>
               <Link
                 href="/settings"
