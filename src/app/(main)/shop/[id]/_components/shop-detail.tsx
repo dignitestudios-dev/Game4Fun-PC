@@ -82,7 +82,7 @@ function ShopDetail({ product }: { product: Product }) {
   };
   return (
     <div className="relative w-full">
-      <div className="bg-[url(/images/p-img.png)] bg-no-repeat bg-contain absolute -top-32 left-0  w-full h-full" />
+      <div className="bg-[url(/images/p-img.png)] bg-no-repeat bg-cover absolute -top-32 left-0  w-full h-full" />
       {/* <div className="absolute bottom-0 left-0 w-[100vw] h-36 bg-gradient-to-t from-[#141414] via-[#14141484] to-transparent pointer-events-none z-10" /> */}
 
       <div className="flex flex-wrap gap-4">

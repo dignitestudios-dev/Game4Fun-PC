@@ -5,6 +5,7 @@ import SidebarFilter from "./_components/sidebar-filter";
 import ShopCard from "@/components/ui/shop-card";
 import { X } from "lucide-react";
 import SortDropdown from "./_components/ui/sort-dropdown";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   useFilterProductsQuery,
   useGetFiltersQuery,
@@ -18,7 +19,8 @@ function Page() {
   const [sortBy, setSortBy] = useState({ label: "Latest", val: "latest" });
   const [selected, setSelected] = useState<{ [key: string]: string[] }>({});
 
-  const params: Record<string, any> = { //eslint-disable-line
+  const params: Record<string, any> = {   //eslint-disable-line
+ 
     page,
     limit: 10,
     sortBy: sortBy.val,
@@ -136,17 +138,19 @@ function Page() {
         </div>
 
         <div className="flex-1">
-          <div className="flex justify-between pr-20 items-center py-4">
-            <h1 className="text-2xl font-semibold ">ALL PC BUILDS</h1>
+          <div className="flex justify-center lg:justify-between pr-20 items-center py-4">
+            <h1 className="text-2xl font-semibold lg:block hidden">
+              ALL PC BUILDS
+            </h1>
             <SortDropdown setSortBy={setSortBy} sortBy={sortBy} />
           </div>
           <div className="flex flex-wrap justify-center lg:justify-start items-center gap-10">
             {isLoading && filterLoader && <Loader />}
-            {data?.products.map((build, idx) => (
+            {data && data?.products.length>0 ? data?.products.map((build, idx) => (
               <ShopCard {...build} key={idx} />
-            ))}
+            )) : <div className="text-center" >No Products Found</div>}
           </div>
-          {data && (
+          {data && data.products.length >0 && (
             <div className="flex justify-end">
               <Pagination
                 currentPage={page}
@@ -157,76 +161,110 @@ function Page() {
           )}
         </div>
       </div>
-      {isFilterOpen && (
-        <div className="fixed inset-0 bg-black text-white bg-opacity-50 z-50">
-          <div className="fixed right-0 top-0 h-full w-72 p-5 shadow-lg">
-            <div className="flex justify-between items-center mb-4">
-              {/* <h2 className="text-xl font-semibold">Filters</h2> */}
-              <button
-                className="absolute right-2 top-4"
-                onClick={() => setIsFilterOpen(false)}
-              >
-                <X className="w-6 h-6" />
-              </button>
+
+{isFilterOpen && (
+  <AnimatePresence>
+    {/* Overlay */}
+    <motion.div
+      key="overlay"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3 }}
+      className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm"
+      onClick={() => setIsFilterOpen(false)}
+    />
+
+    {/* Sidebar Drawer */}
+    <motion.div
+      key="drawer"
+      initial={{ x: "100%" }}
+      animate={{ x: 0 }}
+      exit={{ x: "100%" }}
+      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+      className="fixed right-0 top-0 z-50 h-full w-72 sm:w-80 bg-[#1b1b1d]/95 backdrop-blur-lg text-white shadow-2xl flex flex-col rounded-l-2xl overflow-hidden"
+    >
+      {/* Header */}
+      <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
+        <h2 className="text-lg font-semibold tracking-wider text-gradient">Filters</h2>
+        <button
+          className="hover:scale-110 transition-transform"
+          onClick={() => setIsFilterOpen(false)}
+        >
+          <X className="w-6 h-6 text-gray-300 hover:text-white" />
+        </button>
+      </div>
+
+      {/* Content */}
+      <div className="flex-1 overflow-y-auto px-5 py-6 space-y-8 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-transparent">
+        {sections.map((section, idx) => (
+          <div key={idx} className="relative">
+            <h3 className="uppercase text-sm tracking-widest font-semibold mb-4 text-gray-200">
+              {section.title}
+            </h3>
+            <div className="space-y-3">
+              {section.options.map((opt, optIdx) => (
+                <label
+                  key={optIdx}
+                  className="flex items-center gap-3 cursor-pointer group"
+                >
+                  <input
+                    type="checkbox"
+                    checked={selected[section.title]?.includes(opt.value) || false}
+                    onChange={() => toggleOption(section.title, opt.value)}
+                    className="hidden"
+                  />
+
+                  {/* Custom checkbox */}
+                  <span
+                    className={`w-5 h-5 rounded-md border-2 flex items-center justify-center transition-all duration-300 ${
+                      selected[section.title]?.includes(opt.value)
+                        ? "bg-gradient-to-r from-pink-500 to-purple-500 border-pink-400"
+                        : "bg-transparent border-gray-500 group-hover:border-pink-400"
+                    }`}
+                  >
+                    {selected[section.title]?.includes(opt.value) && (
+                      <svg
+                        className="w-3.5 h-3.5 text-white"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      >
+                        <path d="M2 8l4 4 8-8" />
+                      </svg>
+                    )}
+                  </span>
+
+                  <span className="text-sm text-gray-300 group-hover:text-white transition-colors">
+                    {opt.label}
+                  </span>
+                </label>
+              ))}
             </div>
-            {/* <SidebarFilter sections={sections} /> */}
-          </div>
-          <div
-            className="text-white block overflow-x-hidden rounded-2xl p-4 py-8 w-full 
-  space-y-6 top-4 max-h-[calc(100vh-2rem)] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-transparent "
-          >
-            {/* Top Gradient Strip */}
-            <div className="absolute bg-custom-gradient w-full -left-0 h-2 top-1 rounded-t-2xl z-[10]" />
 
-            {sections.map((section, idx) => (
-             <div key={idx} className="relative">
-  <h3 className="uppercase text-md tracking-widest pb-1 mb-3">
-    {section.title}
-  </h3>
-  <div className="space-y-2">
-    {section.options.map((opt, optIdx) => (
-      <label key={optIdx} className="flex items-center gap-2 cursor-pointer text-sm relative">
-        {/* Hidden native checkbox */}
-        <input
-          type="checkbox"
-          checked={selected[section.title]?.includes(opt.value) || false}
-          onChange={() => toggleOption(section.title, opt.value)}
-          className="absolute opacity-0 w-4 h-4"
-        />
-        
-        {/* Custom checkbox */}
-        <span className={`w-4 h-4 rounded-sm border-2 border-pink-500 flex-shrink-0 flex items-center justify-center ${
-          selected[section.title]?.includes(opt.value) 
-            ? 'bg-pink-500' 
-            : 'bg-black'
-        }`}>
-          {/* Checkmark - only show when checked */}
-          {selected[section.title]?.includes(opt.value) && (
-            <svg
-              className="w-3 h-3 text-white"
-              viewBox="0 0 16 16"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path d="M2 8l4 4 8-8" />
-            </svg>
-          )}
-        </span>
-        {opt.label}
-      </label>
-    ))}
-  </div>
-
-  {/* Gradient Border Divider */}
-  {idx !== sections.length - 1 && (
-    <div className="mt-4 h-px w-full bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500" />
-  )}
-</div>
-            ))}
+            {/* Divider */}
+            {idx !== sections.length - 1 && (
+              <div className="mt-6 h-px w-full bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 opacity-60" />
+            )}
           </div>
-        </div>
-      )}
+        ))}
+      </div>
+
+      {/* Footer */}
+      <div className="p-5 border-t border-white/10">
+        <button
+          className="w-full py-3 rounded-lg bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold tracking-wide shadow-lg hover:opacity-90 transition-all"
+          onClick={() => setIsFilterOpen(false)}
+        >
+          Apply Filters
+        </button>
+      </div>
+    </motion.div>
+  </AnimatePresence>
+)}
+
+
     </div>
   );
 }

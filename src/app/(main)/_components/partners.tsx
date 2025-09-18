@@ -24,7 +24,13 @@ function Partners() {
            <div className="relative ">
           <StyledHeader title="our partners" backTitle='Partners' classname="-right-[300%] z-30" />
         </div>
-            <h1 className="text-5xl font-semibold z-50 md:w-[50%] px-2 text-center">Lorem ipsum dolor sit <span className='text-center'><GradientUnderlineTitle title="Lorem ipsum dolor" classname="text-5xl" /></span> </h1>
+            <h1 className="text-5xl font-semibold z-50 md:w-[50%] px-2 text-center">Our Trusted Partners<span className='text-center'>
+              
+              <GradientUnderlineTitle title="Collaborating with industry " classname="text-5xl" />
+              <GradientUnderlineTitle title="leaders to deliver unmatched" classname="text-5xl" />
+              <GradientUnderlineTitle title="performance" classname="text-5xl" />
+              
+              </span> </h1>
        
         </div>
         <div className='py-12' >

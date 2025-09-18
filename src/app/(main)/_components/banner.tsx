@@ -11,7 +11,7 @@ function Banner() {
   return (
     <section className="flex  items-center px-4 pb-12 md:px-12 relative overflow-hidden">
       <div className="bg-[url(/images/gradient-bg.png)] bg-no-repeat bg-contain absolute -right-32  w-[70%] h-full" />
-      <div className="w-full md:w-1/2 flex flex-col gap-6 items-start ">
+      <div className="w-full lg:w-1/2 flex flex-col gap-6 items-start ">
         <h3 className="text-gradient uppercase font-semibold text-sm tracking-widest">
           Welcome to Game4FunPCs
         </h3>

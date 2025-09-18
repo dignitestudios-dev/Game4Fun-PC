@@ -3,7 +3,8 @@ import Cookies from "js-cookie";
 export const authApi = createApi({
   reducerPath: "authApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://1b75nbwh-8000.inc1.devtunnels.ms",
+    // baseUrl: "https://1b75nbwh-8000.inc1.devtunnels.ms",
+    baseUrl: "http://3.150.169.176/",
     prepareHeaders: (headers) => {
       // headers.set("Content-Type", "application/json");
       if (Cookies.get("token")) {

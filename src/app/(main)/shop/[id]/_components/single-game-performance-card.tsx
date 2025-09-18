@@ -59,73 +59,79 @@ const SingleGamePerformanceCard: React.FC<Props> = ({ games }) => {
   ];
 
   return (
-    <div className="flex flex-col gap-10 w-full">
+    <div className="flex flex-col gap-6 w-full">
       {activeGame && (
-        <div className="bg-[#1c1b1b] text-white p-6 rounded-2xl shadow-lg flex gap-6 w-full">
+        <div className="bg-[#1c1b1b] text-white p-4 sm:p-6 rounded-2xl shadow-lg flex flex-col md:flex-row gap-6 w-full">
           {/* Left side - Game Cover */}
-          <div className="flex flex-col items-center w-[15%]">
+          <div className="flex flex-col items-center w-full md:w-[20%]">
             <Image
-              width={500}
-              height={500}
+              width={300}
+              height={300}
               src={activeGame.image || "/placeholder-game-cover.jpg"}
               alt={activeGame.gameName}
-              className="rounded-xl shadow-md object-cover"
+              className="rounded-xl shadow-md object-cover w-32 h-32 sm:w-40 sm:h-40 md:w-full md:h-auto"
             />
-            <p className="mt-2 text-center text-sm">{activeGame.gameName}</p>
+            <p className="mt-2 text-center text-sm sm:text-base font-medium">
+              {activeGame.gameName}
+            </p>
           </div>
 
           {/* Right side - Performance Info */}
           <div className="flex flex-col w-full">
-            <div className="flex justify-between">
-              <h2 className="text-xl font-semibold mb-2">Game Performance</h2>
-              <div className="flex justify-center mb-6">
-                <select
-                  value={selectedGame}
-                  onChange={(e) => setSelectedGame(e.target.value)}
-                  className="bg-[#242323] border border-[#525151] rounded-xl px-4 py-2 text-white outline-none"
-                >
-                  {games.map((game) => (
-                    <option key={game._id} value={game._id}>
-                      {game.gameName}
-                    </option>
-                  ))}
-                </select>
-              </div>
+            {/* Header */}
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+              <h2 className="text-lg sm:text-xl font-semibold">
+                Game Performance
+              </h2>
+              <select
+                value={selectedGame}
+                onChange={(e) => setSelectedGame(e.target.value)}
+                className="bg-[#242323] border border-[#525151] rounded-xl px-3 py-2 text-sm sm:text-base text-white outline-none"
+              >
+                {games.map((game) => (
+                  <option key={game._id} value={game._id}>
+                    {game.gameName}
+                  </option>
+                ))}
+              </select>
             </div>
-            <div className="flex-1 w-full bg-[#242323] border rounded-2xl border-[#525151]">
-              <p className="text-lg text-gray-300 py-2 text-center">
-                <span className="text-red-400">{activeGame.gameName}</span> –{" "}
-                {activeGame.description}
-              </p>
 
-              <table className="w-full text-sm border-collapse">
+            {/* Description */}
+            <p className="text-sm sm:text-base text-gray-300 py-3 text-center sm:text-left">
+              <span className="text-red-400 font-semibold">{activeGame.gameName}</span>{" "}
+              – {activeGame.description}
+            </p>
+
+            {/* Table (scrollable on small screens) */}
+            <div className="w-full overflow-x-auto">
+              <table className="w-full text-xs sm:text-sm border-collapse min-w-[500px]">
                 <thead>
                   <tr>
-                    <th className="p-2 border-[#525151] border text-center">
+                    <th className="p-2 border border-[#525151] text-center">
                       Settings
                     </th>
-                    <th className="p-2 border-[#525151] border text-center">
-                      Minimum FPS
+                    <th className="p-2 border border-[#525151] text-center">
+                      Min FPS
                     </th>
-                    <th className="p-2 border-[#525151] border text-center">
-                      Average FPS
+                    <th className="p-2 border border-[#525151] text-center">
+                      Avg FPS
                     </th>
-                    <th className="p-2 border-[#525151] border text-center">
-                      Maximum FPS
+                    <th className="p-2 border border-[#525151] text-center">
+                      Max FPS
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   {mapGameToSettings(activeGame).map((row, index) => (
                     <tr key={index}>
-                      <td className="p-2 border-[#525151] border text-center">
+                      <td className="p-2 border border-[#525151] text-center">
                         {row.setting}
                       </td>
-                      <td className="p-2 border-[#525151] border text-center bg-[#FF9D0066]">
+                      <td className="p-2 border border-[#525151] text-center bg-[#FF9D0066]">
                         {row.minimumFPS} FPS
                       </td>
                       <td
-                        className={`p-2 border-[#525151] border text-center ${
+                        className={`p-2 border border-[#525151] text-center ${
                           row.setting === "Low"
                             ? "bg-[#00FF5566]"
                             : "bg-[#FF9D0066]"
@@ -134,7 +140,7 @@ const SingleGamePerformanceCard: React.FC<Props> = ({ games }) => {
                         {row.averageFPS} FPS
                       </td>
                       <td
-                        className={`p-2 border-[#525151] border text-center ${
+                        className={`p-2 border border-[#525151] text-center ${
                           row.setting === "Medium" || row.setting === "Low"
                             ? "bg-[#00FF5566]"
                             : "bg-[#FF9D0066]"

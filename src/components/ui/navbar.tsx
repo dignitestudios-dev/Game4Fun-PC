@@ -10,6 +10,8 @@ import { ArrowLeft, Menu, X } from "lucide-react";
 import { useGetProfileQuery } from "@/services/auth-api";
 import Cookies from "js-cookie";
 import ArrowBtn from "./arrow-btn";
+import { motion, AnimatePresence } from "framer-motion";
+
 const routes = [
   { href: "/", pathname: "HOME" },
   { href: "#about-us", pathname: "ABOUT US" },
@@ -28,6 +30,7 @@ function Navbar() {
   if (data) {
     Cookies.set("userData", JSON.stringify(data?.user));
   }
+
   const pathname = usePathname();
   const router = useRouter();
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -44,10 +47,13 @@ function Navbar() {
 
   return (
     <>
+      {/* Top navbar */}
       <div className="flex p-5 md:p-8 md:px-16 items-center relative w-full justify-between">
-        <div className="bg-[url(/images/top-left-shadow.png)] md:block hidden  w-full h-[565px] bg-no-repeat bg-contain absolute top-0 left-0" />
-        <div className="bg-[url(/images/top-mid-shadow.png)] md:block hidden w-full bg-no-repeat  absolute top-0 left-1/5" />
+        {/* Background shadows */}
+        <div className="bg-[url(/images/top-left-shadow.png)] md:block hidden w-full h-[565px] bg-no-repeat bg-contain absolute top-0 left-0" />
+        <div className="bg-[url(/images/top-mid-shadow.png)] md:block hidden w-full bg-no-repeat absolute top-0 left-1/5" />
 
+        {/* Left side - Logo + optional back arrow */}
         <div className="flex items-center gap-8 z-50">
           <div className="flex items-center gap-4 z-50 relative">
             {pathname !== "/" && (
@@ -58,7 +64,9 @@ function Navbar() {
             )}
             <Logo />
           </div>
-          <div className="hidden xl:flex gap-4 font-bold text-sm z-50">
+
+          {/* Desktop nav links */}
+          <div className="hidden lg:flex gap-4 font-bold text-sm z-50">
             {routes.map((r, idx) => {
               const isSection = r.href.startsWith("#");
               return isSection ? (
@@ -88,6 +96,7 @@ function Navbar() {
           </div>
         </div>
 
+        {/* Right side - Desktop user/cart */}
         <div className="hidden lg:flex items-center z-50 gap-2">
           {Cookies.get("token") && data ? (
             <>
@@ -108,32 +117,37 @@ function Navbar() {
             </>
           ) : (
             <Link href={"/sign-in"}>
-              {" "}
               <ArrowBtn title="login" />
             </Link>
           )}
         </div>
 
-        <div className="md:hidden z-50 flex gap-2">
-          {" "}
+        {/* Mobile/Tablet controls */}
+        <div className="lg:hidden z-50 flex items-center gap-2">
           {Cookies.get("token") && data && (
             <Link
               href="/cart"
               className="bg-[linear-gradient(to_right,#C100FF,#FFBE96)] p-[1.2px] rounded-full flex"
             >
-              <div className="bg-black rounded-full w-12 h-12 flex items-center justify-center">
+              <div className="bg-black rounded-full w-10 h-10 flex items-center justify-center">
                 <Image
                   src="/images/cart-icon.png"
                   alt="cart"
-                  width={23}
-                  height={23}
+                  width={20}
+                  height={20}
                 />
               </div>
             </Link>
           )}
-          {Cookies.get("token") && data && (
-               <UserDropdown />
+          {Cookies.get("token") && data ? (
+            <UserDropdown />
+          ) : (
+            <Link href={"/sign-in"}>
+              <ArrowBtn title="login" />
+            </Link>
           )}
+
+          {/* Hamburger */}
           <button onClick={() => setSidebarOpen(!sidebarOpen)}>
             {sidebarOpen ? (
               <X size={28} className="text-white" />
@@ -143,46 +157,46 @@ function Navbar() {
           </button>
         </div>
 
+        {/* Right background shadow */}
         <div className="bg-[url(/images/top-right-shadow.png)] z-10 w-[600px] bg-no-repeat absolute top-0 right-0 h-screen pointer-events-none select-none" />
       </div>
 
-      <div
-        className={cn(
-          "fixed top-0 left-0  overflow-hidden w-64 bg-clip-padding h-full backdrop-filter bg-opacity-10 bg-black/60 backdrop-blur-lg z-[60] p-6 transform transition-transform duration-300",
-          sidebarOpen ? "translate-x-0" : "-translate-x-full"
-        )}
-      >
-        <div className="flex flex-col gap-6 mt-8 text-white font-semibold text-lg">
-          {routes.map((r, idx) => {
-            const isSection = r.href.startsWith("#");
-            return isSection ? (
-              <button
-                key={idx}
-                onClick={() => handleSectionClick(r.href)}
-                className="text-left hover:text-gradient transition"
-              >
-                {r.pathname}
-              </button>
-            ) : (
-              <Link
-                key={idx}
-                href={r.href}
-                onClick={() => setSidebarOpen(false)}
-                className="hover:text-gradient transition"
-              >
-                {r.pathname}
-              </Link>
-            );
-          })}
-          {/* <Link
-            href={"/cart"}
-            onClick={() => setSidebarOpen(false)}
-            className="hover:text-gradient transition"
+      {/* Sidebar - Animated with Framer Motion */}
+      <AnimatePresence>
+        {sidebarOpen && (
+          <motion.div
+            initial={{ x: -300, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: -300, opacity: 0 }}
+            transition={{ type: "spring", stiffness: 80, damping: 15 }}
+            className="fixed top-0 left-0 w-64 h-full bg-black/70 backdrop-blur-lg z-[60] p-6"
           >
-            {"Cart"}
-          </Link> */}
-        </div>
-      </div>
+            <div className="flex flex-col gap-6 mt-8 text-white font-semibold text-lg">
+              {routes.map((r, idx) => {
+                const isSection = r.href.startsWith("#");
+                return isSection ? (
+                  <button
+                    key={idx}
+                    onClick={() => handleSectionClick(r.href)}
+                    className="text-left hover:text-gradient transition"
+                  >
+                    {r.pathname}
+                  </button>
+                ) : (
+                  <Link
+                    key={idx}
+                    href={r.href}
+                    onClick={() => setSidebarOpen(false)}
+                    className="hover:text-gradient transition"
+                  >
+                    {r.pathname}
+                  </Link>
+                );
+              })}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }

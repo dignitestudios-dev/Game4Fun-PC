@@ -93,7 +93,7 @@ function ContactUs() {
     }
   };
   return (
-    <div className="p-12 md:px-24 relative" id="contact">
+    <div className="p-6 md:px-24 relative" id="contact">
       <div className="flex lg:flex-row flex-col gap-8  md:justify-between items-start">
         <div className="lg:w-[45%] w-full">
           <div>

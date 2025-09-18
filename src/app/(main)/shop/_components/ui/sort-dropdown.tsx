@@ -6,7 +6,7 @@ const SortDropdown = ({setSortBy , sortBy}:{setSortBy:React.Dispatch<SetStateAct
   const [isOpen, setIsOpen] = useState(false);
 const options = [
   // { label: "By Popularity", value: "popularity" },
-  { label: "popularity", value: "Popularity" },
+  { label: "Popularity", value: "popularity" },
   { label: "Latest", value: "latest" },
   { label: "Alphabetical (Ascending)", value: "alphabetic_asc" },
   { label: "Alphabetical (Descending)", value: "alphabetic_desc" },
