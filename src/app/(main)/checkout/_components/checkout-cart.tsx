@@ -93,6 +93,7 @@ function CheckoutCart({ handleNext }: Props) {
         const res = await postInfo(payload);
         toast.success(res.data.message);
       } catch (error: any) {//eslint-disable-line
+        
         toast.error(error.data.message);
       }
     }
@@ -172,14 +173,29 @@ function CheckoutCart({ handleNext }: Props) {
 
       {/* Save Contact */}
       <div className="flex gap-3 items-center">
-        <Input
+        <input
           type="checkbox"
-          className="bg-transparent"
+          className="
+    appearance-none 
+    h-4 w-4 
+    border-2 border-white 
+    rounded 
+    bg-[#262525] 
+    checked:bg-pink-500 
+    checked:border-pink-500 
+    checked:before:content-['✓'] 
+    checked:before:text-white 
+    checked:before:flex 
+    checked:before:items-center 
+    checked:before:justify-center 
+    checked:before:h-full 
+    checked:before:w-full 
+    checked:before:text-sm 
+    cursor-pointer
+  "
           {...register("saveContact")}
         />
-        <h1 className="text-white text-nowrap">
-          Save contact information
-        </h1>
+        <h1 className="text-white text-nowrap">Save contact information</h1>
         <FormErrorMessage message={errors?.saveContact?.message} />
       </div>
 
