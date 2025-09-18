@@ -27,19 +27,19 @@ function ShopCard({
         <div className="flex flex-col gap-8 justify-center text-xs font-semibold z-20 tracking-widest text-white/70">
           <div>
             <h3 className="text-lg text-white">CASE</h3>
-            <span className="font-normal truncate block w-24">
+            <span className="font-normal line-clamp-2 block w-24">
               {details?.cpuCase}
             </span>
           </div>
           <div>
             <h3 className="text-lg text-white">RAM</h3>
-            <span className="font-normal truncate block w-24">
+            <span className="font-normal line-clamp-2 block w-24">
               {details?.pcRam} GB
             </span>
           </div>
           <div>
             <h3 className="text-lg text-white">GPU</h3>
-            <span className="font-normal truncate block w-24">
+            <span className="font-normal line-clamp-2 block w-24">
               {details?.gpu} GB
             </span>
           </div>
@@ -54,10 +54,10 @@ function ShopCard({
       </div>
 
       <div>
-        <h2 className="text-xl font-bold uppercase tracking-widest pt-12 truncate">
+        <h2 className="text-xl font-bold uppercase tracking-widest pt-12 line-clamp-2">
           {productName}
         </h2>
-        <p className="text-xs text-white/70 leading-relaxed line-clamp-2">
+        <p className="text-xs h-[50px] text-white/70 leading-relaxed line-clamp-2">
           {description}
         </p>
       </div>
@@ -67,36 +67,36 @@ function ShopCard({
           <div className="w-1/5">
             <ProcessorIcon />
           </div>
-          <div className="truncate">
-            <p className="font-light truncate">{details?.processorManufactured}</p>
-            <p className="text-[14px] truncate">{details?.processor}</p>
+          <div>
+            <p className="font-light line-clamp-2">{details?.processorManufactured}</p>
+            <p className="text-[14px] line-clamp-2">{details?.processor}</p>
           </div>
         </div>
         <div className="flex gap-1 items-center">
           <div className="w-1/5">
             <GraphicCardIcon />
           </div>
-          <div className="truncate">
-            <p className="font-light truncate">{details?.gpuManufactured}</p>
-            <p className="text-[14px] truncate">{details?.graphicCards}</p>
+          <div>
+            <p className="font-light line-clamp-2">{details?.gpuManufactured}</p>
+            <p className="text-[14px] line-clamp-2">{details?.graphicCards}</p>
           </div>
         </div>
         <div className="flex gap-1 items-center">
           <div className="w-1/5">
             <RamIcon />
           </div>
-          <div className="truncate">
-            <p className="font-light truncate">{details?.ramManufactured}</p>
-            <p className="text-[14px] truncate">{details?.ram}</p>
+          <div>
+            <p className="font-light line-clamp-2">{details?.ramManufactured}</p>
+            <p className="text-[14px] line-clamp-2">{details?.ram}</p>
           </div>
         </div>
         <div className="flex gap-1 items-center">
           <div className="w-1/5">
             <MotherboardIcon />
           </div>
-          <div className="truncate">
+          <div>
             <p className="font-light">Motherboard</p>
-            <p className="text-[14px] truncate">{details?.motherboard}</p>
+            <p className="text-[14px] line-clamp-2">{details?.motherboard}</p>
           </div>
         </div>
       </div>
