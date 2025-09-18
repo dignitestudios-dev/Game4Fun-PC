@@ -2,8 +2,8 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import Cookies from "js-cookie";
 
 const baseQuery = fetchBaseQuery({
-  // baseUrl: "https://1b75nbwh-8000.inc1.devtunnels.ms",
-  baseUrl: "http://3.150.169.176/",
+  baseUrl: "https://1b75nbwh-8000.inc1.devtunnels.ms",
+  // baseUrl: "http://3.150.169.176/",
   prepareHeaders: (headers) => {
     if (Cookies.get("token")) {
       headers.set("Authorization", `Bearer ${Cookies.get("token")}`);
