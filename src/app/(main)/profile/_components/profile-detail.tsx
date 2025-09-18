@@ -1,7 +1,7 @@
 "use client";
 import { SquarePen } from "lucide-react";
 import Image from "next/image";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import toast from "react-hot-toast";
 import Input from "@/components/ui/input";
 import ArrowBtn from "@/components/ui/arrow-btn";
@@ -21,6 +21,26 @@ function ProfileDetail() {
     phoneNumber: "",
     address: "",
   });
+  useEffect(() => {
+    try {
+      // 👇 Get raw cookie
+      const rawUser = Cookies.get("userData");
+
+      if (rawUser) {
+        // 👇 Decode and parse
+        const parsedUser = JSON.parse(decodeURIComponent(rawUser));
+
+        // 👇 Set into form state
+        setFormData({
+          fullName: parsedUser.fullName || "",
+          phoneNumber: parsedUser.phone || "",
+          address: parsedUser.address || "",
+        });
+      }
+    } catch (err) {
+      console.error("Failed to parse user cookie:", err);
+    }
+  }, []);
   const rawUserData = Cookies.get("userData");
   const userData = rawUserData ? JSON.parse(rawUserData) : null;
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {

@@ -103,7 +103,7 @@ function ReviewOrder() {
 
           <h1 className="text-2xl font-semibold mt-4">Order</h1>
           {data?.cart.items.map((c, idx) => (
-            <CartCard key={idx} cartId={data?.cart._id} item={c} />
+            <CartCard key={idx} cartId={data?.cart._id} item={c} removeBtn={true} />
           ))}
         </div>
         {/* 

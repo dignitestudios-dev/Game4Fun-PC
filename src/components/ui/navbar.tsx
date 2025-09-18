@@ -95,7 +95,7 @@ function Navbar() {
                 href="/cart"
                 className="bg-[linear-gradient(to_right,#C100FF,#FFBE96)] p-[1.2px] rounded-full flex"
               >
-                <div className="bg-white dark:bg-black rounded-full w-12 h-12 flex items-center justify-center">
+                <div className="bg-black rounded-full w-12 h-12 flex items-center justify-center">
                   <Image
                     src="/images/cart-icon.png"
                     alt="cart"
@@ -121,7 +121,7 @@ function Navbar() {
               href="/cart"
               className="bg-[linear-gradient(to_right,#C100FF,#FFBE96)] p-[1.2px] rounded-full flex"
             >
-              <div className="bg-white dark:bg-black rounded-full w-12 h-12 flex items-center justify-center">
+              <div className="bg-black rounded-full w-12 h-12 flex items-center justify-center">
                 <Image
                   src="/images/cart-icon.png"
                   alt="cart"

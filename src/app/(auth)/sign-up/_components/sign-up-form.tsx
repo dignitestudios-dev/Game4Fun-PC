@@ -35,6 +35,7 @@ function SignUpForm() {
     }
     if (res.data) {
       Cookies.set("token", res.data.data.token);
+      Cookies.set("email", res.data.data.user.email);
       toast.success(res.data.message);
       router.push("verification");
     }

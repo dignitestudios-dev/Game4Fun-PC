@@ -2,7 +2,6 @@
 import { EmblaOptionsType } from "embla-carousel";
 import EmblaCarousel from "./embla-crousel";
 import GraphicCardIcon from "@/components/icons/graphic-card-icon";
-// import { title } from "process";
 import CardBtn from "@/components/ui/card-btn";
 import ArrowBtn from "@/components/ui/arrow-btn";
 import ProcessorIcon from "@/components/icons/processor-icon";
@@ -57,26 +56,26 @@ function ShopDetail({ product }: { product: Product }) {
   const router = useRouter();
   const handleAddCart = async () => {
     try {
-      const res = await addToCart({
+       await addToCart({
         action: "add",
         quantity: 1,
         productId: product._id,
       }).unwrap();
-      toast.success(res.message, {
+      toast.success("Added To Cart", {
         style: {
           border: "2px solid #d744d9",
           background: "black",
           color: "white",
           padding: "16px",
+          fontSize:"20px"
         },
         iconTheme: {
-          primary: "#d744d9", // checkmark color
-          secondary: "black", // circle background
+          primary: "#d744d9",
+          secondary: "black",
         },
+        position: "bottom-center",
       });
-    } catch (error: any) {//eslint-disable-line
-      
-
+    } catch (error: any) {  //eslint-disable-line
       console.error(error);
       // toast.error(error.data.message);
     }
@@ -161,12 +160,12 @@ function ShopDetail({ product }: { product: Product }) {
               <button
                 onClick={async () => {
                   try {
-                    const res = await addToCart({
+                  await addToCart({
                       action: "add",
                       quantity: 1,
                       productId: product._id,
                     }).unwrap();
-                    toast.success(res.message, {
+                    toast.success("Added To Cart", {
                       style: {
                         border: "2px solid #d744d9",
                         background: "black",
@@ -177,10 +176,11 @@ function ShopDetail({ product }: { product: Product }) {
                         primary: "#d744d9",
                         secondary: "black",
                       },
+                      position: "bottom-center",
                     });
                     router.push("/cart");
-                  } catch (error: any) {       //eslint-disable-line
-             
+                  } catch (error: any) {//eslint-disable-line
+                    
 
                     console.error(error);
                     // toast.error(error.data.message);

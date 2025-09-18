@@ -7,6 +7,7 @@ import {
   VerificationFormData,
   verificationSchema,
 } from "@/schemas/verification-schema";
+import Cookies from "js-cookie";
 import {
   useResendOtpMutation,
   useVerifyOtpMutation,
@@ -73,7 +74,7 @@ function VerificationForm() {
     >
       <div className="flex w-full flex-col gap-4 items-center">
         <p className="text-sm text-center w-full">
-          Please enter OTP code sent to designer@dignitestudios.com
+          Please enter OTP code sent to {Cookies.get("email")}
         </p>
 
         <div className="flex gap-2">

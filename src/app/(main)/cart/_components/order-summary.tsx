@@ -34,7 +34,7 @@ const data = [
     hardwareDuration: "3 Years",
     freeLabor: "Yes",
     freeShipping: "1 Claim (Year 1)",
-    expeditedRepairs: "—", // use dash if nothing is listed
+    expeditedRepairs: "Yes", // use dash if nothing is listed
   },
   {
     planName: "Gamer Legendary",

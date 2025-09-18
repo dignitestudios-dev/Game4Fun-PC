@@ -2,7 +2,15 @@ import { useRemoveFromCartMutation } from "@/services/product-api";
 import Image from "next/image";
 import React from "react";
 
-function CartCard({ item, cartId }: { item: CartItem; cartId: string }) {
+function CartCard({
+  item,
+  cartId,
+  removeBtn,
+}: {
+  item: CartItem;
+  cartId: string;
+  removeBtn?: boolean;
+}) {
   const [remove] = useRemoveFromCartMutation();
   const handleRemove = async () => {
     await remove({ cartId, productId: item.productId });
@@ -10,12 +18,13 @@ function CartCard({ item, cartId }: { item: CartItem; cartId: string }) {
   return (
     <div className="relative z-50">
       <div className="flex items-center py-4 gap-4">
-        <div className="border border-[#5a5a5a] p-2 rounded-3xl">
+        <div className="border w-[150px] h-[120px] border-[#5a5a5a] p-2 rounded-3xl">
           <Image
             src={item.productImages[0]?.file}
             alt="pc"
-            width={100}
-            height={100}
+            width={150}
+            height={120}
+            className="object-cover"
           />
         </div>
         <div className="flex justify-between w-full">
@@ -28,9 +37,14 @@ function CartCard({ item, cartId }: { item: CartItem; cartId: string }) {
             </span>
           </div>
           <div>
-            <button onClick={handleRemove} className="text-red-600 hover:underline cursor-pointer">
-              Remove
-            </button>
+            {!removeBtn && (
+              <button
+                onClick={handleRemove}
+                className="text-red-600 hover:underline cursor-pointer"
+              >
+                Remove
+              </button>
+            )}
           </div>
         </div>
       </div>

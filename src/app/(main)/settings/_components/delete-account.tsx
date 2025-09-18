@@ -5,7 +5,7 @@ import ArrowBtn from "@/components/ui/arrow-btn";
 import toast from "react-hot-toast";
 import { useDeleteProfileMutation } from "@/services/auth-api";
 import { useRouter } from "next/navigation";
-
+import Cookies from "js-cookie";
 function DeleteAccount() {
   const [pass, setPass] = useState("");
   const router = useRouter();
@@ -15,8 +15,9 @@ function DeleteAccount() {
     if (!pass) return toast.error("Password is required");
     try {
       const res = await deleteProfile(pass).unwrap();
-      toast.success(res.message);
+      Cookies.remove("token")
       router.push("/sign-in");
+      toast.success(res.message);
     } catch (error: any) { // eslint-disable-line
       toast.error(error?.data.message);
     }

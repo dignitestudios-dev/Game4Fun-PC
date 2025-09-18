@@ -52,7 +52,7 @@ export default function UserDropdown() {
         className="flex items-center gap-2 focus:outline-none"
       >
         <div className="bg-[linear-gradient(to_right,#C100FF,#FFBE96)] p-[1.2px] rounded-full flex">
-          <div className="bg-white dark:bg-black rounded-full w-12 h-12 flex items-center justify-center">
+          <div className="bg-black rounded-full w-12 h-12 flex items-center justify-center">
             <Image
               src={data?.profilePicture ?? ""}
               alt="cart"
@@ -70,15 +70,15 @@ export default function UserDropdown() {
 
       {isOpen && (
       <div className="absolute right-0 my-2 py-2 w-48 rounded-2xl 
-  bg-white/90 dark:bg-neutral-900/90 shadow-lg 
+  bg-neutral-900/90 shadow-lg 
   ring-1 ring-black/10 backdrop-blur-sm z-50">
 
-          <ul className="py-1 text-sm text-foreground dark:text-white">
+          <ul className="py-1 text-sm text-white">
             <li>
               <Link
                 href="/profile"
                 onClick={() => setIsOpen(!isOpen)}
-                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800"
+                className="block px-4 py-2 hover:bg-neutral-800"
               >
                 My Profile
               </Link>
@@ -87,7 +87,7 @@ export default function UserDropdown() {
               <Link
                 href="/orders"
                 onClick={() => setIsOpen(!isOpen)}
-                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800"
+                className="block px-4 py-2 hover:bg-neutral-800"
               >
                 My Orders
               </Link>
@@ -98,7 +98,7 @@ export default function UserDropdown() {
                   setIsOpen(!isOpen);
                   setPopup(!popup);
                 }}
-                className="block w-full cursor-pointer text-start px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800"
+                className="block w-full cursor-pointer text-start px-4 py-2 hover:bg-neutral-800"
               >
                 Terms and Conditions
               </button>
@@ -109,7 +109,7 @@ export default function UserDropdown() {
                   setWarrantyPopup(!warrantyPopup);
                   setIsOpen(!isOpen);
                 }}
-                className="block w-full text-start cursor-pointer px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800"
+                className="block w-full text-start cursor-pointer px-4 py-2 hover:bg-neutral-800"
               >
                 Warranty
               </button>
@@ -117,7 +117,7 @@ export default function UserDropdown() {
             {/* <li>
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="block w-full text-start cursor-pointer px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800"
+                className="block w-full text-start cursor-pointer px-4 py-2 hover:bg-neutral-800"
               >
                 PC Guide
               </button>
@@ -126,7 +126,7 @@ export default function UserDropdown() {
               <Link
                 href="/settings"
                 onClick={() => setIsOpen(!isOpen)}
-                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800"
+                className="block px-4 py-2 hover:bg-neutral-800"
               >
                 Settings
               </Link>
@@ -139,7 +139,7 @@ export default function UserDropdown() {
                   setIsOpen(!isOpen);
                   router.push("/sign-in");
                 }}
-                className="w-full cursor-pointer text-red-600 text-left block px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800"
+                className="w-full cursor-pointer text-red-600 text-left block px-4 py-2 hover:bg-neutral-800"
               >
                 Logout
               </button>

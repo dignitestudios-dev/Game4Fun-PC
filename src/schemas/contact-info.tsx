@@ -10,7 +10,7 @@ export const checkoutSchema = z.object({
   zipCode: z
     .string()
     .min(1, "Zipcode is required")
-    .regex(/^[0-9A-Za-z\- ]+$/, "Invalid zipcode"),
+    .regex(/^[0-9A-Za-z\- ]+$/, "Invalid zipcode").max(5),
   saveContact: z.boolean().optional(),
 });
 

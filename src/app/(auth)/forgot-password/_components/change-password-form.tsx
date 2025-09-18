@@ -52,7 +52,7 @@ function ChangePasswordForm() {
             </span>
           )}
           <div onClick={() => setVisible(!visible)} className="absolute z-50 top-[30%] right-4">
-            {visible ? <EyeClosed size={20} /> : <Eye size={20} />}
+            {visible ?<Eye size={20} />  : <EyeClosed size={20} />}
           </div>
         </div>
 
@@ -68,7 +68,7 @@ function ChangePasswordForm() {
             </span>
           )}
           <div onClick={() => setVisible1(!visible1)} className="absolute z-50 top-[30%] right-4">
-            {visible1 ? <EyeClosed size={20} /> : <Eye size={20} />}
+            {visible1 ?<Eye size={20} />  : <EyeClosed size={20} />}
           </div>
         </div>
 

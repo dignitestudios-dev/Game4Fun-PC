@@ -74,7 +74,7 @@ function CheckoutPayments({ data }: { data: Cart }) {
 
   return (
     <div className="relative z-50 mx-auto flex flex-col items-start gap-4">
-      <h1 className="text-xl font-semibold">My Cart</h1>
+      <h1 className="text-xl font-semibold">Payment Details</h1>
 
       {/* Cardholder name (your own input) */}
       <Input

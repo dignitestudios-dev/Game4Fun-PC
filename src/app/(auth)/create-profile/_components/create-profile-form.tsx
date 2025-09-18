@@ -99,10 +99,12 @@ function CreateProfileForm() {
         />
         <AuthInput
           label="Phone Number"
+          
           name="phoneNumber"
           value={formData.phoneNumber}
           onChange={handleChange}
-          type="text"
+          
+          type="tel"
         />
         <AuthInput
           label="Address"
