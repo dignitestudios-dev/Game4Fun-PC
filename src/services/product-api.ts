@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import Cookies from "js-cookie";
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: "https://www.game4funpcs.com",
+  baseUrl: "https://www.api.game4funpcs.com",
   // baseUrl: "http://3.150.169.176/",
   prepareHeaders: (headers) => {
     if (Cookies.get("token")) {
