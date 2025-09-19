@@ -24,12 +24,13 @@ function Partners() {
            <div className="relative ">
           <StyledHeader title="our partners" backTitle='Partners' classname="-right-[300%] z-30" />
         </div>
-            <h1 className="text-5xl font-semibold z-50 md:w-[50%] px-2 text-center">Our Trusted Partners<span className='text-center'>
+            <h1 className="text-5xl font-semibold z-50 md:w-[60%] px-2 text-center">Our Trusted Partners<span className='text-center'>
               
-              <GradientUnderlineTitle title="Collaborating with industry " classname="text-5xl" />
-              <GradientUnderlineTitle title="leaders to deliver unmatched" classname="text-5xl" />
-              <GradientUnderlineTitle title="performance" classname="text-5xl" />
-              
+              <GradientUnderlineTitle title="Collaborating with industry leaders " classname="md:text-5xl text-xl" />
+              <div className='flex flex-col items-center' >
+              <GradientUnderlineTitle title="to deliver unmatched" classname="md:text-5xl text-xl" />
+              <GradientUnderlineTitle title="    performance" classname="md:text-5xl text-xl" />
+              </div>
               </span> </h1>
        
         </div>
@@ -37,7 +38,7 @@ function Partners() {
 
 
     <div className="w-full  py-10 flex justify-center z-50">
-      <div className="flex flex-wrap justify-center items-center gap-2">
+      <div className="flex md:flex-row flex-col justify-center items-center gap-2">
         {logos.map((logo, index) => (
           <div
             key={index}
