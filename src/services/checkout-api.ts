@@ -3,7 +3,7 @@ import Cookies from "js-cookie";
 export const checkoutApi = createApi({
   reducerPath: "checkoutApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://www.api.game4funpcs.com",
+    baseUrl: "https://api.game4funpcs.com",
     // baseUrl: "http://3.150.169.176/",
     prepareHeaders: (headers) => {
       if (Cookies.get("token")) {

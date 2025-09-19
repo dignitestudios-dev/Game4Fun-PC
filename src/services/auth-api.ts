@@ -3,7 +3,7 @@ import Cookies from "js-cookie";
 export const authApi = createApi({
   reducerPath: "authApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://www.api.game4funpcs.com",
+    baseUrl: "https://api.game4funpcs.com",
     // baseUrl: "http://3.150.169.176/",
     prepareHeaders: (headers) => {
       // headers.set("Content-Type", "application/json");
