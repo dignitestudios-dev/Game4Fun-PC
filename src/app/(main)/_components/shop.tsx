@@ -1,14 +1,15 @@
 "use client";
 import ArrowBtn from "@/components/ui/arrow-btn";
 import GradientUnderlineTitle from "@/components/ui/gradient-underlined-title";
+import Loader from "@/components/ui/loader";
 import ShopCard from "@/components/ui/shop-card";
 import StyledHeader from "@/components/ui/styled-title";
 import { useGetAllProductsQuery } from "@/services/product-api";
 import Link from "next/link";
 
 function Shop() {
-  const { data } = useGetAllProductsQuery({ limit: "4" });
-
+  const { data, isLoading } = useGetAllProductsQuery({ limit: "4" });
+  if (isLoading) return <Loader />;
   return (
     <div className="md:p-14 p-2 py-14 relative">
       <div className="flex flex-wrap gap-8 justify-center md:justify-between items-center">

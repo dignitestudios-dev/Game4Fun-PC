@@ -12,9 +12,10 @@ import toast from "react-hot-toast";
 import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
 import { FormErrorMessage } from "@/components/error-message";
+import Loader from "@/components/ui/loader";
 function SignInForm() {
   const [visible, setVisible] = useState(false);
-  const [signIn] = useSignInMutation();
+  const [signIn , {isLoading}] = useSignInMutation();
   const {
     handleSubmit,
     formState: { errors },
@@ -51,6 +52,8 @@ function SignInForm() {
       router.push("/");
     }
   };
+
+  if(isLoading) return <Loader/>
   return (
     <div className="bg-[#2A2929CC] rounded-2xl p-8 w-[90%] lg:w-[30%] relative  z-50">
       <form

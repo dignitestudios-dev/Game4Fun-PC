@@ -2,10 +2,11 @@ import GradientUnderlineTitle from "@/components/ui/gradient-underlined-title"
 import StyledHeader from "@/components/ui/styled-title"
 import FAQCard from "./ui/faq-card"
 import { useGetFaqQuery } from "@/services/faq-api"
+import Loader from "@/components/ui/loader";
 
 function FAQ() {
- const {data} =  useGetFaqQuery();
-
+ const {data , isLoading} =  useGetFaqQuery();
+if(isLoading) return <Loader/>
   return (
     <section id="faq" className="md:px-12  py-24">
         <div className="flex flex-col items-center justify-center gap-4 w-full" >
