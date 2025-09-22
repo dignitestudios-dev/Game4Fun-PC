@@ -69,7 +69,7 @@ const SingleGamePerformanceCard: React.FC<Props> = ({ games }) => {
               height={300}
               src={activeGame.image || "/placeholder-game-cover.jpg"}
               alt={activeGame.gameName}
-              className="rounded-xl shadow-md object-cover w-32 h-32 sm:w-40 sm:h-40 md:w-full md:h-auto"
+              className="rounded-xl shadow-md object-contain w-32 h-full sm:w-40 sm:h-40 md:w-full md:h-auto"
             />
             <p className="mt-2 text-center text-sm sm:text-base font-medium">
               {activeGame.gameName}

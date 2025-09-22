@@ -17,7 +17,7 @@ function SupportedGames({product}:{product:Product}) {
     <Marquee autoFill>
         {product.supportedGames.map((i,idx)=>(
             <div key={idx} className='bg-[#2A292959] p-4 rounded-2xl mx-2'>
-            <Image src={i.image}  alt='img' width={100} height={100} />
+            <Image src={i.image}  alt='img' width={100} height={100} className='w-[100px] h-[60px] object-contain' />
             <h1 className='text-xs text-center pt-3'>{i.gameName}</h1>
         </div>))}
     </Marquee>
