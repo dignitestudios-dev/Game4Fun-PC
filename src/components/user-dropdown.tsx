@@ -83,7 +83,7 @@ export default function UserDropdown() {
                 My Profile
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 href="/orders"
                 onClick={() => setIsOpen(!isOpen)}
@@ -91,7 +91,7 @@ export default function UserDropdown() {
               >
                 My Orders
               </Link>
-            </li>
+            </li> */}
             <li>
               <button
                 onClick={() => {
