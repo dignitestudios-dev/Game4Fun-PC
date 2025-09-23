@@ -14,7 +14,7 @@ if(isLoading) return <Loader/>
           <StyledHeader title="FAQ"  backTitle="FAQ" classname="-right-[450%] z-30" />
         </div>
             <h1 className="text-5xl font-semibold text-center md:text-start">Frequently asked <span><GradientUnderlineTitle title="questions" classname="text-5xl" /></span> </h1>
-            <p className="text-center md:w-[45%] text-[#BDBDBD]">Lorem ipsum dolor sit amet consectetur adipiscing vitae mattis tellus. Nullam quis mattis ligula consectetur.</p>
+            {/* <p className="text-center md:w-[45%] text-[#BDBDBD]">Lorem ipsum dolor sit amet consectetur adipiscing vitae mattis tellus. Nullam quis mattis ligula consectetur.</p> */}
         </div>
         <div className="grid grid-col-1 lg:grid-cols-2 gap-4 items-center p-12 md:px-20" >
 
