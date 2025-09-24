@@ -19,16 +19,19 @@ export default function Layout({
     return () => clearTimeout(timer);
   }, []);
 
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center h-screen w-screen bg-white">
-        <Image src="/images/loader.gif" alt="Loading..." width={500} height={500} className="" />
-      </div>
-    );
-  }
-
   return (
-    <div>
+    <div className="relative ">
+      {loading && (
+        <div className="fixed z-[99999] flex items-center justify-center h-screen w-screen bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 bg-black/10">
+          <Image
+            src="/images/loader.gif"
+            alt="Loading..."
+            width={500}
+            height={500}
+            className=""
+          />
+        </div>
+      )}
       <Navbar />
       {children}
       <ChatWidget />
