@@ -30,7 +30,7 @@ export default function ScrollToTopButton() {
     visible && (
   <button
   onClick={scrollToTop}
-  className="fixed bottom-28 z-50 right-6 cursor-pointer bg-custom-gradient text-white p-3 rounded-full shadow-lg hover:scale-110 transition-transform duration-200 animate-[float_3s_ease-in-out_infinite]"
+  className="fixed bottom-6 z-50 right-6 cursor-pointer bg-custom-gradient text-white p-3 rounded-full shadow-lg hover:scale-110 transition-transform duration-200 animate-[float_3s_ease-in-out_infinite]"
 >
   <ArrowUp className="w-10 h-10" />
 </button>
