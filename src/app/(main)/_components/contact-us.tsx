@@ -42,20 +42,15 @@ const links = [
   {
     icon: Facebook,
     text: "Facebook",
-  },
-  {
-    icon: Twitter,
-    text: "Twitter X",
+    href: "https://www.facebook.com/p/Game4funpcs-61576901232433/",
   },
   {
     icon: Instagram,
     text: "Instagram",
-  },
-  {
-    icon: Linkedin,
-    text: "LinkedIn",
+    href: "https://www.instagram.com/game4funpcs/",
   },
 ];
+
 function ContactUs() {
   const {
     handleSubmit,

@@ -1,25 +1,39 @@
 // import { Mail } from 'lucide-react'
-import React from 'react'
+import Link from "next/link";
+import React from "react";
 
 type Props = {
-    info: {
-      // eslint-disable-next-line
-        icon: any;
-        text: string;
-    }
-}
+  info: {
+    // eslint-disable-next-line
+    icon: any;
+    text: string;
+    href?: string ;
+  };
+};
 
-function ContactInfo({info}: Props) {
-  return (
+function ContactInfo({ info }: Props) {
+  if (info.href) {
+    return (
+      <Link href={info.href} className="flex items-center gap-4">
+        <div className="bg-[linear-gradient(to_right,#C100FF,#FFBE96)] p-[1.2px] rounded-2xl flex">
+          <div className=" rounded-full w-10 h-10 flex items-center justify-center">
+            {<info.icon size={20} />}
+          </div>
+        </div>
+        <h3>{info.text}</h3>
+      </Link>
+    );
+  } else {
+    return (
       <div className="flex items-center gap-4">
-                <div className="bg-[linear-gradient(to_right,#C100FF,#FFBE96)] p-[1.2px] rounded-2xl flex">
-                  <div className=" rounded-full w-10 h-10 flex items-center justify-center">
-                    {<info.icon size={20}/>}
-                  </div>
-                </div>
-                <h3>{info.text}</h3>
-              </div>
-  )
+        <div className="bg-[linear-gradient(to_right,#C100FF,#FFBE96)] p-[1.2px] rounded-2xl flex">
+          <div className=" rounded-full w-10 h-10 flex items-center justify-center">
+            {<info.icon size={20} />}
+          </div>
+        </div>
+        <h3>{info.text}</h3>
+      </div>
+    );
+  }
 }
-
-export default ContactInfo
+export default ContactInfo;
