@@ -13,10 +13,15 @@
  interface BudgetRequirements {
   minBudgetRange: string;
   maxBudgetRange: string;
-  useCase: string;
-  performancePreference: string;
-  preferredBrands: string;
-  extraDescription?: string;
-  description: string;
-  data: PcBuildData[];
+  cpu: string;
+  gpu: string;
+  ram: string;
+  storage: string;
+  motherboard: string;
+  cooling: "air" | "aio" | string;
+  psu: string;
+  caseAndAirflow: string;
+  monitor: string;
+  games: string[] | string;
+  setting: "competitive" | "low" | "high" | "ultra" | "custom" | string;
 }

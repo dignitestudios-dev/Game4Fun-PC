@@ -13,22 +13,61 @@ import RamIcon from "@/components/icons/ram-icon";
 import MotherboardIcon from "@/components/icons/mother-board-icon";
 import Loader from "@/components/ui/loader";
 
+// ------------------ SCHEMA ------------------
 const budgetSchema = z.object({
   minBudgetRange: z.string().min(1, "Minimum budget is required"),
+
   maxBudgetRange: z.string().min(1, "Maximum budget is required"),
-  useCase: z.string().min(1, "Use case is required"),
-  performancePreference: z
-    .string()
-    .min(1, "Performance preference is required"),
-  preferredBrands: z.string().min(1, "Preferred brands are required"),
-  extraDescription: z.string().optional(),
+
+  cpu: z.string().min(1, "CPU is required"),
+
+  gpu: z.string().min(1, "GPU is required"),
+
+  ram: z.string().min(1, "RAM is required"),
+
+  storage: z.string().min(1, "Storage is required"),
+
+  motherboard: z.string().min(1, "Motherboard is required"),
+
+  cooling: z.string().min(1, "Cooling option is required"),
+
+  psu: z.string().min(1, "PSU is required"),
+
+  caseAndAirflow: z.string().min(1, "Case & airflow info is required"),
+
+  monitor: z.string().min(1, "Monitor is required"),
+
+  games: z.union([
+    z.string().min(1, "At least one game is required"),
+    z.array(z.string().min(1)).min(1, "At least one game is required"),
+  ]),
+
+  setting: z.string().min(1, "Graphics setting is required"),
 });
 
 type BudgetFormData = z.infer<typeof budgetSchema>;
 
+type SuggestedPC = {
+  PCName: string;
+  PCdescription: string;
+  cpuName: string;
+  cpuSpecs: string;
+  gpuName: string;
+  gpuSpecs: string;
+  ramName: string;
+  ramSpecs: string;
+  motherboardSpecs: string;
+};
+
+type SuggestedPCResponse = {
+  minBudgetRange: string;
+  maxBudgetRange: string;
+  data: SuggestedPC[];
+};
+
 function BudgetRequirements() {
-  const [pcBuilder , {isLoading}] = useAiPcBuilderMutation();
-  const [suggestedPc, setSuggestedPc] = useState<BudgetRequirements | null>(
+  const [pcBuilder, { isLoading }] = useAiPcBuilderMutation();
+  const [suggestedPc, setSuggestedPc] = useState<SuggestedPCResponse | null>(
     null
   );
 
@@ -42,61 +81,83 @@ function BudgetRequirements() {
 
   const onSubmit = async (data: BudgetFormData) => {
     const res = await pcBuilder(data);
-    setSuggestedPc(res.data!);
+    if (res.data) {
+      setSuggestedPc(res.data as any); //eslint-disable-line
+    }
   };
 
-if(isLoading) return <Loader/>
+  if (isLoading) return <Loader />;
 
   return (
     <div className="flex flex-col gap-8">
       {/* Form */}
       {!suggestedPc?.data && (
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-wrap p-4 md:p-12 justify-between gap-8"
-        >
-          <div className="md:w-[45%] space-y-4">
-            <h1 className="uppercase mb-4 font-bold tracking-wider text-3xl">
-              Budget & Requirement
-            </h1>
+        <form onSubmit={handleSubmit(onSubmit)} className="p-4 md:p-12">
+          <h1 className="uppercase mb-8 font-bold tracking-wider text-3xl">
+            Budget & Requirement
+          </h1>
 
-            <Input
-              label="Minimum Budget"
-              type="number"
-              {...register("minBudgetRange")}
-            />
-            <FormErrorMessage message={errors.minBudgetRange?.message} />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Left Column */}
+            <div className="space-y-4">
+              <Input
+                label="Minimum Budget"
+                type="number"
+                {...register("minBudgetRange")}
+              />
+              <FormErrorMessage message={errors.minBudgetRange?.message} />
 
-            <Input
-              label="Maximum Budget"
-              type="number"
-              {...register("maxBudgetRange")}
-            />
-            <FormErrorMessage message={errors.maxBudgetRange?.message} />
+              <Input
+                label="Maximum Budget"
+                type="number"
+                {...register("maxBudgetRange")}
+              />
+              <FormErrorMessage message={errors.maxBudgetRange?.message} />
 
-            <Input label="Use Case" {...register("useCase")} />
-            <FormErrorMessage message={errors.useCase?.message} />
+              <Input label="CPU" {...register("cpu")} />
+              <FormErrorMessage message={errors.cpu?.message} />
 
-            <Input
-              label="Performance Preference"
-              {...register("performancePreference")}
-            />
-            <FormErrorMessage message={errors.performancePreference?.message} />
+              <Input label="GPU" {...register("gpu")} />
+              <FormErrorMessage message={errors.gpu?.message} />
 
-            <Input label="Preferred Brands" {...register("preferredBrands")} />
-            <FormErrorMessage message={errors.preferredBrands?.message} />
+              <Input label="RAM" {...register("ram")} />
+              <FormErrorMessage message={errors.ram?.message} />
 
-            <textarea
-              {...register("extraDescription")}
-              className="w-full px-4 py-3 rounded-2xl bg-[#1d1d1d] border border-[#FFFFFF36] text-[#FFFFFF] placeholder-[#FFFFFF36] focus:outline-none focus:border-purple-500 transition"
-              placeholder="Extra notes..."
-            />
-            <FormErrorMessage message={errors.extraDescription?.message} />
+              <Input label="Storage" {...register("storage")} />
+              <FormErrorMessage message={errors.storage?.message} />
+            </div>
 
-            <button type="submit" className="flex justify-start items-center">
-              <ArrowBtn title="Submit" />
-            </button>
+            {/* Right Column */}
+            <div className="space-y-4">
+              <Input label="Motherboard" {...register("motherboard")} />
+              <FormErrorMessage message={errors.motherboard?.message} />
+
+              <Input label="Cooling (air/aio)" {...register("cooling")} />
+              <FormErrorMessage message={errors.cooling?.message} />
+
+              <Input label="PSU" {...register("psu")} />
+              <FormErrorMessage message={errors.psu?.message} />
+
+              <Input label="Case & Airflow" {...register("caseAndAirflow")} />
+              <FormErrorMessage message={errors.caseAndAirflow?.message} />
+
+              <Input label="Monitor" {...register("monitor")} />
+              <FormErrorMessage message={errors.monitor?.message} />
+
+              <Input label="Games (comma separated)" {...register("games")} />
+              <FormErrorMessage message={errors.games?.message} />
+
+              <Input label="Graphics Setting" {...register("setting")} />
+              <FormErrorMessage message={errors.setting?.message} />
+            </div>
           </div>
+
+          <button
+            type="submit"
+            className="mt-8 flex justify-start items-center"
+          >
+            <ArrowBtn title="Submit" />
+          </button>
         </form>
       )}
 
@@ -110,7 +171,7 @@ if(isLoading) return <Loader/>
             >
               {/* Title + Description */}
               <div>
-                <h2 className="text-xl font-bold uppercase tracking-widest ">
+                <h2 className="text-xl font-bold uppercase tracking-widest">
                   {pc.PCName}
                 </h2>
                 <p className="text-xs text-white/70 leading-relaxed">
@@ -161,7 +222,7 @@ if(isLoading) return <Loader/>
                 </div>
               </div>
 
-              {/* Price Placeholder (AI response has no price) */}
+              {/* Price Range */}
               <div className="flex justify-between items-center">
                 <div>
                   <h4 className="text-xs">Price</h4>
@@ -170,7 +231,6 @@ if(isLoading) return <Loader/>
                     {suggestedPc.maxBudgetRange}
                   </h1>
                 </div>
-                {/* <CardBtn title="view details" bgColor="bg-[#1C1B1B]" /> */}
               </div>
             </div>
           ))}
