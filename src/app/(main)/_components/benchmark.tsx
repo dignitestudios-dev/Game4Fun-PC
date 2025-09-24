@@ -1,6 +1,6 @@
 "use client";
 import GradientUnderlineTitle from "@/components/ui/gradient-underlined-title";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import BenchmarkDropdown from "./ui/benchmark-dropdown";
 import ArrowBtn from "@/components/ui/arrow-btn";
 import ProcessorIcon from "@/components/icons/processor-icon";
@@ -19,6 +19,7 @@ import Loader from "@/components/ui/loader";
 
 function Benchmark() {
   const [aiSuggest, { data, isLoading }] = useAiSuggestionMutation();
+  const [show, setShow] = useState(false);
   const {
     register,
     handleSubmit,
@@ -36,6 +37,12 @@ function Benchmark() {
       resolution: "",
     },
   });
+
+  useEffect(() => {
+    if (data) {
+      setShow(true);
+    }
+  }, [data]);
   // const tags: string[] = watch("game") || [];
   // const removeTag = (tag: string) => {
   //   const newTags = tags.filter((t) => t !== tag);
@@ -58,8 +65,9 @@ function Benchmark() {
         ram: "",
         resolution: "",
       });
-    } catch (error: any) {   //eslint-disable-line
-   
+    } catch (error: any) { //eslint-disable-line
+     
+
       toast.error(error?.data.message);
     }
   };
@@ -75,7 +83,7 @@ function Benchmark() {
             <GradientUnderlineTitle title="Performance" classname="text-5xl" />
           </span>{" "}
         </div>
-        {!data && (
+        {!show && (
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="flex gap-8 flex-wrap justify-center w-full py-10"
@@ -117,6 +125,10 @@ function Benchmark() {
               watch={watch}
               error={errors.game?.message}
             />
+            <p className="text-sm  w-full text-center">
+              Press <span className="font-semibold">Enter</span> after typing a
+              game to register it.
+            </p>
             {/* {tags.map((tag, idx) => (
               <span
                 key={idx}
@@ -139,7 +151,7 @@ function Benchmark() {
           </form>
         )}
 
-        {data! && <GamePerformanceCard system={data!} />}
+        {show && <GamePerformanceCard system={data!} setShow={setShow} />}
       </div>
     </section>
   );

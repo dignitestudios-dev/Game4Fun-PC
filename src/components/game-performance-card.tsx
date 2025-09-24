@@ -1,3 +1,4 @@
+import { RotateCw } from "lucide-react";
 import Image from "next/image";
 import React, { useState } from "react";
 
@@ -26,9 +27,10 @@ import React, { useState } from "react";
 
 interface Props {
   system: SystemBenchmark;
+  setShow: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const GamePerformanceCard: React.FC<Props> = ({ system }) => {
+const GamePerformanceCard: React.FC<Props> = ({ system, setShow }) => {
   const [selectedGame, setSelectedGame] = useState<string>(
     system.benchmarks[0]?.game || ""
   );
@@ -59,7 +61,11 @@ const GamePerformanceCard: React.FC<Props> = ({ system }) => {
           <div className="flex flex-col w-full">
             <div className="flex justify-between">
               <h2 className="text-xl font-semibold mb-2">Game Performance</h2>
-              <div className="flex justify-center mb-6">
+              <div className="flex items-center gap-5 justify-center mb-6">
+                <RotateCw
+                  className="bg-custom-gradient rounded-2xl w-10 h-10 p-1 transition-transform duration-200 hover:scale-110 hover:shadow-lg cursor-pointer"
+                  onClick={() => setShow(false)}
+                />
                 <select
                   value={selectedGame}
                   onChange={(e) => setSelectedGame(e.target.value)}

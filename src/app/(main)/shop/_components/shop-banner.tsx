@@ -12,8 +12,8 @@ function ShopBanner() {
         <div className="relative">
           <StyledHeader title="Shop" backTitle="Shop" classname="right-[-450%]" />
         </div>
-        <h1 className="text-5xl font-semibold text-center">Lorem ipsum dolor sit</h1>
-        <GradientUnderlineTitle title="Lorem ipsum dolor sit" />
+        {/* <h1 className="text-5xl font-semibold text-center">Your Dream Build Starts Here.</h1> */}
+        <GradientUnderlineTitle title="Your Dream Build Starts Here." />
       </div>
     </div>
   );
