@@ -1,4 +1,5 @@
 import { authApi } from "@/services/auth-api";
+import { chatApi } from "@/services/chat-api";
 import { checkoutApi } from "@/services/checkout-api";
 import { contactApi } from "@/services/contact-api";
 import { faqApi } from "@/services/faq-api";
@@ -13,6 +14,7 @@ export const store = configureStore({
     [faqApi.reducerPath]: faqApi.reducer,
     [contactApi.reducerPath]: contactApi.reducer,
     [checkoutApi.reducerPath]: checkoutApi.reducer,
+    [chatApi.reducerPath]: chatApi.reducer,
   },
 
   middleware: (getDefaultMiddleware) =>
@@ -21,6 +23,7 @@ export const store = configureStore({
       .concat(productApi.middleware)
       .concat(faqApi.middleware)
       .concat(contactApi.middleware)
+      .concat(chatApi.middleware)
       .concat(checkoutApi.middleware),
 });
 setupListeners(store.dispatch);

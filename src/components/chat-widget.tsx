@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import ChatIcon from "./icons/chat-icon";
 import { X } from "lucide-react";
 import Image from "next/image";
+import { useAiChatBotMutation } from "@/services/chat-api";
 
 type ChatMessage = {
   id: string | number;
@@ -19,6 +20,8 @@ export default function ChatWidget() {
   const [input, setInput] = useState("");
   const listRef = useRef<HTMLDivElement>(null);
 
+  const [aiChatBot, { isLoading }] = useAiChatBotMutation();
+
   useEffect(() => {
     if (listRef.current) {
       listRef.current.scrollTop = listRef.current.scrollHeight;
@@ -29,9 +32,11 @@ export default function ChatWidget() {
     .toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
     .toLowerCase();
 
-  function sendMessage() {
+  async function sendMessage() {
     const text = input.trim();
     if (!text) return;
+
+    // add user message
     setMessages((prev) => [
       ...prev,
       {
@@ -43,21 +48,33 @@ export default function ChatWidget() {
       },
     ]);
     setInput("");
-    setTimeout(() => {
+
+    try {
+      const res = await aiChatBot({ message: text }).unwrap();
       setMessages((prev) => [
         ...prev,
         {
           id: crypto.randomUUID(),
           author: "bot",
-          text: "Thanks! I received your message.",
+          text: res.reply ?? "⚠️ No response from server",
           time: nowLabel,
         },
       ]);
-    }, 600);
+    } catch (err) {
+      setMessages((prev) => [
+        ...prev,
+        {
+          id: crypto.randomUUID(),
+          author: "bot",
+          text: "❌ Sorry, something went wrong.",
+          time: nowLabel,
+        },
+      ]);
+    }
   }
 
   return (
-    <div className="fixed  bottom-24 right-6 z-50">
+    <div className="fixed bottom-24 right-6 z-50">
       {open && (
         <div className="w-[360px] max-w-[92vw] shadow-2xl rounded-2xl overflow-hidden border border-white/10 bg-neutral-900">
           {/* Header */}
@@ -84,6 +101,9 @@ export default function ChatWidget() {
             {messages.map((m) => (
               <MessageBubble key={m.id} msg={m} />
             ))}
+            {isLoading && (
+              <div className="text-white/60 text-sm">Bot is typing...</div>
+            )}
           </div>
 
           {/* Input */}
@@ -97,7 +117,8 @@ export default function ChatWidget() {
             />
             <button
               onClick={sendMessage}
-              className="p-3 rounded-full bg-custom-gradient text-white shadow-lg hover:opacity-90"
+              disabled={isLoading}
+              className="p-3 rounded-full bg-custom-gradient text-white shadow-lg hover:opacity-90 disabled:opacity-50"
             >
               <svg
                 width="20"
@@ -123,7 +144,7 @@ export default function ChatWidget() {
           onClick={() => setOpen(true)}
           className="rounded-full p-4 shadow-2xl bg-custom-gradient text-white"
         >
-         <ChatIcon/>
+          <ChatIcon />
         </button>
       )}
     </div>
@@ -139,7 +160,6 @@ function MessageBubble({ msg }: { msg: ChatMessage }) {
           🤖
         </div>
       )}
-
       <div className={`max-w-[80%] ${isUser ? "text-right" : ""}`}>
         <div
           className={
@@ -152,16 +172,15 @@ function MessageBubble({ msg }: { msg: ChatMessage }) {
         </div>
         <div className="mt-1 text-[10px] text-white/40">{msg.time}</div>
       </div>
-
-      {isUser && (
+      {/* {isUser && (
         <Image
-        width={100}
-        height={100}
+          width={100}
+          height={100}
           src={msg.avatarUrl ?? "https://i.pravatar.cc/80?img=47"}
           alt="avatar"
           className="h-8 w-8 rounded-full object-cover border border-white/10"
         />
-      )}
+      )} */}
     </div>
   );
 }
@@ -172,26 +191,5 @@ const defaultMessages: ChatMessage[] = [
     author: "bot",
     text: "Hello, I'm G4f AI! 👋\nI'm your personal chat assistant. How can I help you?",
     time: "09:00pm",
-  },
-  {
-    id: 2,
-    author: "user",
-    text: "ut labore et dolore magna aliqua.",
-    time: "09:00pm",
-    avatarUrl: "https://i.pravatar.cc/80?img=47",
-  },
-  {
-    id: 3,
-    author: "user",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, se.",
-    time: "09:00pm",
-    avatarUrl: "https://i.pravatar.cc/80?img=47",
-  },
-  {
-    id: 4,
-    author: "user",
-    text: "ut labore et dolore magna aliqua.",
-    time: "09:00pm",
-    avatarUrl: "https://i.pravatar.cc/80?img=47",
   },
 ];
