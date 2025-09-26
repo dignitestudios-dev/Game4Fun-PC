@@ -4,11 +4,11 @@ import LocationIcon from "@/components/icons/location-icon";
 import { PhoneIcon } from "lucide-react";
 import EmailIcon from "@/components/icons/email-icon";
 
-import warrantyData from "../data/warranty.json";
+import warrantyData from "../data/pc-guide.json";
 import ArrowBtn from "./ui/arrow-btn";
 import PopupHeader from "./ui/popup-header";
 
-function WarrantyPopup({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+function PCGuidePopup({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const popupRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -17,6 +17,7 @@ function WarrantyPopup({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
     } else {
       document.body.style.overflow = ""; // restore scroll
     }
+
     return () => {
       document.body.style.overflow = "";
     };
@@ -30,8 +31,15 @@ function WarrantyPopup({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
     }
   };
 
-  const renderSection = (section: any) => { //eslint-disable-line
+  const renderSection = (section: any) => { // eslint-disable-line
     switch (section.type) {
+      case "intro":
+        return (
+          <p key={section.content} className="text-sm text-[#BDBDBD] leading-6">
+            {section.content}
+          </p>
+        );
+
       case "header":
         return <PopupHeader key={section.title} title={section.title} />;
 
@@ -62,14 +70,15 @@ function WarrantyPopup({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
       case "table":
         return (
           <div key={section.title} className="pt-4">
-            {section.title && (
-              <h3 className="font-semibold text-white mb-2">{section.title}</h3>
-            )}
+            <h3 className="font-semibold text-white mb-2">{section.title}</h3>
             <PolicyTable
               columns={section.columns.map((c: string) => ({ key: c, label: c }))}
               data={section.rows.map((row: string[]) =>
                 Object.fromEntries(
-                  section.columns.map((col: string, i: number) => [col, row[i]])
+                  section.columns.map((col: string, i: number) => [
+                    col.toLowerCase(),
+                    row[i],
+                  ])
                 )
               )}
             />
@@ -82,7 +91,7 @@ function WarrantyPopup({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
       case "contact":
         return (
           <div key="contact" className="text-sm text-[#BDBDBD] space-y-2">
-            <p className="font-bold text-white">{section.company || "Contact"}</p>
+            <p className="font-bold text-white">Game4FunPCS</p>
             <ul className="space-y-2">
               {section.email && (
                 <li className="flex items-center gap-2">
@@ -131,22 +140,15 @@ function WarrantyPopup({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
         <div className="p-6 overflow-y-auto flex-1">
           {/* Meta */}
           <div className="border-b border-[#2b2b2b] pb-3 mb-4">
-            <h1 className="text-lg font-semibold text-white">Warranty Policy</h1>
-            {warrantyData.meta?.effectiveDate && (
-              <p className="text-[#BDBDBD] text-sm">
-                Effective Date: {warrantyData.meta.effectiveDate}
-              </p>
-            )}
-            {warrantyData.meta?.governingLaw && (
-              <p className="text-[#BDBDBD] text-sm">
-                Governing Law: {warrantyData.meta.governingLaw}
-              </p>
-            )}
+            <h1 className="text-lg font-semibold text-white">
+              {warrantyData.meta.title}
+            </h1>
+            <p className="text-[#BDBDBD] text-sm">Version: {warrantyData.meta.version}</p>
           </div>
 
           {/* Dynamic Sections */}
           <div className="space-y-4">
-            {warrantyData.sections.map((section: any) => //eslint-disable-line
+            {warrantyData.sections.map((section: any, idx: number) => // eslint-disable-line
               renderSection(section)
             )}
           </div>
@@ -163,4 +165,4 @@ function WarrantyPopup({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
   );
 }
 
-export default WarrantyPopup;
+export default PCGuidePopup;

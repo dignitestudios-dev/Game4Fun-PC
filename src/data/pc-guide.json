@@ -1,0 +1,304 @@
+{
+  "meta": {
+    "title": "Game4FunPCS First PC Guide: Power Up Like a Pro",
+    "version": "2025 Edition"
+  },
+  "sections": [
+    {
+      "type": "intro",
+      "content": "Welcome to the Game4FunPCS family! Whether this is your first custom-built rig or your long-awaited upgrade, you’ve entered the elite world of PC gaming—and we’re here to make sure your experience is smooth, powerful, and unforgettable."
+    },
+    {
+      "type": "header",
+      "title": "Before Your PC Arrives"
+    },
+    {
+      "type": "list",
+      "title": "Prepare Your Space",
+      "items": [
+        "Clear and clean your desk (especially where the PC will sit)",
+        "Get your monitor, keyboard, mouse, and headset ready",
+        "Recommended: 144Hz monitor for smooth gameplay",
+        "1080p build: Use 1080p @ 144Hz+ monitor",
+        "1440p build: Use 1440p @ 144Hz+ monitor"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Check Internet Connection",
+      "items": [
+        "Most gaming desktops do not include Wi-Fi by default",
+        "If no built-in Wi-Fi: use a USB dongle (TP-Link with antenna is best)",
+        "Ethernet = Best connection"
+      ]
+    },
+    {
+      "type": "header",
+      "title": "Unboxing & Inspection"
+    },
+    {
+      "type": "list",
+      "title": "Inspect Before Opening",
+      "items": [
+        "Look for damage on the shipping box",
+        "Take pictures if any visible damage"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Inside the Box",
+      "items": [
+        "Power cable",
+        "Wi-Fi antennas (if included)",
+        "Accessory boxes",
+        "Keep original packaging for returns or future moves"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Full Visual Check",
+      "items": [
+        "All parts securely seated?",
+        "No loose cables or visible damage?",
+        "If anything seems off — contact Game4FunPCS Support"
+      ]
+    },
+    {
+      "type": "header",
+      "title": "Setup Time"
+    },
+    {
+      "type": "list",
+      "title": "Connect Peripherals",
+      "items": [
+        "Plug keyboard, mouse, headset into USB",
+        "Plug monitor into GPU (middle/lower ports), not motherboard"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Power On",
+      "items": [
+        "Flip PSU switch on back to “I” (not “O”)",
+        "Press power button on front/top of case"
+      ]
+    },
+    {
+      "type": "header",
+      "title": "First Boot & Configuration"
+    },
+    {
+      "type": "list",
+      "title": "Windows Setup",
+      "items": [
+        "Follow setup instructions to desktop",
+        "If Windows doesn’t boot → Contact support"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Activate Windows",
+      "items": [
+        "Go to Settings > System > Activation",
+        "Should say 'Windows is activated'"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Storage Check",
+      "items": [
+        "Open File Explorer > This PC",
+        "C:\\ Drive = SSD boot drive (e.g. 500GB or 1TB)",
+        "D:\\ or E:\\ = Extra drive (HDD, SSD, NVMe)"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Remove Bloatware",
+      "items": [
+        "Search: Add or remove programs",
+        "Uninstall junk (McAfee, Norton, Office trial, etc.)"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Windows Update",
+      "items": [
+        "Start > Windows Update > Check for Updates",
+        "Install and restart until fully up-to-date"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Enable RAM Speeds",
+      "items": [
+        "Ctrl + Shift + Esc > Task Manager > Performance > Memory",
+        "If RAM isn’t running at full speed: Reboot > Tap DEL to enter BIOS",
+        "Enable XMP (Intel), DOCP/EXPO (AMD)",
+        "Save and exit"
+      ]
+    },
+    {
+      "type": "header",
+      "title": "Game-Ready Optimization Cheat Sheet"
+    },
+    {
+      "type": "list",
+      "title": "Quick Checklist",
+      "items": [
+        "Update GPU drivers",
+        "Enable Game Mode",
+        "Set Power Plan to High/Ultimate",
+        "End background tasks before gaming",
+        "Adjust in-game settings for FPS"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Update Graphics Drivers",
+      "items": [
+        "NVIDIA: GeForce Experience → Drivers → Check Updates",
+        "AMD: Adrenalin Software → Update tab → Restart after install"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Enable Game Mode",
+      "items": [
+        "Windows + I > Gaming > Game Mode > ON",
+        "Prevents updates + prioritizes gaming"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "NVIDIA GPU Settings",
+      "items": [
+        "Pre-rendered Frames: 1",
+        "Power Mode: Max Performance",
+        "V-Sync: Off",
+        "Low Latency Mode: On"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "AMD GPU Settings",
+      "items": [
+        "Anti-Lag: On",
+        "Boost: On",
+        "Filtering: Performance",
+        "V-Sync: Off"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Monitor Tweaks",
+      "items": [
+        "Settings > Display > Advanced > Refresh Rate > Max",
+        "On monitor OSD: Enable FreeSync/G-Sync, Overdrive, Game Mode"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Power Settings",
+      "items": [
+        "Control Panel > Power Options > Ultimate Performance",
+        "Advanced Settings: PCIe = Max Performance",
+        "CPU = 100%",
+        "USB selective suspend = OFF"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Background Cleanup",
+      "items": [
+        "Ctrl + Shift + Esc → Task Manager",
+        "End background apps",
+        "Disable unnecessary startup apps"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "In-Game Settings",
+      "items": [
+        "Resolution: Native preferred, reduce for FPS boost",
+        "Textures: High (8GB VRAM+), Medium (6GB), Low (≤4GB)",
+        "Shadows: Medium or Low",
+        "Anti-Aliasing: DLSS > TAA > FXAA",
+        "Post-processing: Turn off Motion Blur, Depth of Field"
+      ]
+    },
+    {
+      "type": "header",
+      "title": "Advanced Tweaks (Experts Only)"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Enable Hardware GPU Scheduling (Settings > Display > Graphics)",
+        "SSD Optimization: 'Defragment & Optimize' > SSD > Optimize",
+        "Change DNS: 8.8.8.8 or 1.1.1.1 for speed boost",
+        "Enable Resizable BAR in BIOS (if supported)"
+      ]
+    },
+    {
+      "type": "header",
+      "title": "Optional Software Tools"
+    },
+    {
+      "type": "list",
+      "items": [
+        "MSI Afterburner – Fan curves, temp overlay",
+        "HWMonitor – CPU & GPU temps",
+        "CrystalDiskInfo – SSD/HDD health",
+        "Malwarebytes – Monthly scans",
+        "PingPlotter – Internet latency tests"
+      ]
+    },
+    {
+      "type": "header",
+      "title": "PC Maintenance Timeline"
+    },
+    {
+      "type": "list",
+      "title": "Every Month",
+      "items": [
+        "Run Windows Update",
+        "Clean case vents and filters",
+        "Reboot PC"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Every 6 Months",
+      "items": [
+        "Full dusting (with fans held still!)",
+        "Run Cinebench or 3DMark again for performance check"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Yearly",
+      "items": [
+        "Consider fresh Windows install for max performance"
+      ]
+    },
+    {
+      "type": "header",
+      "title": "Need Help?"
+    },
+    {
+      "type": "contact",
+      "email": "game4funpcs@gmail.com",
+      "website": "www.Game4FunPCS.com",
+      "discord": "Game4FunPCS Discord (Coming Soon)"
+    },
+    {
+      "type": "header",
+      "title": "Final Words"
+    },
+    {
+      "type": "paragraph",
+      "content": "Congratulations on your new system! Whether you’re grinding ranked, creating content, or just chilling with friends—your Game4FunPCS rig was built to deliver. Keep this guide handy, tune up monthly, and game hard."
+    }
+  ]
+}

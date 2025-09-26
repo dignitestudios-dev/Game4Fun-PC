@@ -11,7 +11,7 @@ function About() {
           alt="aboutus"
           width={1500}
           height={1500}
-          className="rounded-xl relative z-50"
+          className="rounded-xl relative z-30"
         />
       </div>
 

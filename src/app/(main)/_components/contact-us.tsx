@@ -1,11 +1,12 @@
 import {
   Facebook,
   Instagram,
-  Linkedin,
+
   Mail,
   Phone,
   // Plus,
-  Twitter,
+  // Twitter,
+  Youtube,
 } from "lucide-react";
 import ContactInfo from "./ui/contact-info";
 import Input from "@/components/ui/input";
@@ -22,6 +23,7 @@ import { FormErrorMessage } from "@/components/error-message";
 import GetFreeQuote from "./ui/get-free-quote";
 import { useState } from "react";
 import Popup from "@/components/popup";
+import { FaTiktok } from "react-icons/fa";
 
 const info = [
   {
@@ -47,6 +49,16 @@ const links = [
   {
     icon: Instagram,
     text: "Instagram",
+    href: "https://www.instagram.com/game4funpcs/",
+  },
+  {
+    icon: Youtube,
+    text: "Youtube",
+    href: "https://www.instagram.com/game4funpcs/",
+  },
+  {
+    icon: FaTiktok  ,
+    text: "Tiktok    ",
     href: "https://www.instagram.com/game4funpcs/",
   },
 ];
@@ -116,7 +128,7 @@ function ContactUs() {
                   <ContactInfo info={i} key={idx} />
                 ))}
               </div>
-              <div className="flex flex-wrap gap-4 justify-between">
+              <div className="flex flex-wrap gap-4 justify-between mr-7">
                 {links.slice(2, 4).map((i, idx) => (
                   <ContactInfo info={i} key={idx} />
                 ))}

@@ -11,6 +11,8 @@ import { useGetProfileQuery } from "@/services/auth-api";
 import Cookies from "js-cookie";
 import ArrowBtn from "./arrow-btn";
 import { motion, AnimatePresence } from "framer-motion";
+import { useGetCartQuery } from "@/services/product-api";
+import CartButton from "./cart-button";
 
 const routes = [
   { href: "/", pathname: "HOME" },
@@ -27,6 +29,7 @@ const routes = [
 
 function Navbar() {
   const { data } = useGetProfileQuery({});
+   const {data:cartData} =  useGetCartQuery();
   if (data) {
     Cookies.set("userData", JSON.stringify(data?.user));
   }
@@ -100,19 +103,7 @@ function Navbar() {
         <div className="hidden lg:flex items-center z-50 gap-2">
           {Cookies.get("token") && data ? (
             <>
-              <Link
-                href="/cart"
-                className="bg-[linear-gradient(to_right,#C100FF,#FFBE96)] p-[1.2px] rounded-full flex"
-              >
-                <div className="bg-black rounded-full w-12 h-12 flex items-center justify-center">
-                  <Image
-                    src="/images/cart-icon.png"
-                    alt="cart"
-                    width={23}
-                    height={23}
-                  />
-                </div>
-              </Link>
+          <CartButton cartCount={cartData?.cart.items.length || 0} />
               <UserDropdown />
             </>
           ) : (

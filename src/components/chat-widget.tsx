@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import ChatIcon from "./icons/chat-icon";
 import { X } from "lucide-react";
-import Image from "next/image";
+// import Image from "next/image";
 import { useAiChatBotMutation } from "@/services/chat-api";
 
 type ChatMessage = {
@@ -60,7 +60,7 @@ export default function ChatWidget() {
           time: nowLabel,
         },
       ]);
-    } catch (err) {
+    } catch (_err) {
       setMessages((prev) => [
         ...prev,
         {

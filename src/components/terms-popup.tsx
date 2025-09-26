@@ -53,14 +53,15 @@ function TermsPopup({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
             <h3 className="font-semibold text-white mb-2">{section.title}</h3>
             <PolicyTable
               columns={section.columns.map((c: string) => ({ key: c, label: c }))}
-              data={section.rows.map((row: string[]) =>
-                Object.fromEntries(
-                  section.columns.map((col: string, i: number) => [
-                    col.toLowerCase(),
-                    row[i],
-                  ])
-                )
-              )}
+           data={section.rows.map((row: string[]) =>
+  Object.fromEntries(
+    section.columns.map((col: string, i: number) => [
+      col, // keep same as in columns
+      row[i],
+    ])
+  )
+)}
+
             />
             {section.note && (
               <p className="mt-2 text-sm text-[#BDBDBD]">{section.note}</p>

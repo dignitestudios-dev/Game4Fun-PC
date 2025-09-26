@@ -8,11 +8,13 @@ import Image from "next/image";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import TermsPopup from "./terms-popup";
+import PCGuidePopup from "./pc-guide-popup";
 import WarrantyPopup from "./warranty-popup";
 
 export default function UserDropdown() {
   const [isOpen, setIsOpen] = useState(false);
   const [popup, setPopup] = useState(false);
+  const [pcGuidePopup, setPCGuidePopup] = useState(false);
   const [warrantyPopup, setWarrantyPopup] = useState(false);
   const dropdownRef = useRef(null);
   const data = JSON.parse(Cookies.get("userData")!);
@@ -43,6 +45,10 @@ export default function UserDropdown() {
   return (
     <div className="relative z-[999999999999999999]" ref={dropdownRef}>
       <TermsPopup isOpen={popup} onClose={() => setPopup(false)} />
+      <PCGuidePopup
+        isOpen={pcGuidePopup}
+        onClose={() => setPCGuidePopup(false)}
+      />
       <WarrantyPopup
         isOpen={warrantyPopup}
         onClose={() => setWarrantyPopup(false)}
@@ -111,7 +117,18 @@ export default function UserDropdown() {
                 }}
                 className="block w-full text-start cursor-pointer px-4 py-2 hover:bg-neutral-800"
               >
-                Warranty
+              Warranty
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => {
+                  setPCGuidePopup(!pcGuidePopup);
+                  setIsOpen(!isOpen);
+                }}
+                className="block w-full text-start cursor-pointer px-4 py-2 hover:bg-neutral-800"
+              >
+                PC Guide
               </button>
             </li>
             {/* <li>
