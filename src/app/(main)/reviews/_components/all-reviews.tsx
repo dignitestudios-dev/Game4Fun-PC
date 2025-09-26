@@ -26,27 +26,31 @@ const reviews = [
     rating: 3,
   },
   {
-    name: "Daniel Smith",
-    date: "2 June, 2024",
+    name: "Ava Johnson",
+    date: "12 June, 2024",
     review:
-      "Product quality is good, but shipping took longer than promised.",
-    rating: 3,
+      "Customer support was very responsive and helped me track my order. Packaging was neat as well.",
+    rating: 4,
+    avatarUrl: "/avatars/ava.png",
   },
   {
-    name: "Daniel Smith",
-    date: "2 June, 2024",
+    name: "Michael Brown",
+    date: "20 June, 2024",
     review:
-      "Product quality is good, but shipping took longer than promised.",
+      "Decent product for the price. Not perfect, but worth it overall. Delivery could be faster.",
     rating: 3,
+    avatarUrl: "/avatars/michael.png",
   },
   {
-    name: "Daniel Smith",
-    date: "2 June, 2024",
+    name: "Emily Davis",
+    date: "5 July, 2024",
     review:
-      "Product quality is good, but shipping took longer than promised.",
-    rating: 3,
+      "Absolutely love it! Exceeded my expectations. Will definitely recommend to my friends.",
+    rating: 5,
+    avatarUrl: "/avatars/emily.png",
   },
 ];
+
 
 function AllReviews() {
   return (

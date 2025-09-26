@@ -35,19 +35,32 @@ function CreateProfileForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async () => {
-    const data = new FormData();
-    if (!formData.fullName || !formData.address || !formData.phoneNumber) {
-      return toast.error("Please fill all fields");
-    }
-    if (!file) {
-      return toast.error("Please select profile image");
-    }
-    data.append("fullName", formData.fullName);
-    data.append("phone", formData.phoneNumber);
-    data.append("address", formData.address);
-    data.append("profilePicture", file);
+const handleSubmit = async () => {
+  const data = new FormData();
 
+  if (!formData.fullName || !formData.address || !formData.phoneNumber) {
+    return toast.error("Please fill all fields");
+  }
+
+  let profileFile = file;
+
+  if (!profileFile) {
+    try {
+      const response = await fetch("/images/logo.png"); 
+      const blob = await response.blob();
+      profileFile = new File([blob], "logo.png", { type: blob.type });
+    } catch (error) {
+      console.error("Error loading default image:", error);
+      return toast.error("Please select a profile image");
+    }
+  }
+
+  data.append("fullName", formData.fullName);
+  data.append("phone", formData.phoneNumber);
+  data.append("address", formData.address);
+  data.append("profilePicture", profileFile);
+
+  try {
     const res = await complete(data).unwrap();
 
     if (res.error) {
@@ -58,14 +71,20 @@ function CreateProfileForm() {
       }
       return;
     }
+
     if (res.message) {
       toast.success(res.message);
-      router.push("/")
+      router.push("/");
     }
-  };
+  } catch (err) {
+    toast.error("Request failed.");
+    console.error(err);
+  }
+};
+
 
   return (
-    <div className="bg-[#2A2929CC] rounded-2xl p-8 w-[30%] relative z-50">
+    <div className="bg-[#2A2929CC] rounded-2xl p-8 w-full md:w-[30%] relative z-50">
       <div className="flex flex-col gap-4 items-center">
         <div
           className="w-32 h-32 rounded-full border-2 border-dashed flex items-center justify-center cursor-pointer border-purple-500 transition"
