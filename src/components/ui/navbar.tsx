@@ -29,7 +29,8 @@ const routes = [
 
 function Navbar() {
   const { data } = useGetProfileQuery({});
-   const {data:cartData} =  useGetCartQuery();
+  const hasToken = !!Cookies.get("token");
+  const { data: cartData } = useGetCartQuery(undefined, { skip: !hasToken });
   if (data) {
     Cookies.set("userData", JSON.stringify(data?.user));
   }
@@ -103,7 +104,7 @@ function Navbar() {
         <div className="hidden lg:flex items-center z-50 gap-2">
           {Cookies.get("token") && data ? (
             <>
-          <CartButton cartCount={cartData?.cart.items.length || 0} />
+              <CartButton cartCount={cartData?.cart.items.length || 0} />
               <UserDropdown />
             </>
           ) : (
