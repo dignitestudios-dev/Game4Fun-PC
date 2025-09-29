@@ -2,22 +2,54 @@ import Image from "next/image";
 import React from "react";
 
 interface ReviewCardProps {
-  name: string;
-  date: string;
+  title: string;
   review: string;
   rating: number;
-  avatarUrl?: string;
+  userData: {
+    fullName: string;
+    email: string;
+    profilePicture: string | null;
+  };
+  createdAt: string;
+
 }
 
 export default function ReviewCard({
-  name,
-  date,
+  title,
   review,
   rating,
-  avatarUrl,
+ 
+  userData,
+  createdAt,
+ 
 }: ReviewCardProps) {
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString("en-US", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+    });
+  };
+
   return (
-    <div className="bg-[#1A1A1A] w-full lg:w-[48%] text-white p-4 rounded-lg shadow-md  space-y-3">
+    <div className="bg-[#1A1A1A] w-full lg:w-[48%] text-white p-4 rounded-lg shadow-md space-y-3">
+      {/* Review Image */}
+      {/* {picture && (
+        <div className="w-full h-48 rounded-lg overflow-hidden mb-3">
+          <Image
+            width={500}
+            height={300}
+            src={picture}
+            alt={title}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      )} */}
+
+      {/* Title */}
+      <h3 className="text-lg font-semibold text-white">{title}</h3>
+
+      {/* Star Rating */}
       <div className="flex text-yellow-400">
         {Array.from({ length: 5 }).map((_, i) => (
           <svg
@@ -38,26 +70,43 @@ export default function ReviewCard({
         ))}
       </div>
 
-      <p className="text-gray-300 text-sm">{review}</p>
+      {/* Review Text */}
+      <p className="text-gray-300 text-sm line-clamp-3">{review}</p>
 
-      <div className="flex items-center gap-3">
-        {avatarUrl ? (
-          <Image
-            width={300}
-            height={300}
-            src={avatarUrl}
-            alt={name}
-            className="w-8 h-8 rounded-full object-cover"
-          />
-        ) : (
-          <div className="w-8 h-8 rounded-full bg-yellow-500 flex items-center justify-center text-black font-bold">
-            {name.charAt(0)}
+      {/* User Info */}
+      <div className="flex items-center justify-between pt-2 border-t border-gray-700">
+        <div className="flex items-center gap-3">
+          {userData.profilePicture ? (
+            <Image
+              width={300}
+              height={300}
+              src={userData.profilePicture}
+              alt={userData.fullName}
+              className="w-10 h-10 rounded-full object-cover"
+            />
+          ) : (
+            <div className="w-10 h-10 rounded-full bg-yellow-500 flex items-center justify-center text-black font-bold">
+              {userData.fullName.charAt(0).toUpperCase()}
+            </div>
+          )}
+          <div>
+            <p className="text-sm font-semibold">{userData.fullName}</p>
+            <p className="text-xs text-gray-500">{formatDate(createdAt)}</p>
           </div>
-        )}
-        <div>
-          <p className="text-sm font-semibold">{name}</p>
-          <p className="text-xs text-gray-500">{date}</p>
         </div>
+
+        {/* Status Badge */}
+        {/* <span
+          className={`px-2 py-1 rounded-full text-xs font-medium ${
+            status === "pending"
+              ? "bg-yellow-500/20 text-yellow-500"
+              : status === "accepted"
+              ? "bg-green-500/20 text-green-500"
+              : "bg-red-500/20 text-red-500"
+          }`}
+        >
+          {status}
+        </span> */}
       </div>
     </div>
   );

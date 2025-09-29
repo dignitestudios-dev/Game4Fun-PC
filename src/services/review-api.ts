@@ -12,25 +12,25 @@ const baseQuery = fetchBaseQuery({
   },
 });
 
-const baseQueryWithReauth: typeof baseQuery = async (
-  args,
-  api,
-  extraOptions
-) => {
-  const result = await baseQuery(args, api, extraOptions);
-  if (result.error && result.error.status === 401) {
-    Cookies.remove("token");
-    window.location.href = "/sign-in";
-  }
+// const baseQueryWithReauth: typeof baseQuery = async (
+//   args,
+//   api,
+//   extraOptions
+// ) => {
+//   const result = await baseQuery(args, api, extraOptions);
+//   if (result.error && result.error.status === 401) {
+//     Cookies.remove("token");
+//     window.location.href = "/sign-in";
+//   }
 
-  return result;
-};
+//   return result;
+// };
 
 export const reviewApi = createApi({
   reducerPath: "reviewApi",
   baseQuery: baseQuery,
   endpoints: (builder) => ({
-    getAllReviews: builder.query({
+    getAllReviews: builder.query<ReviewResponse , void>({
       query: () => `/review/getAllReviews`,
     }),
 
