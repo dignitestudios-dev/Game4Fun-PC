@@ -27,7 +27,7 @@ function ShopCard({
         <div className="flex flex-col gap-8 justify-center text-xs font-semibold z-20 tracking-widest text-white/70">
           <div>
             <h3 className="text-lg text-white">CASE</h3>
-            <span className="font-normal line-clamp-2 block w-24">
+            <span className="font-normal truncate line-clamp-2 block w-24">
               {details?.cpuCase}
             </span>
           </div>
