@@ -153,14 +153,77 @@ export default function ChatWidget() {
 
 function MessageBubble({ msg }: { msg: ChatMessage }) {
   const isUser = msg.author === "user";
+  
+  const formatMessage = (text: string) => {
+    const lines = text.split('\n');
+    return lines.map((line, i) => {
+      // Check for headers (lines ending with :)
+      if (line.trim().endsWith(':') && !line.startsWith('-') && !line.match(/^\d+\./)) {
+        return (
+          <div key={i} className="font-semibold text-white mt-3 mb-1">
+            {line}
+          </div>
+        );
+      }
+      
+      // Check for numbered lists
+      if (line.match(/^\d+\.\s/)) {
+        const content = line.replace(/^\d+\.\s/, '');
+        return (
+          <div key={i} className="ml-2 mb-1 flex gap-2">
+            <span className="text-rose-400 font-semibold">•</span>
+            <span>{formatInlineStyles(content)}</span>
+          </div>
+        );
+      }
+      
+      // Check for bullet points
+      if (line.startsWith('-')) {
+        const content = line.replace(/^-\s*/, '');
+        return (
+          <div key={i} className="ml-4 mb-1 flex gap-2">
+            <span className="text-rose-400 text-xs mt-1">▸</span>
+            <span>{formatInlineStyles(content)}</span>
+          </div>
+        );
+      }
+      
+      // Regular text
+      if (line.trim()) {
+        return (
+          <div key={i} className="mb-2">
+            {formatInlineStyles(line)}
+          </div>
+        );
+      }
+      
+      return <div key={i} className="h-2" />;
+    });
+  };
+  
+  const formatInlineStyles = (text: string) => {
+    // Format **bold** text
+    const parts = text.split(/(\*\*.*?\*\*)/g);
+    return parts.map((part, i) => {
+      if (part.startsWith('**') && part.endsWith('**')) {
+        return (
+          <strong key={i} className="font-bold text-white">
+            {part.slice(2, -2)}
+          </strong>
+        );
+      }
+      return <span key={i}>{part}</span>;
+    });
+  };
+  
   return (
-    <div className={`flex items-end gap-2 ${isUser ? "justify-end" : ""}`}>
+    <div className={`flex items-start gap-2 ${isUser ? "justify-end" : ""}`}>
       {!isUser && (
-        <div className="h-8 w-8 rounded-full bg-neutral-800 grid place-items-center text-white/60 border border-white/10">
+        <div className="h-8 w-8 rounded-full bg-neutral-800 grid place-items-center text-white/60 border border-white/10 flex-shrink-0">
           🤖
         </div>
       )}
-      <div className={`max-w-[80%] ${isUser ? "text-right" : ""}`}>
+      <div className={`max-w-[85%] ${isUser ? "text-right" : ""}`}>
         <div
           className={
             isUser
@@ -168,7 +231,7 @@ function MessageBubble({ msg }: { msg: ChatMessage }) {
               : "rounded-2xl px-4 py-3 text-white/90 bg-neutral-800 border border-white/10"
           }
         >
-          {msg.text}
+          {isUser ? msg.text : formatMessage(msg.text)}
         </div>
         <div className="mt-1 text-[10px] text-white/40">{msg.time}</div>
       </div>

@@ -28,12 +28,11 @@ const baseQueryWithReauth: typeof baseQuery = async (
 
 export const reviewApi = createApi({
   reducerPath: "reviewApi",
-  baseQuery: baseQueryWithReauth,
+  baseQuery: baseQuery,
   endpoints: (builder) => ({
-    // getAllProducts: builder.query<ProductsResponse, { limit: string }>({
-    //   query: ({ limit }) => `/product/getAllProducts?limit=${limit}`,
-    //   providesTags: ["Product"],
-    // }),
+    getAllReviews: builder.query({
+      query: () => `/review/getAllReviews`,
+    }),
 
 
     postReview: builder.mutation<
@@ -51,5 +50,6 @@ export const reviewApi = createApi({
 });
 
 export const {
-usePostReviewMutation
+usePostReviewMutation,
+useGetAllReviewsQuery
 } = reviewApi;

@@ -1,6 +1,8 @@
+"use client"
 import React from 'react'
 import ReviewSummary from './review-summary'
 import ReviewCard from './review-card';
+import { useGetAllReviewsQuery } from '@/services/review-api';
 const reviews = [
   {
     name: "Jason Cruz",
@@ -53,6 +55,7 @@ const reviews = [
 
 
 function AllReviews() {
+  const {data} = useGetAllReviewsQuery({})
   return (
     <div className='px-4 md:px-10'>
  <ReviewSummary/>
