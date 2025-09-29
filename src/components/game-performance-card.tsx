@@ -1,5 +1,4 @@
 import { RotateCw } from "lucide-react";
-import Image from "next/image";
 import React, { useState } from "react";
 
 // interface BenchmarkSetting {
@@ -45,7 +44,7 @@ const GamePerformanceCard: React.FC<Props> = ({ system, setShow }) => {
 
       {activeBenchmark && (
         <div className="bg-[#1c1b1b] text-white p-6 rounded-2xl shadow-lg flex gap-6 w-full">
-          {/* Left side - Game Cover */}
+          {/* Left side - Game Cover
           <div className="flex flex-col items-center w-[15%]">
             <Image
               width={500}
@@ -55,7 +54,7 @@ const GamePerformanceCard: React.FC<Props> = ({ system, setShow }) => {
               className="rounded-xl shadow-md object-cover"
             />
             <p className="mt-2 text-center text-sm">{activeBenchmark.game}</p>
-          </div>
+          </div> */}
 
           {/* Right side - Performance Info */}
           <div className="flex flex-col w-full">
