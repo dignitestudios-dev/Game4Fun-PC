@@ -19,8 +19,9 @@ function Page() {
   const [sortBy, setSortBy] = useState({ label: "Latest", val: "latest" });
   const [selected, setSelected] = useState<{ [key: string]: string[] }>({});
 
-  const params: Record<string, any> = {   //eslint-disable-line
- 
+  const params: Record<string, any> = {
+    //eslint-disable-line
+
     page,
     limit: 10,
     sortBy: sortBy.val,
@@ -29,21 +30,51 @@ function Page() {
   Object.entries(selected).forEach(([section, values]) => {
     if (values.length > 0) {
       switch (section) {
+        case "CPU":
+          params.cpu = values[values.length - 1];
+          break;
+
+        case "Storage":
+          params.storage = values[values.length - 1];
+          break;
+
+        case "GPU Brand":
+          params.gpuBrand = values[values.length - 1];
+          break;
+
         case "Performance":
           values.forEach((val, idx) => (params[`cpu[${idx}]`] = val));
           break;
+
         case "Graphics Card":
           values.forEach((val, idx) => (params[`graphicCards[${idx}]`] = val));
           break;
+
         case "GPU Memory":
-          values.forEach((val, idx) => (params[`gpu[${idx}]`] = val));
+          const lastGpu = values[values.length - 1];
+          const [minGpu, maxGpu] = lastGpu
+            .split("-")
+            .map((v) => v.replace("gb", "").trim());
+          params.mingpuMemory = Number(minGpu);
+          params.maxgpuMemory = maxGpu ? Number(maxGpu) : null;
           break;
+
+        case "RAM":
+          values.forEach((val, idx) => {
+            params[`ram[${idx}]`] = val
+              .replace("gb", "")
+              .replace("+", "")
+              .trim();
+          });
+          break;
+
         case "Price":
           const lastPrice = values[values.length - 1];
           const [minPrice, maxPrice] = lastPrice.split("-").map(Number);
           params.minPrice = minPrice;
           params.maxPrice = maxPrice;
           break;
+
         default:
           break;
       }
@@ -68,52 +99,58 @@ function Page() {
     {
       title: "Price",
       options: [
-        { label: "$300 - $1000", value: "300-1000" },
-        { label: "$1000 - $2500", value: "1000-2500" },
-        { label: "$2500 - $5000", value: "2500-5000" },
-        { label: "$5000 - $10000", value: "5000-10000" },
-      ],
-    },
-    {
-      title: "Performance Tier",
-      options: [
-        { label: "Ultra", value: "ultra" },
-        { label: "Extreme", value: "extreme" },
+        { label: "$500 – $1,000", value: "500-1000" },
+        { label: "$1,000 – $2,500", value: "1000-2500" },
+        { label: "$2,500 – $5,000", value: "2500-5000" },
+        { label: "$5,000 – $10,000+", value: "5000-100000000" },
       ],
     },
     {
       title: "CPU",
       options: [
-        { label: "Intel", value: "intel" },
+        { label: "Intel Core", value: "Intel Core" },
+        { label: "AMD Ryzen", value: "AMD Ryzen" },
+        { label: "Intel Ultra Core", value: "Intel Ultra Core" },
+        { label: "AMD Threadripper", value: "AMD Threadripper" },
+      ],
+    },
+    {
+      title: "GPU Brand",
+      options: [
+        { label: "NVIDIA", value: "nvidia" },
         { label: "AMD", value: "amd" },
       ],
     },
     {
-      title: "Performance",
-      options:
-        filterData?.data?.cpus?.map((cpu) => ({
-          label: cpu,
-          value: cpu,
-        })) || [],
-    },
-    {
-      title: "Graphics Card",
-      options:
-        filterData?.data?.graphicCards?.map((gpu) => ({
-          label: gpu,
-          value: gpu,
-        })) || [],
-    },
-    {
       title: "GPU Memory",
       options: [
-        { label: "4 GB", value: "4gb" },
-        { label: "8 GB", value: "8gb" },
-        { label: "12 GB", value: "12gb" },
-        { label: "24 GB", value: "24gb" },
+        { label: "4 – 10 GB", value: "4-10" },
+        { label: "12 – 16 GB", value: "12-16" },
+        { label: "16 – 20 GB", value: "16-20" },
+        { label: "24 – 32 GB", value: "24-32" },
+      ],
+    },
+    {
+      title: "RAM",
+      options: [
+        { label: "16 GB", value: "16gb" },
+        { label: "32 GB", value: "32gb" },
+        { label: "48 GB", value: "48gb" },
+        { label: "64 GB", value: "64gb" },
+        { label: "128 GB+", value: "128" },
+      ],
+    },
+    {
+      title: "Storage",
+      options: [
+        { label: "1 TB SSD", value: "1 TB SSD" },
+        { label: "2 TB SSD", value: "2 TB SSD" },
+        { label: "4 TB SSD", value: "4 TB SSD" },
+        { label: "SSD + HDD Combo", value: "SSD + HDD Combo" },
       ],
     },
   ];
+
   return (
     <div className="">
       <ShopBanner />
@@ -146,11 +183,15 @@ function Page() {
           </div>
           <div className="flex flex-wrap justify-center lg:justify-start items-center gap-10">
             {isLoading && filterLoader && <Loader />}
-            {data && data?.products.length>0 ? data?.products.map((build, idx) => (
-              <ShopCard {...build} key={idx} />
-            )) : <div className="text-center" >No Products Found</div>}
+            {data && data?.products.length > 0 ? (
+              data?.products.map((build, idx) => (
+                <ShopCard {...build} key={idx} />
+              ))
+            ) : (
+              <div className="text-center">No Products Found</div>
+            )}
           </div>
-          {data && data.products.length >0 && (
+          {data && data.products.length > 0 && (
             <div className="flex justify-end">
               <Pagination
                 currentPage={page}
@@ -162,109 +203,114 @@ function Page() {
         </div>
       </div>
 
-{isFilterOpen && (
-  <AnimatePresence>
-    {/* Overlay */}
-    <motion.div
-      key="overlay"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.3 }}
-      className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm"
-      onClick={() => setIsFilterOpen(false)}
-    />
+      {isFilterOpen && (
+        <AnimatePresence>
+          {/* Overlay */}
+          <motion.div
+            key="overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm"
+            onClick={() => setIsFilterOpen(false)}
+          />
 
-    {/* Sidebar Drawer */}
-    <motion.div
-      key="drawer"
-      initial={{ x: "100%" }}
-      animate={{ x: 0 }}
-      exit={{ x: "100%" }}
-      transition={{ type: "spring", stiffness: 300, damping: 30 }}
-      className="fixed right-0 top-0 z-50 h-full w-72 sm:w-80 bg-[#1b1b1d]/95 backdrop-blur-lg text-white shadow-2xl flex flex-col rounded-l-2xl overflow-hidden"
-    >
-      {/* Header */}
-      <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
-        <h2 className="text-lg font-semibold tracking-wider text-gradient">Filters</h2>
-        <button
-          className="hover:scale-110 transition-transform"
-          onClick={() => setIsFilterOpen(false)}
-        >
-          <X className="w-6 h-6 text-gray-300 hover:text-white" />
-        </button>
-      </div>
+          {/* Sidebar Drawer */}
+          <motion.div
+            key="drawer"
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            className="fixed right-0 top-0 z-50 h-full w-72 sm:w-80 bg-[#1b1b1d]/95 backdrop-blur-lg text-white shadow-2xl flex flex-col rounded-l-2xl overflow-hidden"
+          >
+            {/* Header */}
+            <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
+              <h2 className="text-lg font-semibold tracking-wider text-gradient">
+                Filters
+              </h2>
+              <button
+                className="hover:scale-110 transition-transform"
+                onClick={() => setIsFilterOpen(false)}
+              >
+                <X className="w-6 h-6 text-gray-300 hover:text-white" />
+              </button>
+            </div>
 
-      {/* Content */}
-      <div className="flex-1 overflow-y-auto px-5 py-6 space-y-8 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-transparent">
-        {sections.map((section, idx) => (
-          <div key={idx} className="relative">
-            <h3 className="uppercase text-sm tracking-widest font-semibold mb-4 text-gray-200">
-              {section.title}
-            </h3>
-            <div className="space-y-3">
-              {section.options.map((opt, optIdx) => (
-                <label
-                  key={optIdx}
-                  className="flex items-center gap-3 cursor-pointer group"
-                >
-                  <input
-                    type="checkbox"
-                    checked={selected[section.title]?.includes(opt.value) || false}
-                    onChange={() => toggleOption(section.title, opt.value)}
-                    className="hidden"
-                  />
-
-                  {/* Custom checkbox */}
-                  <span
-                    className={`w-5 h-5 rounded-md border-2 flex items-center justify-center transition-all duration-300 ${
-                      selected[section.title]?.includes(opt.value)
-                        ? "bg-gradient-to-r from-pink-500 to-purple-500 border-pink-400"
-                        : "bg-transparent border-gray-500 group-hover:border-pink-400"
-                    }`}
-                  >
-                    {selected[section.title]?.includes(opt.value) && (
-                      <svg
-                        className="w-3.5 h-3.5 text-white"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
+            {/* Content */}
+            <div className="flex-1 overflow-y-auto px-5 py-6 space-y-8 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-transparent">
+              {sections.map((section, idx) => (
+                <div key={idx} className="relative">
+                  <h3 className="uppercase text-sm tracking-widest font-semibold mb-4 text-gray-200">
+                    {section.title}
+                  </h3>
+                  <div className="space-y-3">
+                    {section.options.map((opt, optIdx) => (
+                      <label
+                        key={optIdx}
+                        className="flex items-center gap-3 cursor-pointer group"
                       >
-                        <path d="M2 8l4 4 8-8" />
-                      </svg>
-                    )}
-                  </span>
+                        <input
+                          type="checkbox"
+                          checked={
+                            selected[section.title]?.includes(opt.value) ||
+                            false
+                          }
+                          onChange={() =>
+                            toggleOption(section.title, opt.value)
+                          }
+                          className="hidden"
+                        />
 
-                  <span className="text-sm text-gray-300 group-hover:text-white transition-colors">
-                    {opt.label}
-                  </span>
-                </label>
+                        {/* Custom checkbox */}
+                        <span
+                          className={`w-5 h-5 rounded-md border-2 flex items-center justify-center transition-all duration-300 ${
+                            selected[section.title]?.includes(opt.value)
+                              ? "bg-gradient-to-r from-pink-500 to-purple-500 border-pink-400"
+                              : "bg-transparent border-gray-500 group-hover:border-pink-400"
+                          }`}
+                        >
+                          {selected[section.title]?.includes(opt.value) && (
+                            <svg
+                              className="w-3.5 h-3.5 text-white"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                            >
+                              <path d="M2 8l4 4 8-8" />
+                            </svg>
+                          )}
+                        </span>
+
+                        <span className="text-sm text-gray-300 group-hover:text-white transition-colors">
+                          {opt.label}
+                        </span>
+                      </label>
+                    ))}
+                  </div>
+
+                  {/* Divider */}
+                  {idx !== sections.length - 1 && (
+                    <div className="mt-6 h-px w-full bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 opacity-60" />
+                  )}
+                </div>
               ))}
             </div>
 
-            {/* Divider */}
-            {idx !== sections.length - 1 && (
-              <div className="mt-6 h-px w-full bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 opacity-60" />
-            )}
-          </div>
-        ))}
-      </div>
-
-      {/* Footer */}
-      <div className="p-5 border-t border-white/10">
-        <button
-          className="w-full py-3 rounded-lg bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold tracking-wide shadow-lg hover:opacity-90 transition-all"
-          onClick={() => setIsFilterOpen(false)}
-        >
-          Apply Filters
-        </button>
-      </div>
-    </motion.div>
-  </AnimatePresence>
-)}
-
-
+            {/* Footer */}
+            <div className="p-5 border-t border-white/10">
+              <button
+                className="w-full py-3 rounded-lg bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold tracking-wide shadow-lg hover:opacity-90 transition-all"
+                onClick={() => setIsFilterOpen(false)}
+              >
+                Apply Filters
+              </button>
+            </div>
+          </motion.div>
+        </AnimatePresence>
+      )}
     </div>
   );
 }
