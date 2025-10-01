@@ -19,8 +19,8 @@ function Page() {
   const [sortBy, setSortBy] = useState({ label: "Latest", val: "latest" });
   const [selected, setSelected] = useState<{ [key: string]: string[] }>({});
 
-  const params: Record<string, any> = {
-    //eslint-disable-line
+  const params: Record<string, any> = {    //eslint-disable-line
+  
 
     page,
     limit: 10,
