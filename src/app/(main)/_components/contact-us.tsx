@@ -28,11 +28,11 @@ import { FaTiktok } from "react-icons/fa";
 const info = [
   {
     icon: Mail,
-    text: "game4funpcs@gmail.com",
+    text: "Game4funpcs@gmail.com",
   },
   {
     icon: Mail,
-    text: "warranty4game4funpcs@gmail.com",
+    text: "Warranty4game4funpcs@gmail.com",
   },
   {
     icon: Phone,
@@ -54,12 +54,12 @@ const links = [
   {
     icon: Youtube,
     text: "Youtube",
-    href: "https://www.instagram.com/game4funpcs/",
+    href: "https://youtube.com/@game4funpcs?si=er13IMONx0eovbOB",
   },
   {
     icon: FaTiktok  ,
     text: "Tiktok    ",
-    href: "https://www.instagram.com/game4funpcs/",
+    href: "https://tiktok.com/@game4funpcs",
   },
 ];
 
