@@ -20,7 +20,7 @@ function Page() {
   const [selected, setSelected] = useState<{ [key: string]: string[] }>({});
 
   const params: Record<string, any> = {    //eslint-disable-line
-  
+
 
     page,
     limit: 10,
@@ -51,10 +51,17 @@ function Page() {
           break;
 
         case "GPU Memory":
+          const firstGpu = values[0];
           const lastGpu = values[values.length - 1];
-          const [minGpu, maxGpu] = lastGpu
-            .split("-")
-            .map((v) => v.replace("gb", "").trim());
+
+          const minGpu = firstGpu.split("-")[0].replace("gb", "").trim();
+
+          const lastParts = lastGpu.split("-");
+          const maxGpu =
+            lastParts.length > 1
+              ? lastParts[1].replace("gb", "").trim()
+              : lastParts[0].replace("gb", "").trim();
+
           params.mingpuMemory = Number(minGpu);
           params.maxgpuMemory = maxGpu ? Number(maxGpu) : null;
           break;
@@ -69,8 +76,12 @@ function Page() {
           break;
 
         case "Price":
-          const lastPrice = values[values.length - 1];
-          const [minPrice, maxPrice] = lastPrice.split("-").map(Number);
+          const firstValue = values[0];
+          const lastValue = values[values.length - 1];
+
+          const minPrice = Number(firstValue.split("-")[0]);
+          const maxPrice = Number(lastValue.split("-").pop());
+
           params.minPrice = minPrice;
           params.maxPrice = maxPrice;
           break;

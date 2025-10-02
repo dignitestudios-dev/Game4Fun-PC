@@ -50,7 +50,7 @@ export const contactApi = createApi({
       //   invalidatesTags: ["Product"],
     }),
     postQuote: builder.mutation<
-      { success: boolean; message: string }, 
+      { success: boolean; message: string },
       {
         fullName: string;
         emailAddress: string;
@@ -60,6 +60,15 @@ export const contactApi = createApi({
         preferredGPUBrand: string;
         ram: string;
         storage: string;
+        motherboard: string;
+        cooling: string;
+        psu: string;
+        caseSize: string;
+        caseColor: string;
+        caseStyle: string;
+        monitorResolution: string;
+        games: string;
+        graphicsSetting: string;
         additionalFeature: string;
       }
     >({
@@ -77,5 +86,5 @@ export const {
   useSubmitMessageMutation,
   useGetContactInfoQuery,
   usePostContactInfoMutation,
-  usePostQuoteMutation
+  usePostQuoteMutation,
 } = contactApi;

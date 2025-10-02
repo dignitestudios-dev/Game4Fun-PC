@@ -18,13 +18,13 @@ function CartCard({
   return (
     <div className="relative z-50">
       <div className="flex items-center py-4 gap-4">
-        <div className="border w-[150px] h-[120px] border-[#5a5a5a] p-2 rounded-3xl">
+        <div className="border  border-[#5a5a5a]  rounded-3xl">
           <Image
             src={item.productImages[0]?.file}
             alt="pc"
             width={150}
             height={120}
-            className="object-cover"
+            className="w-[150px] object-cover h-[120px] rounded-3xl "
           />
         </div>
         <div className="flex justify-between w-full">
