@@ -1,10 +1,11 @@
-import React from 'react'
+
+import React, { Suspense } from 'react'
 import Checkout from './_components/checkout'
 
 
 function page() {
   return (
-    <div><Checkout/></div>
+    <Suspense><Checkout/></Suspense>
   )
 }
 
