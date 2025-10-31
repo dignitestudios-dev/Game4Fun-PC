@@ -42,6 +42,8 @@ function CheckoutPayments({ data }: { data: Cart }) {
         return;
       }
 
+      console.log(data,"data")
+
       // const payload = {
       //   paymentMethodId: paymentMethod.id,
       //   cartId: data._id,

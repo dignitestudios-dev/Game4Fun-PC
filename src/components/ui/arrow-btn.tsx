@@ -21,12 +21,12 @@ function ArrowBtn({ title }: Props) {
       />
 
       {/* Text */}
-      <span className="relative z-10 uppercase font-semibold text-sm text-white">
+      <span className="relative  uppercase font-semibold text-sm text-white">
         {title}
       </span>
 
       {/* Arrow */}
-      <span className="relative z-10 w-6 h-6 flex items-center justify-center">
+      <span className="relative  w-6 h-6 flex items-center justify-center">
         <ArrowIcon />
       </span>
     </div>

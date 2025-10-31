@@ -24,6 +24,7 @@
   createdAt: string;
   updatedAt: string;
   items: CartItem[];
+  totalpricewithoutwarranty:number;
 }
 
  interface GetCartResponse {

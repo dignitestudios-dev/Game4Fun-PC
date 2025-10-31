@@ -271,3 +271,52 @@ Hide native checkbox
   background: linear-gradient(to right, #C100FF, #d57af4, #FFBE96); /* your gradient */
   border-radius: 2px;
 }
+
+
+.css-13cymwt-control{
+ 
+  background-color: #242323 !important;
+ 
+  border:1px solid #250f0f !important;
+  border-radius: 50px !important;
+}
+.css-t3ipsp-control{
+  border-radius: 50px !important;
+  background-color: #242323 !important;
+  box-shadow: none !important;
+  border:1px solid #525151 !important;
+ 
+}
+.css-t3ipsp-control:focus{
+outline: none !important;
+border: none !important;
+ 
+
+}
+/* .css-13cymwt-control:focus{
+  background-color: #242323 !important;
+  border:1px solid #525151 !important;
+} */
+.css-1nmdiq5-menu{
+  background-color: #242323 !important;
+}
+.css-1dimb5e-singleValue{
+  color: #fff !important;
+}
+.css-1dimb5e-singleValue:hover{
+  color: #fff !important;
+}
+
+.css-1cfo1cf{
+  color: #fff !important;
+}
+.select__multi-value{
+  background-color: #242323!important;
+}
+.select__multi-value__label{
+  color: #fff !important;
+}
+.select_menu {
+  background-color: #242323!important;
+  z-index: 1000 !important;
+}

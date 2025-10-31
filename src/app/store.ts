@@ -7,7 +7,7 @@ import { productApi } from "@/services/product-api";
 import { reviewApi } from "@/services/review-api";
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
-
+import { customProductApi } from "@/services/custom-product-api";
 export const store = configureStore({
   reducer: {
     [authApi.reducerPath]: authApi.reducer,
@@ -17,6 +17,7 @@ export const store = configureStore({
     [checkoutApi.reducerPath]: checkoutApi.reducer,
     [chatApi.reducerPath]: chatApi.reducer,
     [reviewApi.reducerPath]: reviewApi.reducer,
+    [customProductApi.reducerPath]: customProductApi.reducer,
   },
 
   middleware: (getDefaultMiddleware) =>
@@ -27,7 +28,8 @@ export const store = configureStore({
       .concat(contactApi.middleware)
       .concat(chatApi.middleware)
       .concat(reviewApi.middleware)
-      .concat(checkoutApi.middleware),
+      .concat(checkoutApi.middleware)
+      .concat(customProductApi.middleware),
 });
 setupListeners(store.dispatch);
 export type RootState = ReturnType<typeof store.getState>;

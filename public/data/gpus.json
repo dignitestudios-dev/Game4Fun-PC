@@ -1,0 +1,3623 @@
+[
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 5070",
+    "queryName": "geforce-rtx-5070",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 2,
+      "value": 600
+    },
+    "id": "67f277190ceac14632adc4a3"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 5080",
+    "queryName": "geforce-rtx-5080",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 1,
+      "value": 1350
+    },
+    "id": "67f2771a0ceac14632adc4a5"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 5060",
+    "queryName": "geforce-rtx-5060",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 2,
+      "value": 300
+    },
+    "id": "683772390ceac14632add5c9"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 4060",
+    "queryName": "geforce-rtx-4060",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 12,
+      "value": 400
+    },
+    "id": "67f2773d0ceac14632adc5a6"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 5070 Ti",
+    "queryName": "geforce-rtx-5070-ti",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 5,
+      "value": 1350
+    },
+    "id": "67f2771a0ceac14632adc4a7"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 5090",
+    "queryName": "geforce-rtx-5090",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 1,
+      "value": 3400
+    },
+    "id": "67f277150ceac14632adc486"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 5060 Ti",
+    "queryName": "geforce-rtx-5060-ti",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 7,
+      "value": 500
+    },
+    "id": "683772390ceac14632add5cb"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 5060 Ti 16 GB",
+    "queryName": "geforce-rtx-5060-ti-16-gb",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 6,
+      "value": 500
+    },
+    "id": "683772870ceac14632add5ce"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 9070 XT",
+    "queryName": "radeon-rx-9070-xt",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 3,
+      "value": 1350
+    },
+    "id": "67f277180ceac14632adc49b"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 4060 Ti 8 GB",
+    "queryName": "geforce-rtx-4060-ti-8-gb",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 5,
+      "value": 350
+    },
+    "id": "67f2773d0ceac14632adc5a7"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 9060 XT 16 GB",
+    "queryName": "radeon-rx-9060-xt-16-gb",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 1,
+      "value": 350
+    },
+    "id": "6861673e0ceac14632b13505"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 4070 SUPER",
+    "queryName": "geforce-rtx-4070-super",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 1,
+      "value": 500
+    },
+    "id": "67f2773d0ceac14632adc5a8"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 4070",
+    "queryName": "geforce-rtx-4070",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 6,
+      "value": 600
+    },
+    "id": "67f2773e0ceac14632adc5ac"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 9060 XT",
+    "queryName": "radeon-rx-9060-xt",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "6861673e0ceac14632b13504"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 3070",
+    "queryName": "geforce-rtx-3070",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 10,
+      "value": 500
+    },
+    "id": "67f277450ceac14632adc5e0"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 7800 XT",
+    "queryName": "radeon-rx-7800-xt",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 4,
+      "value": 600
+    },
+    "id": "67f277310ceac14632adc551"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 4070 Ti",
+    "queryName": "geforce-rtx-4070-ti",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 8,
+      "value": 1350
+    },
+    "id": "67f2773e0ceac14632adc5ae"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "Arc B580",
+    "queryName": "arc-b580",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 1,
+      "value": 300
+    },
+    "id": "67f277150ceac14632adc480"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 4070 Ti SUPER",
+    "queryName": "geforce-rtx-4070-ti-super",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 6,
+      "value": 2800
+    },
+    "id": "67f2773d0ceac14632adc5a9"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 3080",
+    "queryName": "geforce-rtx-3080",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 8,
+      "value": 800
+    },
+    "id": "67f277450ceac14632adc5e3"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 9070",
+    "queryName": "radeon-rx-9070",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 1,
+      "value": 600
+    },
+    "id": "67f277180ceac14632adc499"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 1660 SUPER",
+    "queryName": "geforce-gtx-1660-super",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 7,
+      "value": 200
+    },
+    "id": "67f277370ceac14632adc578"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 3090",
+    "queryName": "geforce-rtx-3090",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 13,
+      "value": 1350
+    },
+    "id": "67f277450ceac14632adc5de"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 4080 SUPER",
+    "queryName": "geforce-rtx-4080-super",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 4,
+      "value": 2800
+    },
+    "id": "67f2773d0ceac14632adc5aa"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 5050",
+    "queryName": "geforce-rtx-5050",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 5,
+      "value": 250
+    },
+    "id": "687f4aa40ceac14632b2d212"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 4080",
+    "queryName": "geforce-rtx-4080",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 4,
+      "value": 1350
+    },
+    "id": "67f2773e0ceac14632adc5ad"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 2060",
+    "queryName": "geforce-rtx-2060",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 4,
+      "value": 200
+    },
+    "id": "67f277290ceac14632adc519"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 1660 Ti",
+    "queryName": "geforce-gtx-1660-ti",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 6,
+      "value": 200
+    },
+    "id": "67f277330ceac14632adc562"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 4060 Ti 16 GB",
+    "queryName": "geforce-rtx-4060-ti-16-gb",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f2773d0ceac14632adc5a5"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 3070 Ti",
+    "queryName": "geforce-rtx-3070-ti",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 8,
+      "value": 600
+    },
+    "id": "67f277420ceac14632adc5ca"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 2070 SUPER",
+    "queryName": "geforce-rtx-2070-super",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 20,
+      "value": 800
+    },
+    "id": "67f277290ceac14632adc518"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 7600",
+    "queryName": "radeon-rx-7600",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 3,
+      "value": 250
+    },
+    "id": "67f277310ceac14632adc54d"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 6600",
+    "queryName": "radeon-rx-6600",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 11,
+      "value": 350
+    },
+    "id": "67f277230ceac14632adc4e6"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 7700 XT",
+    "queryName": "radeon-rx-7700-xt",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 3,
+      "value": 500
+    },
+    "id": "67f277320ceac14632adc559"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 1660",
+    "queryName": "geforce-gtx-1660",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 15,
+      "value": 300
+    },
+    "id": "67f277330ceac14632adc560"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 6600 XT",
+    "queryName": "radeon-rx-6600-xt",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 14,
+      "value": 400
+    },
+    "id": "67f277240ceac14632adc4f3"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 3080 Ti",
+    "queryName": "geforce-rtx-3080-ti",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 6,
+      "value": 800
+    },
+    "id": "67f277420ceac14632adc5cc"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 2060 SUPER",
+    "queryName": "geforce-rtx-2060-super",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 23,
+      "value": 800
+    },
+    "id": "67f277290ceac14632adc514"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 7600 XT",
+    "queryName": "radeon-rx-7600-xt",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 9,
+      "value": 400
+    },
+    "id": "67f277310ceac14632adc54e"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 580",
+    "queryName": "radeon-rx-580",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 6,
+      "value": 150
+    },
+    "id": "67f277470ceac14632adc5f0"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 4090",
+    "queryName": "geforce-rtx-4090",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 1,
+      "value": 2800
+    },
+    "id": "67f2773d0ceac14632adc5ab"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 7900 XTX",
+    "queryName": "radeon-rx-7900-xtx",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 1,
+      "value": 800
+    },
+    "id": "67f277320ceac14632adc55a"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 710",
+    "queryName": "geforce-gt-710",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 5,
+      "value": 100
+    },
+    "id": "67f2779e0ceac14632adc666"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 6700 XT",
+    "queryName": "radeon-rx-6700-xt",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277250ceac14632adc4fa"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 1050 Ti",
+    "queryName": "geforce-gtx-1050-ti",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 10,
+      "value": 150
+    },
+    "id": "67f2779c0ceac14632adc657"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 3060 Ti",
+    "queryName": "geforce-rtx-3060-ti",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 5,
+      "value": 300
+    },
+    "id": "67f277450ceac14632adc5df"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 1650",
+    "queryName": "geforce-gtx-1650",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277330ceac14632adc55f"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 6900 XT",
+    "queryName": "radeon-rx-6900-xt",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 12,
+      "value": 1350
+    },
+    "id": "67f277250ceac14632adc4fc"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 2060 12 GB",
+    "queryName": "geforce-rtx-2060-12-gb",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 10,
+      "value": 300
+    },
+    "id": "67f277290ceac14632adc513"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 2080 SUPER",
+    "queryName": "geforce-rtx-2080-super",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 1,
+      "value": 200
+    },
+    "id": "67f277290ceac14632adc516"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 2080",
+    "queryName": "geforce-rtx-2080",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 16,
+      "value": 800
+    },
+    "id": "67f2772a0ceac14632adc51c"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 5700",
+    "queryName": "radeon-rx-5700",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f2771e0ceac14632adc4c5"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 6500 XT",
+    "queryName": "radeon-rx-6500-xt",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 3,
+      "value": 150
+    },
+    "id": "67f277240ceac14632adc4f4"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 3050 6 GB",
+    "queryName": "geforce-rtx-3050-6-gb",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 9,
+      "value": 200
+    },
+    "id": "67f277410ceac14632adc5c6"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 6400",
+    "queryName": "radeon-rx-6400",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277240ceac14632adc4ed"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 6800",
+    "queryName": "radeon-rx-6800",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 5,
+      "value": 500
+    },
+    "id": "67f277250ceac14632adc4f6"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "Arc B570",
+    "queryName": "arc-b570",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 1,
+      "value": 250
+    },
+    "id": "67f277140ceac14632adc47e"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "Arc A310",
+    "queryName": "arc-a310",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 9,
+      "value": 150
+    },
+    "id": "67f2773b0ceac14632adc594"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "Arc A380",
+    "queryName": "arc-a380",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 7,
+      "value": 150
+    },
+    "id": "67f2773b0ceac14632adc59a"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "Arc A580",
+    "queryName": "arc-a580",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 2,
+      "value": 200
+    },
+    "id": "67f2773c0ceac14632adc59d"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "Arc A750",
+    "queryName": "arc-a750",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f2773c0ceac14632adc59c"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "Arc A770",
+    "queryName": "arc-a770",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 3,
+      "value": 300
+    },
+    "id": "67f2773c0ceac14632adc59e"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 1030",
+    "queryName": "geforce-gt-1030",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 2,
+      "value": 100
+    },
+    "id": "67f277520ceac14632adc62d"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 7900 XT",
+    "queryName": "radeon-rx-7900-xt",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 7,
+      "value": 1350
+    },
+    "id": "67f277330ceac14632adc55b"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 580 2048SP",
+    "queryName": "radeon-rx-580-2048sp",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 13,
+      "value": 250
+    },
+    "id": "67f277460ceac14632adc5e6"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 5700 XT",
+    "queryName": "radeon-rx-5700-xt",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 6,
+      "value": 250
+    },
+    "id": "67f2771e0ceac14632adc4c7"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 590 GME",
+    "queryName": "radeon-rx-590-gme",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 5,
+      "value": 150
+    },
+    "id": "67f277460ceac14632adc5e4"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 590",
+    "queryName": "radeon-rx-590",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 4,
+      "value": 150
+    },
+    "id": "67f277460ceac14632adc5e5"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 550",
+    "queryName": "radeon-rx-550",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277450ceac14632adc5e2"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 560",
+    "queryName": "radeon-rx-560",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 11,
+      "value": 150
+    },
+    "id": "67f277490ceac14632adc5fc"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 570",
+    "queryName": "radeon-rx-570",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 1,
+      "value": 100
+    },
+    "id": "67f277460ceac14632adc5e7"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R7 240",
+    "queryName": "radeon-r7-240",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 4,
+      "value": 100
+    },
+    "id": "67f2779e0ceac14632adc668"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 6750 XT",
+    "queryName": "radeon-rx-6750-xt",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 6,
+      "value": 400
+    },
+    "id": "67f277240ceac14632adc4f1"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 3090 Ti",
+    "queryName": "geforce-rtx-3090-ti",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 8,
+      "value": 2800
+    },
+    "id": "67f277420ceac14632adc5c9"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 3080 12 GB",
+    "queryName": "geforce-rtx-3080-12-gb",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 16,
+      "value": 1350
+    },
+    "id": "67f277420ceac14632adc5ce"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 6800 XT",
+    "queryName": "radeon-rx-6800-xt",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 1,
+      "value": 400
+    },
+    "id": "67f277250ceac14632adc4fb"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 1050",
+    "queryName": "geforce-gtx-1050",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f2779b0ceac14632adc655"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 970",
+    "queryName": "geforce-gtx-970",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 22,
+      "value": 400
+    },
+    "id": "67f277240ceac14632adc4f2"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 2070",
+    "queryName": "geforce-rtx-2070",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 22,
+      "value": 800
+    },
+    "id": "67f2772a0ceac14632adc51d"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 5600 XT",
+    "queryName": "radeon-rx-5600-xt",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 1,
+      "value": 150
+    },
+    "id": "67f2771e0ceac14632adc4c6"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 3060 8 GB",
+    "queryName": "geforce-rtx-3060-8-gb",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 15,
+      "value": 350
+    },
+    "id": "67f277410ceac14632adc5c7"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 3060 Ti GDDR6X",
+    "queryName": "geforce-rtx-3060-ti-gddr6x",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 14,
+      "value": 800
+    },
+    "id": "67f277420ceac14632adc5c8"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 1080",
+    "queryName": "geforce-gtx-1080",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 2,
+      "value": 150
+    },
+    "id": "67f2779c0ceac14632adc658"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 1070",
+    "queryName": "geforce-gtx-1070",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 14,
+      "value": 300
+    },
+    "id": "67f2779c0ceac14632adc656"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 1080 Ti",
+    "queryName": "geforce-gtx-1080-ti",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 21,
+      "value": 800
+    },
+    "id": "67f2779c0ceac14632adc659"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 1650 SUPER",
+    "queryName": "geforce-gtx-1650-super",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 19,
+      "value": 350
+    },
+    "id": "67f277330ceac14632adc55e"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 730",
+    "queryName": "geforce-gt-730",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 15,
+      "value": 150
+    },
+    "id": "67f2779f0ceac14632adc670"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 5500 XT",
+    "queryName": "radeon-rx-5500-xt",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 18,
+      "value": 350
+    },
+    "id": "67f2771d0ceac14632adc4bf"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 7900 GRE",
+    "queryName": "radeon-rx-7900-gre",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 4,
+      "value": 800
+    },
+    "id": "67f277320ceac14632adc557"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon Vega 8",
+    "queryName": "radeon-vega-8",
+    "segment": "Integrated",
+    "bestPicks": {
+      "position": 24,
+      "value": 400
+    },
+    "id": "67f2774a0ceac14632adc605"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX Vega 56",
+    "queryName": "radeon-rx-vega-56",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 18,
+      "value": 400
+    },
+    "id": "67f2771a0ceac14632adc4ab"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 2080 Ti",
+    "queryName": "geforce-rtx-2080-ti",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 19,
+      "value": 1350
+    },
+    "id": "67f2772a0ceac14632adc51b"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 960",
+    "queryName": "geforce-gtx-960",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 19,
+      "value": 300
+    },
+    "id": "67f277250ceac14632adc4f7"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 3080 Ti 20 GB",
+    "queryName": "geforce-rtx-3080-ti-20-gb",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 15,
+      "value": 1350
+    },
+    "id": "67f277410ceac14632adc5c5"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 1070 Ti",
+    "queryName": "geforce-gtx-1070-ti",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 16,
+      "value": 350
+    },
+    "id": "67f277530ceac14632adc638"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 980",
+    "queryName": "geforce-gtx-980",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277250ceac14632adc4f9"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 470",
+    "queryName": "radeon-rx-470",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277290ceac14632adc515"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 1630",
+    "queryName": "geforce-gtx-1630",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 14,
+      "value": 250
+    },
+    "id": "67f277330ceac14632adc55d"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 980 Ti",
+    "queryName": "geforce-gtx-980-ti",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 21,
+      "value": 600
+    },
+    "id": "67f277250ceac14632adc4f8"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R9 390",
+    "queryName": "radeon-r9-390",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 22,
+      "value": 500
+    },
+    "id": "67f277540ceac14632adc63d"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 950",
+    "queryName": "geforce-gtx-950",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 11,
+      "value": 200
+    },
+    "id": "67f277230ceac14632adc4e5"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 6950 XT",
+    "queryName": "radeon-rx-6950-xt",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 10,
+      "value": 1350
+    },
+    "id": "67f277240ceac14632adc4f0"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon VII",
+    "queryName": "radeon-vii",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 21,
+      "value": 2800
+    },
+    "id": "67f277150ceac14632adc487"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "Arc Pro A60",
+    "queryName": "arc-pro-a60",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 20,
+      "value": 600
+    },
+    "id": "67f2773b0ceac14632adc595"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon Vega 3",
+    "queryName": "radeon-vega-3",
+    "segment": "Integrated",
+    "bestPicks": {
+      "position": 26,
+      "value": 500
+    },
+    "id": "67f2774b0ceac14632adc607"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX Vega 64",
+    "queryName": "radeon-rx-vega-64",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 20,
+      "value": 500
+    },
+    "id": "67f2771a0ceac14632adc4a9"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 6650 XT",
+    "queryName": "radeon-rx-6650-xt",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 20,
+      "value": 2800
+    },
+    "id": "67f277240ceac14632adc4ef"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R7 250",
+    "queryName": "radeon-r7-250",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 3,
+      "value": 100
+    },
+    "id": "67f2779e0ceac14632adc667"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R9 290",
+    "queryName": "radeon-r9-290",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 18,
+      "value": 300
+    },
+    "id": "67f277a20ceac14632adc67f"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R9 270",
+    "queryName": "radeon-r9-270",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 15,
+      "value": 250
+    },
+    "id": "67f277a10ceac14632adc67b"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 480",
+    "queryName": "radeon-rx-480",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 20,
+      "value": 400
+    },
+    "id": "67f277290ceac14632adc51a"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 460",
+    "queryName": "radeon-rx-460",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 12,
+      "value": 150
+    },
+    "id": "67f277290ceac14632adc517"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 5050 Mobile",
+    "queryName": "geforce-rtx-5050-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "687f4aa40ceac14632b2d211"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 5060 Mobile",
+    "queryName": "geforce-rtx-5060-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "6837723a0ceac14632add5cc"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 9070 GRE",
+    "queryName": "radeon-rx-9070-gre",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "6861673e0ceac14632b13506"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 5070 Mobile",
+    "queryName": "geforce-rtx-5070-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "683771e30ceac14632add5c8"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 5080 Mobile",
+    "queryName": "geforce-rtx-5080-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277140ceac14632adc47d"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 5070 Ti Mobile",
+    "queryName": "geforce-rtx-5070-ti-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "6837723c0ceac14632add5cd"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 5090 Mobile",
+    "queryName": "geforce-rtx-5090-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277140ceac14632adc47b"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 7650 GRE",
+    "queryName": "radeon-rx-7650-gre",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277310ceac14632adc54c"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 7800M",
+    "queryName": "radeon-rx-7800m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277480ceac14632adc5f8"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon 890M",
+    "queryName": "radeon-890m",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f2771e0ceac14632adc4c8"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon 880M",
+    "queryName": "radeon-880m",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f2771e0ceac14632adc4c9"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon 760M",
+    "queryName": "radeon-760m",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f277200ceac14632adc4d4"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 6600 LE",
+    "queryName": "radeon-rx-6600-le",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277230ceac14632adc4eb"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 7900M",
+    "queryName": "radeon-rx-7900m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277480ceac14632adc5fb"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 6750 GRE 12 GB",
+    "queryName": "radeon-rx-6750-gre-12-gb",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277220ceac14632adc4e0"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 6750 GRE 10 GB",
+    "queryName": "radeon-rx-6750-gre-10-gb",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277250ceac14632adc4f5"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 7600M XT",
+    "queryName": "radeon-rx-7600m-xt",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277480ceac14632adc5f9"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon 780M",
+    "queryName": "radeon-780m",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f277200ceac14632adc4d6"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 7600S",
+    "queryName": "radeon-rx-7600s",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277480ceac14632adc5fa"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 7700S",
+    "queryName": "radeon-rx-7700s",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277480ceac14632adc5f7"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon 740M",
+    "queryName": "radeon-740m",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f277200ceac14632adc4d7"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 6550M",
+    "queryName": "radeon-rx-6550m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277460ceac14632adc5eb"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 4090 Mobile",
+    "queryName": "geforce-rtx-4090-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f279b70ceac14632adc6ae"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 4080 Mobile",
+    "queryName": "geforce-rtx-4080-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f279b70ceac14632adc6ad"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon 660M",
+    "queryName": "radeon-660m",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f277160ceac14632adc48b"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 4060 Mobile",
+    "queryName": "geforce-rtx-4060-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f279b60ceac14632adc6ab"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 4050 Mobile",
+    "queryName": "geforce-rtx-4050-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f279b70ceac14632adc6ac"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon 610M",
+    "queryName": "radeon-610m",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f277160ceac14632adc48a"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "UHD Graphics 770",
+    "queryName": "uhd-graphics-770",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f2779b0ceac14632adc654"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "Arc A350M",
+    "queryName": "arc-a350m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2773a0ceac14632adc593"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "Arc A370M",
+    "queryName": "arc-a370m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2773b0ceac14632adc59b"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 3080 Ti Mobile",
+    "queryName": "geforce-rtx-3080-ti-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277a70ceac14632adc6a6"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 6850M XT",
+    "queryName": "radeon-rx-6850m-xt",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277470ceac14632adc5f1"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 6600S",
+    "queryName": "radeon-rx-6600s",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277470ceac14632adc5ed"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 3070 Ti Mobile",
+    "queryName": "geforce-rtx-3070-ti-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277a70ceac14632adc6a5"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 6800S",
+    "queryName": "radeon-rx-6800s",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277470ceac14632adc5f3"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 6500M",
+    "queryName": "radeon-rx-6500m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277460ceac14632adc5e8"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 6650M",
+    "queryName": "radeon-rx-6650m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277480ceac14632adc5f5"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon 680M",
+    "queryName": "radeon-680m",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f277160ceac14632adc48c"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 6650M XT",
+    "queryName": "radeon-rx-6650m-xt",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277480ceac14632adc5f6"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 6700S",
+    "queryName": "radeon-rx-6700s",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277480ceac14632adc5f4"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 2050 Mobile",
+    "queryName": "geforce-rtx-2050-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277260ceac14632adc4ff"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce MX550",
+    "queryName": "geforce-mx550",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277310ceac14632adc54a"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 6700",
+    "queryName": "radeon-rx-6700",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277230ceac14632adc4e9"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 6800M",
+    "queryName": "radeon-rx-6800m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277470ceac14632adc5ec"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 6700M",
+    "queryName": "radeon-rx-6700m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277470ceac14632adc5f2"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 6600M",
+    "queryName": "radeon-rx-6600m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277460ceac14632adc5ea"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 3050 Ti Mobile",
+    "queryName": "geforce-rtx-3050-ti-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277a70ceac14632adc6a4"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 3050 Mobile",
+    "queryName": "geforce-rtx-3050-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277a80ceac14632adc6a9"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "UHD Graphics 730",
+    "queryName": "uhd-graphics-730",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f277530ceac14632adc63a"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 1010",
+    "queryName": "geforce-gt-1010",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277510ceac14632adc62b"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 3080 Mobile",
+    "queryName": "geforce-rtx-3080-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277a80ceac14632adc6aa"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 3060 Mobile",
+    "queryName": "geforce-rtx-3060-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277a80ceac14632adc6a7"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 3070 Mobile",
+    "queryName": "geforce-rtx-3070-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277a80ceac14632adc6a8"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce MX450 30.5W 10Gbps",
+    "queryName": "geforce-mx450-305w-10gbps",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277300ceac14632adc549"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce MX450 30.5W 8Gbps",
+    "queryName": "geforce-mx450-305w-8gbps",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277310ceac14632adc54b"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 5600M",
+    "queryName": "radeon-rx-5600m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277470ceac14632adc5ee"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "UHD Graphics P630",
+    "queryName": "uhd-graphics-p630",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f277200ceac14632adc4d5"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "UHD Graphics 610",
+    "queryName": "uhd-graphics-610",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f277520ceac14632adc631"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 1650 Ti Mobile",
+    "queryName": "geforce-gtx-1650-ti-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2771c0ceac14632adc4b8"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 1650 Max-Q",
+    "queryName": "geforce-gtx-1650-max-q",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2771d0ceac14632adc4be"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 1650 Mobile",
+    "queryName": "geforce-gtx-1650-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2771d0ceac14632adc4bd"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 2070 SUPER Mobile",
+    "queryName": "geforce-rtx-2070-super-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277260ceac14632adc502"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 2080 SUPER Mobile",
+    "queryName": "geforce-rtx-2080-super-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277270ceac14632adc505"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 2080 SUPER Max-Q",
+    "queryName": "geforce-rtx-2080-super-max-q",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277270ceac14632adc508"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 1650 Ti Max-Q",
+    "queryName": "geforce-gtx-1650-ti-max-q",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2771c0ceac14632adc4bc"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 2070 SUPER Max-Q",
+    "queryName": "geforce-rtx-2070-super-max-q",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277260ceac14632adc501"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce MX350",
+    "queryName": "geforce-mx350",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277300ceac14632adc546"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce MX330",
+    "queryName": "geforce-mx330",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2772f0ceac14632adc544"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon Vega 3 Mobile",
+    "queryName": "radeon-vega-3-mobile",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f2774a0ceac14632adc603"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 5300M",
+    "queryName": "radeon-rx-5300m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277460ceac14632adc5e9"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX Vega 11 Mobile",
+    "queryName": "radeon-rx-vega-11-mobile",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f277490ceac14632adc600"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 5500M",
+    "queryName": "radeon-rx-5500m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277470ceac14632adc5ef"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 5700 XT 50th Anniversary",
+    "queryName": "radeon-rx-5700-xt-50th-anniversary",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f2771c0ceac14632adc4ba"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 1660 Ti Max-Q",
+    "queryName": "geforce-gtx-1660-ti-max-q",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277610ceac14632adc640"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 1660 Ti Mobile",
+    "queryName": "geforce-gtx-1660-ti-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277610ceac14632adc641"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon Vega 10 Mobile",
+    "queryName": "radeon-vega-10-mobile",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f277490ceac14632adc5ff"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 560 XT",
+    "queryName": "radeon-rx-560-xt",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277450ceac14632adc5e1"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 2070 Mobile",
+    "queryName": "geforce-rtx-2070-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277260ceac14632adc4fd"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 2080 Max-Q",
+    "queryName": "geforce-rtx-2080-max-q",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277260ceac14632adc504"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 2070 Max-Q",
+    "queryName": "geforce-rtx-2070-max-q",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277260ceac14632adc4fe"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 2080 Mobile",
+    "queryName": "geforce-rtx-2080-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277260ceac14632adc503"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce RTX 2060 Mobile",
+    "queryName": "geforce-rtx-2060-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277260ceac14632adc500"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon Vega 8 Mobile",
+    "queryName": "radeon-vega-8-mobile",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f2774a0ceac14632adc604"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "UHD Graphics P630 Mobile",
+    "queryName": "uhd-graphics-p630-mobile",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f277170ceac14632adc48f"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 560X Mobile",
+    "queryName": "radeon-rx-560x-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f27a2a0ceac14632adc6af"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX Vega 11",
+    "queryName": "radeon-rx-vega-11",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f277490ceac14632adc601"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon Vega 6 Mobile",
+    "queryName": "radeon-vega-6-mobile",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f2774b0ceac14632adc606"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 1050 Max-Q",
+    "queryName": "geforce-gtx-1050-max-q",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277280ceac14632adc510"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 1050 Ti Max-Q",
+    "queryName": "geforce-gtx-1050-ti-max-q",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277280ceac14632adc50f"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "UHD Graphics 605 Mobile",
+    "queryName": "uhd-graphics-605-mobile",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f277280ceac14632adc512"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce MX110",
+    "queryName": "geforce-mx110",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277300ceac14632adc545"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce MX130",
+    "queryName": "geforce-mx130",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277300ceac14632adc548"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 540 Mobile",
+    "queryName": "radeon-rx-540-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f27a2b0ceac14632adc6b1"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "UHD Graphics 630",
+    "queryName": "uhd-graphics-630",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f2779a0ceac14632adc653"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 1060 Max-Q",
+    "queryName": "geforce-gtx-1060-max-q",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277280ceac14632adc50c"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 1080 Max-Q",
+    "queryName": "geforce-gtx-1080-max-q",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277280ceac14632adc50b"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon Vega Frontier Edition",
+    "queryName": "radeon-vega-frontier-edition",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277160ceac14632adc48d"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 1070 Max-Q",
+    "queryName": "geforce-gtx-1070-max-q",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277270ceac14632adc50a"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce MX150",
+    "queryName": "geforce-mx150",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277300ceac14632adc547"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon 535 Mobile",
+    "queryName": "radeon-535-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277530ceac14632adc634"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 580 Mobile",
+    "queryName": "radeon-rx-580-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f27a2c0ceac14632adc6b2"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon 530X Mobile",
+    "queryName": "radeon-530x-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277530ceac14632adc636"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 1050 Ti Mobile",
+    "queryName": "geforce-gtx-1050-ti-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277270ceac14632adc509"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 1050 Mobile",
+    "queryName": "geforce-gtx-1050-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277270ceac14632adc507"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "HD Graphics 630 Mobile",
+    "queryName": "hd-graphics-630-mobile",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f277a40ceac14632adc692"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "HD Graphics 610 Mobile",
+    "queryName": "hd-graphics-610-mobile",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f277a40ceac14632adc691"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "HD Graphics 630",
+    "queryName": "hd-graphics-630",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f277530ceac14632adc637"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "HD Graphics 610",
+    "queryName": "hd-graphics-610",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f277540ceac14632adc63f"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 1060 Mobile",
+    "queryName": "geforce-gtx-1060-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277280ceac14632adc50e"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 1070 Mobile",
+    "queryName": "geforce-gtx-1070-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277280ceac14632adc50d"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 1080 Mobile",
+    "queryName": "geforce-gtx-1080-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277280ceac14632adc511"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 470 Mobile",
+    "queryName": "radeon-rx-470-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f27a2b0ceac14632adc6b0"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R7 M440",
+    "queryName": "radeon-r7-m440",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277a70ceac14632adc6a0"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R5 M430",
+    "queryName": "radeon-r5-m430",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277a50ceac14632adc69a"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R7 M460",
+    "queryName": "radeon-r7-m460",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277a60ceac14632adc69f"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce 920MX",
+    "queryName": "geforce-920mx",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277430ceac14632adc5d3"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce 930MX",
+    "queryName": "geforce-930mx",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277440ceac14632adc5d7"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R8 M350DX",
+    "queryName": "radeon-r8-m350dx",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f2776e0ceac14632adc642"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R7 M260X",
+    "queryName": "radeon-r7-m260x",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277a60ceac14632adc69c"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R9 380X",
+    "queryName": "radeon-r9-380x",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277520ceac14632adc630"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 750 GM206",
+    "queryName": "geforce-gtx-750-gm206",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277a20ceac14632adc682"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R5 M335",
+    "queryName": "radeon-r5-m335",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277a50ceac14632adc698"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 980 Mobile",
+    "queryName": "geforce-gtx-980-mobile",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2778a0ceac14632adc650"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "HD Graphics 530",
+    "queryName": "hd-graphics-530",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f277540ceac14632adc63c"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "HD Graphics 510",
+    "queryName": "hd-graphics-510",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f277530ceac14632adc63b"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "HD Graphics 515 Mobile",
+    "queryName": "hd-graphics-515-mobile",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f277a30ceac14632adc68a"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R9 Nano",
+    "queryName": "radeon-r9-nano",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277520ceac14632adc62e"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R7 370",
+    "queryName": "radeon-r7-370",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277520ceac14632adc633"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R9 380",
+    "queryName": "radeon-r9-380",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277520ceac14632adc62f"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R9 390X",
+    "queryName": "radeon-r9-390x",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277530ceac14632adc635"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R7 360",
+    "queryName": "radeon-r7-360",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277520ceac14632adc632"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R9 M385X",
+    "queryName": "radeon-r9-m385x",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277a70ceac14632adc6a1"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R7 M340",
+    "queryName": "radeon-r7-m340",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277a60ceac14632adc69d"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R9 M395X",
+    "queryName": "radeon-r9-m395x",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277a70ceac14632adc6a2"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R9 M390X",
+    "queryName": "radeon-r9-m390x",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277a70ceac14632adc6a3"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R7 M370",
+    "queryName": "radeon-r7-m370",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277a60ceac14632adc69e"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce 820M",
+    "queryName": "geforce-820m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2772a0ceac14632adc51f"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce 930M",
+    "queryName": "geforce-930m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277440ceac14632adc5d6"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 960M",
+    "queryName": "geforce-gtx-960m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277440ceac14632adc5d9"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce 920M",
+    "queryName": "geforce-920m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277420ceac14632adc5cb"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce 940M",
+    "queryName": "geforce-940m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277420ceac14632adc5cd"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 965M",
+    "queryName": "geforce-gtx-965m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2778a0ceac14632adc64f"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R5 M255",
+    "queryName": "radeon-r5-m255",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277a50ceac14632adc696"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 970M",
+    "queryName": "geforce-gtx-970m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277890ceac14632adc64e"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 980M",
+    "queryName": "geforce-gtx-980m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2778b0ceac14632adc651"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R5 M240",
+    "queryName": "radeon-r5-m240",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277a40ceac14632adc68f"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "Iris Pro Graphics 6200",
+    "queryName": "iris-pro-graphics-6200",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f277540ceac14632adc63e"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "HD Graphics 6000 Mobile",
+    "queryName": "hd-graphics-6000-mobile",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f277a40ceac14632adc690"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "HD Graphics 5300 Mobile",
+    "queryName": "hd-graphics-5300-mobile",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f277a40ceac14632adc693"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R9 285",
+    "queryName": "radeon-r9-285",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277a00ceac14632adc673"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R7 M260",
+    "queryName": "radeon-r7-m260",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277a50ceac14632adc699"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 740",
+    "queryName": "geforce-gt-740",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277a20ceac14632adc684"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R9 295X2",
+    "queryName": "radeon-r9-295x2",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277a10ceac14632adc67d"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R5 230",
+    "queryName": "radeon-r5-230",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f2779f0ceac14632adc66c"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 720",
+    "queryName": "geforce-gt-720",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f2779e0ceac14632adc669"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 880M",
+    "queryName": "geforce-gtx-880m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2772b0ceac14632adc524"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 850M",
+    "queryName": "geforce-gtx-850m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2772b0ceac14632adc523"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 870M",
+    "queryName": "geforce-gtx-870m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2772b0ceac14632adc522"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce 830M",
+    "queryName": "geforce-830m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2772a0ceac14632adc520"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce 840M",
+    "queryName": "geforce-840m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2772b0ceac14632adc521"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 730M",
+    "queryName": "geforce-gt-730m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2773c0ceac14632adc5a2"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R9 280",
+    "queryName": "radeon-r9-280",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277a10ceac14632adc67a"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 750 Ti",
+    "queryName": "geforce-gtx-750-ti",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277a20ceac14632adc683"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 750",
+    "queryName": "geforce-gtx-750",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277a30ceac14632adc685"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R7 265",
+    "queryName": "radeon-r7-265",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277a00ceac14632adc674"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R7 250X",
+    "queryName": "radeon-r7-250x",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277a00ceac14632adc675"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 860M",
+    "queryName": "geforce-gtx-860m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2772a0ceac14632adc51e"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R7 M265",
+    "queryName": "radeon-r7-m265",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277a50ceac14632adc69b"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R5 M230",
+    "queryName": "radeon-r5-m230",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277a50ceac14632adc695"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 720M",
+    "queryName": "geforce-gt-720m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2773c0ceac14632adc5a1"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R7 250E",
+    "queryName": "radeon-r7-250e",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277a00ceac14632adc672"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R7 260",
+    "queryName": "radeon-r7-260",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277a10ceac14632adc679"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 650",
+    "queryName": "geforce-gtx-650",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f2779d0ceac14632adc662"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 780 Ti",
+    "queryName": "geforce-gtx-780-ti",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277a30ceac14632adc686"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R5 240 OEM",
+    "queryName": "radeon-r5-240-oem",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f2779e0ceac14632adc66b"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R9 290X",
+    "queryName": "radeon-r9-290x",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 11,
+      "value": 250
+    },
+    "id": "67f277a10ceac14632adc67e"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R9 270X",
+    "queryName": "radeon-r9-270x",
+    "segment": "Desktop",
+    "bestPicks": {
+      "position": 20,
+      "value": 300
+    },
+    "id": "67f277a10ceac14632adc67c"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R7 260X",
+    "queryName": "radeon-r7-260x",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277a00ceac14632adc676"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon R9 280X",
+    "queryName": "radeon-r9-280x",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277a00ceac14632adc677"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "HD Graphics 4400 Mobile",
+    "queryName": "hd-graphics-4400-mobile",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f277a40ceac14632adc68e"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "HD Graphics 4200 Mobile",
+    "queryName": "hd-graphics-4200-mobile",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f277a30ceac14632adc68b"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce 710M",
+    "queryName": "geforce-710m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2773c0ceac14632adc5a0"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 755M",
+    "queryName": "geforce-gt-755m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2773f0ceac14632adc5b1"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 760",
+    "queryName": "geforce-gtx-760",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277a30ceac14632adc688"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 740M",
+    "queryName": "geforce-gt-740m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2773c0ceac14632adc5a3"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "HD Graphics 4600",
+    "queryName": "hd-graphics-4600",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f277530ceac14632adc639"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "Iris Pro Graphics 5200",
+    "queryName": "iris-pro-graphics-5200",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f2779a0ceac14632adc652"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 770",
+    "queryName": "geforce-gtx-770",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277a30ceac14632adc687"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 770M",
+    "queryName": "geforce-gtx-770m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2773f0ceac14632adc5b7"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 765M",
+    "queryName": "geforce-gtx-765m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2773f0ceac14632adc5b5"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 760M",
+    "queryName": "geforce-gtx-760m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2773e0ceac14632adc5b0"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "Iris Pro Graphics 5200 Mobile",
+    "queryName": "iris-pro-graphics-5200-mobile",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f277a50ceac14632adc697"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "Iris Graphics 5100 Mobile",
+    "queryName": "iris-graphics-5100-mobile",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f277a40ceac14632adc694"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "HD Graphics 4600 Mobile",
+    "queryName": "hd-graphics-4600-mobile",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f277a30ceac14632adc68c"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 780",
+    "queryName": "geforce-gtx-780",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277a30ceac14632adc689"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon HD 8970M",
+    "queryName": "radeon-hd-8970m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277380ceac14632adc57f"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 780M",
+    "queryName": "geforce-gtx-780m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2773f0ceac14632adc5b3"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon HD 7990",
+    "queryName": "radeon-hd-7990",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277350ceac14632adc56b"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon HD 8790M",
+    "queryName": "radeon-hd-8790m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2777d0ceac14632adc649"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 735M",
+    "queryName": "geforce-gt-735m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2773d0ceac14632adc5a4"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon HD 8850M",
+    "queryName": "radeon-hd-8850m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2777c0ceac14632adc647"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon HD 8870M",
+    "queryName": "radeon-hd-8870m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2777c0ceac14632adc648"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 745M",
+    "queryName": "geforce-gt-745m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2773e0ceac14632adc5af"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 650 Ti Boost",
+    "queryName": "geforce-gtx-650-ti-boost",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f2779f0ceac14632adc66e"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon HD 7790",
+    "queryName": "radeon-hd-7790",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277340ceac14632adc563"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon HD 8570M",
+    "queryName": "radeon-hd-8570m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2777c0ceac14632adc644"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon HD 8690M",
+    "queryName": "radeon-hd-8690m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2777c0ceac14632adc645"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon HD 8670M",
+    "queryName": "radeon-hd-8670m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2777c0ceac14632adc643"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon HD 8750M",
+    "queryName": "radeon-hd-8750m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2777c0ceac14632adc646"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 750M",
+    "queryName": "geforce-gt-750m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2773f0ceac14632adc5b2"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon HD 7870 XT",
+    "queryName": "radeon-hd-7870-xt",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277340ceac14632adc567"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 650 Ti",
+    "queryName": "geforce-gtx-650-ti",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f2779f0ceac14632adc66f"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 645M",
+    "queryName": "geforce-gt-645m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2774e0ceac14632adc616"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 670MX",
+    "queryName": "geforce-gtx-670mx",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2774f0ceac14632adc61b"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 675MX",
+    "queryName": "geforce-gtx-675mx",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277500ceac14632adc61f"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 660",
+    "queryName": "geforce-gtx-660",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f2779f0ceac14632adc66d"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 660 OEM",
+    "queryName": "geforce-gtx-660-oem",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f27ab90ceac14632adc6b4"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 660 Ti",
+    "queryName": "geforce-gtx-660-ti",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277a00ceac14632adc671"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 680M",
+    "queryName": "geforce-gtx-680m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2774f0ceac14632adc617"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 630",
+    "queryName": "geforce-gt-630",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f2779d0ceac14632adc665"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 620",
+    "queryName": "geforce-gt-620",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f2779d0ceac14632adc661"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "HD Graphics 4000 Mobile",
+    "queryName": "hd-graphics-4000-mobile",
+    "segment": "Integrated",
+    "bestPicks": null,
+    "id": "67f277a40ceac14632adc68d"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 670",
+    "queryName": "geforce-gtx-670",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f2779e0ceac14632adc66a"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 690",
+    "queryName": "geforce-gtx-690",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f2779d0ceac14632adc663"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon HD 7850M",
+    "queryName": "radeon-hd-7850m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277510ceac14632adc62a"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon HD 7870M",
+    "queryName": "radeon-hd-7870m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277510ceac14632adc626"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon HD 7750M",
+    "queryName": "radeon-hd-7750m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277510ceac14632adc629"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon HD 7970M",
+    "queryName": "radeon-hd-7970m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277520ceac14632adc62c"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon HD 7730M",
+    "queryName": "radeon-hd-7730m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277510ceac14632adc627"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 610",
+    "queryName": "geforce-gt-610",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f2779d0ceac14632adc664"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 675M",
+    "queryName": "geforce-gtx-675m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2774f0ceac14632adc619"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 650M",
+    "queryName": "geforce-gt-650m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2774f0ceac14632adc61d"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 640M",
+    "queryName": "geforce-gt-640m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2774c0ceac14632adc60a"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 630M",
+    "queryName": "geforce-gt-630m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2774d0ceac14632adc610"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 660M",
+    "queryName": "geforce-gtx-660m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2774f0ceac14632adc61a"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 670M",
+    "queryName": "geforce-gtx-670m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2774f0ceac14632adc618"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 640M LE",
+    "queryName": "geforce-gt-640m-le",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2774e0ceac14632adc613"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 635M",
+    "queryName": "geforce-gt-635m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2774d0ceac14632adc611"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 680",
+    "queryName": "geforce-gtx-680",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277a00ceac14632adc678"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon HD 7850",
+    "queryName": "radeon-hd-7850",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277380ceac14632adc57c"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 560 SE",
+    "queryName": "geforce-gtx-560-se",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277430ceac14632adc5d0"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon HD 7750",
+    "queryName": "radeon-hd-7750",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277360ceac14632adc56e"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon HD 7950",
+    "queryName": "radeon-hd-7950",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277370ceac14632adc575"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon HD 7970",
+    "queryName": "radeon-hd-7970",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277360ceac14632adc570"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon HD 7650M",
+    "queryName": "radeon-hd-7650m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277510ceac14632adc628"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce 610M",
+    "queryName": "geforce-610m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2774c0ceac14632adc60e"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 560 Ti 448",
+    "queryName": "geforce-gtx-560-ti-448",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277430ceac14632adc5d1"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 460 v2",
+    "queryName": "geforce-gtx-460-v2",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f2774c0ceac14632adc60c"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 570M",
+    "queryName": "geforce-gtx-570m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277360ceac14632adc573"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 580M",
+    "queryName": "geforce-gtx-580m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277340ceac14632adc569"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 555M",
+    "queryName": "geforce-gt-555m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277350ceac14632adc56c"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 560M",
+    "queryName": "geforce-gtx-560m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277350ceac14632adc56a"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 560",
+    "queryName": "geforce-gtx-560",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277440ceac14632adc5da"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 555 OEM",
+    "queryName": "geforce-gtx-555-oem",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f27aa40ceac14632adc6b3"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 545",
+    "queryName": "geforce-gt-545",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277430ceac14632adc5d4"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon HD 6670",
+    "queryName": "radeon-hd-6670",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277490ceac14632adc5fe"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 520",
+    "queryName": "geforce-gt-520",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277420ceac14632adc5cf"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 590",
+    "queryName": "geforce-gtx-590",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277450ceac14632adc5dc"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 550 Ti",
+    "queryName": "geforce-gtx-550-ti",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277430ceac14632adc5d5"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 440",
+    "queryName": "geforce-gt-440",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f2774e0ceac14632adc615"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 560 Ti",
+    "queryName": "geforce-gtx-560-ti",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277440ceac14632adc5db"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon HD 6770",
+    "queryName": "radeon-hd-6770",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277490ceac14632adc5fd"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 485M",
+    "queryName": "geforce-gtx-485m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2772e0ceac14632adc53a"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 525M",
+    "queryName": "geforce-gt-525m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277340ceac14632adc568"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 540M",
+    "queryName": "geforce-gt-540m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277340ceac14632adc565"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 520M",
+    "queryName": "geforce-gt-520m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277340ceac14632adc564"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce 410M",
+    "queryName": "geforce-410m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2772d0ceac14632adc538"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 550M",
+    "queryName": "geforce-gt-550m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277340ceac14632adc566"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 570",
+    "queryName": "geforce-gtx-570",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277440ceac14632adc5d8"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 460 SE",
+    "queryName": "geforce-gtx-460-se",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f2774d0ceac14632adc612"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 580",
+    "queryName": "geforce-gtx-580",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277450ceac14632adc5dd"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon HD 6850",
+    "queryName": "radeon-hd-6850",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277490ceac14632adc602"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 430",
+    "queryName": "geforce-gt-430",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f2774b0ceac14632adc608"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTS 450",
+    "queryName": "geforce-gts-450",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f2774c0ceac14632adc60b"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 445M",
+    "queryName": "geforce-gt-445m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2772c0ceac14632adc52f"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 420M",
+    "queryName": "geforce-gt-420m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2772d0ceac14632adc534"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 460M",
+    "queryName": "geforce-gtx-460m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2772d0ceac14632adc535"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 435M",
+    "queryName": "geforce-gt-435m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2772d0ceac14632adc536"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 425M",
+    "queryName": "geforce-gt-425m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2772e0ceac14632adc539"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 460",
+    "queryName": "geforce-gtx-460",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f2774b0ceac14632adc609"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 465",
+    "queryName": "geforce-gtx-465",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f2774c0ceac14632adc60d"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 480",
+    "queryName": "geforce-gtx-480",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f2774e0ceac14632adc614"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTX 470",
+    "queryName": "geforce-gtx-470",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f2774c0ceac14632adc60f"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 330M",
+    "queryName": "geforce-gt-330m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2772f0ceac14632adc542"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 240",
+    "queryName": "geforce-gt-240",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277500ceac14632adc620"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce 210",
+    "queryName": "geforce-210",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f2774f0ceac14632adc61e"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GT 220",
+    "queryName": "geforce-gt-220",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f2774f0ceac14632adc61c"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce GTS 250",
+    "queryName": "geforce-gts-250",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277500ceac14632adc621"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce 9500 GT",
+    "queryName": "geforce-9500-gt",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277500ceac14632adc623"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce 9700M GT",
+    "queryName": "geforce-9700m-gt",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277380ceac14632adc57d"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce 9800 GT",
+    "queryName": "geforce-9800-gt",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277500ceac14632adc624"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce 9800 GTX",
+    "queryName": "geforce-9800-gtx",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277510ceac14632adc625"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce 9600 GT",
+    "queryName": "geforce-9600-gt",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277500ceac14632adc622"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce 8400 GS",
+    "queryName": "geforce-8400-gs",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f2773a0ceac14632adc58c"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce 8800 GTX",
+    "queryName": "geforce-8800-gtx",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f2773a0ceac14632adc58d"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "Arc A730M",
+    "queryName": "arc-a730m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2773b0ceac14632adc597"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "Arc A770M",
+    "queryName": "arc-a770m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2773b0ceac14632adc598"
+  },
+  {
+    "manufacturer": "AMD",
+    "model": "Radeon RX 6300",
+    "queryName": "radeon-rx-6300",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f277220ceac14632adc4e1"
+  },
+  {
+    "manufacturer": "NVIDIA",
+    "model": "GeForce 940MX",
+    "queryName": "geforce-940mx",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f277430ceac14632adc5d2"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "Arc A550M",
+    "queryName": "arc-a550m",
+    "segment": "Mobile",
+    "bestPicks": null,
+    "id": "67f2773b0ceac14632adc596"
+  },
+  {
+    "manufacturer": "Intel",
+    "model": "Arc A350",
+    "queryName": "arc-a350",
+    "segment": "Desktop",
+    "bestPicks": null,
+    "id": "67f2773b0ceac14632adc599"
+  }
+]
