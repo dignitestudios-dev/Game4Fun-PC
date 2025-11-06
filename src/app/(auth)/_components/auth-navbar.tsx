@@ -23,7 +23,7 @@ function AuthNavbar() {
           "bg-[url(/images/top-right-shadow.png)] z-10 w-[600px] bg-no-repeat absolute top-0 right-0 h-screen pointer-events-none select-none"
         )}
       />
-        <div className="absolute bg-[url(/images/shop-bg.png)] -top-28 left-0 bg-no-repeat bg-contain w-screen h-[500px]" />
+        <div className="absolute bg-[url(/images/shop-bg.png)] -top-28 left-0 bg-no-repeat bg-cover w-screen h-[500px]" />
 
       <div className="absolute top-[40%] left-0 w-full h-32 bg-gradient-to-t from-[#141414] via-[#14141484] to-transparent pointer-events-none z-10" />
       <div className="flex items-center gap-4 z-50 relative">
