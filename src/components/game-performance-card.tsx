@@ -3,8 +3,40 @@
 import { RotateCw } from "lucide-react";
 import React, { useState } from "react";
 
+interface Cpu {
+  manufacturer: string;
+  model: string;
+}
+
+interface Gpu {
+  manufacturer: string;
+  model: string;
+}
+
+interface Fps {
+  avgFps: number;
+  min1Fps: number;
+}
+
+interface Settings {
+  resolution: string;
+  preset: string;
+}
+
+interface Game {
+  name: string;
+}
+
+interface Benchmark {
+  cpu: Cpu;
+  gpu: Gpu;
+  game: Game;
+  fps: Fps;
+  settings: Settings;
+}
+
 interface Props {
-  system: any; // The API response: array or { data: [...] }
+  system: Benchmark[] | { data: Benchmark[] };
   setShow: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
@@ -17,7 +49,7 @@ const GamePerformanceCard: React.FC<Props> = ({ system, setShow }) => {
   );
 
   const activeBenchmark = benchmarks.find(
-    (b: any) => b.game?.name === selectedGame
+    (b: Benchmark) => b.game?.name === selectedGame
   );
 
   if (!activeBenchmark) {
@@ -44,7 +76,7 @@ const GamePerformanceCard: React.FC<Props> = ({ system, setShow }) => {
               onChange={(e) => setSelectedGame(e.target.value)}
               className="bg-[#242323] border border-[#525151] rounded-xl px-4 py-2 text-white outline-none"
             >
-              {benchmarks.map((b: any, i: number) => (
+              {benchmarks.map((b: Benchmark, i: number) => (
                 <option key={i} value={b.game?.name}>
                   {b.game?.name}
                 </option>
