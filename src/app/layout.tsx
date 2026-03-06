@@ -10,8 +10,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Games 4 Fun",
-  description: "Games 4 Fun",
+  title: "Game4FunPCs",
+  description: "Custom-Built Gaming Pcs. Zero Compromises. All Fun",
 };
 
 export default function RootLayout({
