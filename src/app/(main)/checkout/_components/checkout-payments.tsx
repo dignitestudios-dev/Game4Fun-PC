@@ -12,6 +12,7 @@ import Input from "@/components/ui/input";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 import { useRouter, useSearchParams } from "next/navigation";
+import { RiErrorWarningLine } from "react-icons/ri";
 
 function CheckoutPayments({ data }: { data: Cart }) {
   const searchParams = useSearchParams();
@@ -42,7 +43,7 @@ function CheckoutPayments({ data }: { data: Cart }) {
         return;
       }
 
-      console.log(data,"data")
+      console.log(data, "data");
 
       // const payload = {
       //   paymentMethodId: paymentMethod.id,
@@ -65,8 +66,9 @@ function CheckoutPayments({ data }: { data: Cart }) {
 
       // push to next page
       router.push(`/review-order?${params.toString()}`);
-    } catch (err: any) {   //eslint-disable-line
-   
+    } catch (err: any) {
+      //eslint-disable-line
+
       console.error(err);
       toast.error("Something went wrong.");
     } finally {
@@ -117,6 +119,14 @@ function CheckoutPayments({ data }: { data: Cart }) {
           />
         </div>
       </div>
+
+      <p className="text-white/70 flex items-start gap-2 mt-4">
+        <RiErrorWarningLine className="text-[#C100FF] h-7 w-7 min-h-7 min-w-7" />
+        Payment options through Affirm are subject to eligibility, may not be
+        available in all states, and are provided by these lending partners:
+        affirm.com/lenders. CA residents: Loans by Affirm Loan Services, LLC are
+        made or arranged pursuant to a California Finance Lenders Law license.
+      </p>
 
       {/* Pay button */}
       <div className="flex justify-center w-full mt-14">
